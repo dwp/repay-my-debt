@@ -15,4 +15,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+// Components that aren't in Frontend
+@import "versions/scenario1";
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
