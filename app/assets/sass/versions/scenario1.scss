@@ -8,6 +8,7 @@
 .scenario-panel {
 	margin: 20px 0;
 	border: 1px solid govuk-colour("mid-grey");
+	
 	&:first-child {
 		margin-top: 0;
 	}
@@ -17,31 +18,50 @@
 		margin: 0;
 	}
 	.scenario-inner-panel {
-		padding: 1.2em 1.2em 1.4em 1.2em;
+		padding: 1.2em 1.2em 1.6em 1.2em;
 		p {
 			margin: 0 0 20px 0;
 		}
 		h3 {
+		margin: 0 0 20px 0;
 			span {
 				display: block;
 				font-size: 19px;
 				font-weight: normal;
 			}
 			&.right-align {
-				border-left: 2px solid #000;
+				border-left: 1px solid #000;
 				padding-left: 1em;
 			}
 			&.status-paid {
 				border-left: 2px solid govuk-colour("blue");
 				padding: .4em .6em;
 				background: rgba(govuk-colour("blue"), 0.05);
-				margin-bottom: 24px;
+				margin-bottom: 26px;
 			}
 			&.status-declined {
 				border-left: 2px solid $govuk-error-colour;
 				padding: .4em .6em;
 				background: rgba(govuk-colour("red"), 0.05);
 				margin-bottom: 24px;
+			}
+		}
+
+		
+	}
+	
+	.why-overview {
+		margin-bottom: 10px;
+		h4 {
+			border-bottom: 1px solid #000;
+			padding-bottom: 15px;
+			margin: 0;
+			span {
+				font-weight: normal;
+				font-size: 19px;
+				color: govuk-colour("dark-grey");
+				display: block;
+				margin-bottom: 5px;
 			}
 		}
 	}
@@ -51,7 +71,37 @@
 	}
 }
 
+
+.info-message {
+				border-left: 3px solid govuk-colour("blue");
+				background: rgba(govuk-colour("blue"), 0.05);
+				padding: .8em 1em .8em .8em;
+				margin-bottom: 20px;
+				display: inline-block;
+				p {
+					margin: 0;
+				}
+				h5 {
+					margin: 0 0 10px 0;
+				}
+			}
+		.warning-message {
+				border-left: 3px solid govuk-colour("red");
+				background: rgba(govuk-colour("red"), 0.05);
+				padding: 1em;
+				margin-bottom: 30px;
+				p {
+					margin: 0;
+				}
+				h5 {
+					margin: 0 0 10px 0;
+				}
+			}
+
+
+
 .secondary-invert {
+	margin-top: 10px;
 	display: inline-block;
 	padding: 0;
 	border: 2px solid govuk-colour("green");
@@ -68,9 +118,12 @@
 
 .clear-bar {
 		overflow: hidden;
-		border-bottom: 2px solid #000;
+		border-bottom: 1px solid #000;
 		padding: 0 2em 1em 0;               
 		margin-bottom: 2em;
+		&.clear-bar-inner {
+			margin-top: -30px;
+		}
 		h2 {
 			float: left; 
 			width: 60%;
@@ -79,19 +132,23 @@
 			span {
 				display: block;
 				font-weight: normal;
-				font-size: 19px;
+				font-size: 24px;
+				color: govuk-colour("dark-grey");
+				margin-top: 5px;
 			}
 		}
 		p {
 			float: right;
 			width: auto;
-			margin: 0;
+			margin: 10px 0 0 0;
 			border-left: 1px solid #000;
 			padding-left: 1em;
+			font-size: 22px;
+			
 			span {
 				display: block;
 				font-weight: bold;
-				font-size: 22px;
+				font-size: 26px;
 			}
 		}
 		
@@ -102,6 +159,21 @@
 			clear: both;
 			margin-top: 1em;
 			display: inline-block;
+		}
+		&.blue-bar {
+			background: govuk-colour("blue");
+			padding: .5em 2em 1em 1em;
+			border: 0;
+			h2, {
+				color: #fff;
+				span {
+					color: #fff;
+				}
+			}
+			p {
+				border-color: #fff;
+				color: #fff;
+			}
 		}
 	}
 
@@ -184,3 +256,28 @@
 	}
 }
 
+
+.govuk-button {
+	margin-top: 10px!important;
+}
+
+
+.visually-hidden {
+	position: absolute;
+	left: -9999px;
+	font-size: 0;
+}
+
+.govuk-inset-text {
+	span {
+		font-weight: bold;
+		display: block;
+		font-size:28px;
+	}
+}
+
+.inner-question {
+	border-top: 1px solid govuk-colour("mid-grey");
+	padding-top: 30px;
+	margin-top: 30px;
+}

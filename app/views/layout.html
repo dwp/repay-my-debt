@@ -33,6 +33,10 @@
   {% include "includes/head.html" %}
 {% endblock %}
 
+
+
+
+
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
@@ -46,7 +50,12 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+  
+ 
+  
 {% endblock %}
+
+
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
@@ -66,6 +75,9 @@
         ]
       }
     }) }}
+    
+    
+    
   {% endblock %}
 {% endif %}
 

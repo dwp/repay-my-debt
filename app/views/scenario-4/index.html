@@ -1,11 +1,21 @@
 
 {% extends "layout.html" %}
 
+
+
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
 
+
+
+
 {% block content %}
+
+
+
+
+
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -18,7 +28,17 @@
 	   				<span>&pound;630.00</span></p>
 
 	   </div>    
+	   
+	   <div class="warning-message">
+							 <h5 class="govuk-heading-s">Your last payment was declined</h5>
+							 	<p>Call our debt management team on 0800 916 0614 to make a payment and bring your plan up to date.</p>
+							 </div>
+
       <div class="govuk-grid-row">
+      
+      
+      
+      
       
         <div class="govuk-grid-column-one-half">
     
@@ -26,23 +46,31 @@
 					 <h2 class="govuk-heading-s">Payment plan</h2>
 					 
 					 <div class="scenario-inner-panel">
-					 	
-					 		 <div class="govuk-grid-row">
-      
-						 		 <div class="govuk-grid-column-one-half">
-						 		 	
-						 		 	 <h3 class="govuk-heading-s"><span>Current payment:</span>&pound;45.00</h3>
-						 		 	 
-						 		 </div>
-						 		 
-						 		 <div class="govuk-grid-column-one-half">
-						 		 	 
-						 		 	 <h3 class="govuk-heading-s right-align"><span>Payments remaining:</span>14</h3>
-						 		 	
-						 		 	 
-						 		 </div>
-						 		 
-					 		 </div>
+
+					 		
+					 		
+					 		<table class="govuk-table">
+
+							  <tbody class="govuk-table__body">
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Current payment</th>
+							      <td class="govuk-table__cell">£45 per month</td>
+							    </tr>
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Remaining payments</th>
+							      <td class="govuk-table__cell">18</td>
+							    </tr>
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Next payment due</th>
+							      <td class="govuk-table__cell">21 March 2020</td>
+							    </tr>
+							  </tbody>
+							</table>
+					 		
+					 		
+					 		
+					 		
+					 		
 					 		 
 					 		
 	
@@ -62,22 +90,27 @@
 					 
 					 <div class="scenario-inner-panel">
 					 	
-					 		 <div class="govuk-grid-row">
-      
-						 		 <div class="govuk-grid-column-one-half">
-						 		 	
-						 		 	 <h3 class="govuk-heading-s"><span>Last payment date:</span>21 January 2020</h3>
-						 		 	 
-						 		 </div>
-						 		 
-						 		 <div class="govuk-grid-column-one-half">
-						 		 	
-						 		 	 <h3 class="govuk-heading-s right-align"><span>Payment status:</span>Paid</h3>
-						 		 	 
-						 		 </div>
-						 		 
-					 		 </div>
-				
+					 			
+					 		<table class="govuk-table">
+
+							  <tbody class="govuk-table__body">
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Last payment</th>
+							      <td class="govuk-table__cell">21 January 2020</td>
+							    </tr>
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Total payments made</th>
+							      <td class="govuk-table__cell">6</td>
+							    </tr>
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Last payment status</th>
+							      <td class="govuk-table__cell">Declined</td>
+							    </tr>
+							   
+							  </tbody>
+							</table>
+							
+									
 	
 		             <span><a href="#" class="secondary-invert">View your full payment history</a></span>
 		             
@@ -120,6 +153,10 @@
 						 		 </div>
 						 		 
 					 		 </div>
+					 		 
+					 		 <!-- <div class="info-message">
+					 		 	<p>Paying an additional amount reduces the amount you owe and will clear your debt sooner.</p>
+					 		 	</div> -->
 	
 		             <span><a href="#" class="secondary-invert">Make an additional payment</a></span>	        	 	          
 					 </div>
