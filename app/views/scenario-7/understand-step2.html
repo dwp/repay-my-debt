@@ -23,7 +23,7 @@
 	   
 	   
 	   <span class="govuk-caption-l">Debt 2 of 2</span>
-	   <h1 class="govuk-heading-l">Universal credit</h1>
+	   <h1 class="govuk-heading-l">HMRC</h1>
 	   
 
       <div class="govuk-grid-row">
@@ -42,7 +42,7 @@
 			    </tr>
 			    <tr class="govuk-table__row">
 			      <th scope="row" class="govuk-table__header">Reason</th>
-			      <td class="govuk-table__cell">Overpayment</td>
+			      <td class="govuk-table__cell">Tax credit overpayment</td>
 			    </tr>
 			    <tr class="govuk-table__row">
 			      <th scope="row" class="govuk-table__header">Date debt started</th>
@@ -58,7 +58,7 @@
         	
         	
                 
-        <form class="inner-question">
+         <form class="inner-question" action="grouped-alert" method="POST" >
         
         
         <div class="govuk-form-group">
@@ -69,15 +69,15 @@
 			      </h1>
 			    </legend>
 
-		    <div class="govuk-radios govuk-radios--inline">
+		     <div class="govuk-radios govuk-radios--inline">
 		      <div class="govuk-radios__item">
-		        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+		        <input class="govuk-radios__input" id="u" name="understand2" type="radio" value="understand-yes-2">
 		        <label class="govuk-label govuk-radios__label" for="changed-name">
 		          Yes
 		        </label>
 		      </div>
 		      <div class="govuk-radios__item">
-		        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+		        <input class="govuk-radios__input" id="changed-name-2" name="understand2" type="radio" value="understand-no-2">
 		        <label class="govuk-label govuk-radios__label" for="changed-name-2">
 		          No
 		        </label>
@@ -90,7 +90,9 @@
        <hr class="govuk-section-break govuk-section-break--l"> 
 	
 			      
-			<p><a href="choosePayment" class="govuk-button">Next</a></p>
+			<button class="govuk-button" data-module="govuk-button">
+			 Next
+			</button>
 			
 			
         </form>

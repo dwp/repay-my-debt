@@ -26,72 +26,87 @@
 		
 		 	 <div class="govuk-inset-text">Because you don't understand some of the debts you owe you should contact the organisations directly.</div>
 	
-        
+       
+									{% if data['understand1']=='understand-yes-1'%}
+									<p>yes i understand debt 1</p>
+									{% elif data['understand1']=='understand-no-1'%}
+									  <div class="list-display">
+									        	<h2 class="govuk-heading-m">Universal credit</h2>
+									        	
+									        	<table class="govuk-table">
+												  <caption class="govuk-table__caption"><span class="visually-hidden">Details of debt</span></caption>
+												  <thead class="govuk-table__head">
+									
+												  <tbody class="govuk-table__body">
+												    <tr class="govuk-table__row">
+												      <th scope="row" class="govuk-table__header">Amount owed</th>
+												      <td class="govuk-table__cell">£109.80</td>
+												    </tr>
+												    <tr class="govuk-table__row">
+												      <th scope="row" class="govuk-table__header">Reason</th>
+												      <td class="govuk-table__cell">Advance payment</td>
+												    </tr>
+												    <tr class="govuk-table__row">
+												      <th scope="row" class="govuk-table__header">Date debt started</th>
+												      <td class="govuk-table__cell">26 June 2019</td>
+												    </tr>
+												  </tbody>
+												</table>
+												
+												<h2 class="govuk-heading-s">Help and support:</h2>
+									
+												<ul class="govuk-list">
+												  <li>Telephone: 020 7946 0101</li>
+												  <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+												</ul>
+												</div>
 
-        <div class="list-display">
-        	<h2 class="govuk-heading-m">Universal credit</h2>
-        	
-        	<table class="govuk-table">
-			  <caption class="govuk-table__caption"><span class="visually-hidden">Details of debt</span></caption>
-			  <thead class="govuk-table__head">
+       
+		
+									{% endif %}
+									
+									
+									{% if data['understand2']=='understand-yes-2'%}
+									<p>yes i understand debt 2</p>
+									{% elif data['understand2']=='understand-no-2'%}
+									 <div class="list-display">
+								        	<h2 class="govuk-heading-m">HMRC</h2>
+								        	
+								        	<table class="govuk-table">
+											  <caption class="govuk-table__caption"><span class="visually-hidden">Details of debt</span></caption>
+											  <thead class="govuk-table__head">
+								
+											  <tbody class="govuk-table__body">
+											    <tr class="govuk-table__row">
+											      <th scope="row" class="govuk-table__header">Amount owed</th>
+											      <td class="govuk-table__cell">£109.80</td>
+											    </tr>
+											    <tr class="govuk-table__row">
+											      <th scope="row" class="govuk-table__header">Reason</th>
+											      <td class="govuk-table__cell">Tax credits overpayment</td>
+											    </tr>
+											    <tr class="govuk-table__row">
+											      <th scope="row" class="govuk-table__header">Date debt started</th>
+											      <td class="govuk-table__cell">26 June 2019</td>
+											    </tr>
+											  </tbody>
+											</table>
+											
+											<h2 class="govuk-heading-s">Help and support:</h2>
+								
+											<ul class="govuk-list">
+											  <li>Telephone: 020 7946 0101</li>
+											  <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+											</ul>
+											</div>
+		
+									{% endif %}
 
-			  <tbody class="govuk-table__body">
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Amount owed</th>
-			      <td class="govuk-table__cell">£109.80</td>
-			    </tr>
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Reason</th>
-			      <td class="govuk-table__cell">Advance payment</td>
-			    </tr>
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Date debt started</th>
-			      <td class="govuk-table__cell">26 June 2019</td>
-			    </tr>
-			  </tbody>
-			</table>
+
+										
+										<p><a href="index2" class="govuk-button">Return to dashboard</a></p>
 			
-			<h2 class="govuk-heading-s">Get help:</h2>
-
-			<ul class="govuk-list">
-			  <li>Telephone: 020 7946 0101</li>
-			  <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
-			</ul>
-			</div>
-
-        <div class="list-display">
-        	<h2 class="govuk-heading-m">Universal credit</h2>
-        	
-        	<table class="govuk-table">
-			  <caption class="govuk-table__caption"><span class="visually-hidden">Details of debt</span></caption>
-			  <thead class="govuk-table__head">
-
-			  <tbody class="govuk-table__body">
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Amount owed</th>
-			      <td class="govuk-table__cell">£109.80</td>
-			    </tr>
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Reason</th>
-			      <td class="govuk-table__cell">Advance payment</td>
-			    </tr>
-			    <tr class="govuk-table__row">
-			      <th scope="row" class="govuk-table__header">Date debt started</th>
-			      <td class="govuk-table__cell">26 June 2019</td>
-			    </tr>
-			  </tbody>
-			</table>
 			
-			<h2 class="govuk-heading-s">Get help:</h2>
-
-			<ul class="govuk-list">
-			  <li>Telephone: 020 7946 0101</li>
-			  <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
-			</ul>
-			</div>
-	
-			      
-			<p><a href="understand-step2" class="govuk-button">Return to dashboard</a></p>
 
 			
         </div>
