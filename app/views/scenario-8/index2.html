@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+    
+   <!-- <div class="clear-bar">
+	   		<h2 class="govuk-heading-l">Harvey Chamberlain<span>ZZ 41 54 60 Z</span></h2>
+	   		<p>What you owe:
+	   				<span>&pound;630.00</span></p>
+
+	   </div> -->
+	   
+	   
+	   <div class="govuk-grid-row">
+      
+        <div class="govuk-grid-column-two-thirds">
+	   
+	   
+
+	   <h1 class="govuk-heading-xl">What do you want to do? </h1>
+	   
+	    <div class="govuk-inset-text">
+		 Total amount owed: <span class="total-amount">&pound;630.00</span>
+		 </div>
+	   
+	      
+      
+			
+			
+			<form class="form" action="/scenario-8/choosePayment" method="post">
+
+			
+			<div class="govuk-form-group">
+				  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+				    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+				      <h1 class="govuk-heading-m">
+				        Choose an option:
+				      </h1>
+				    </legend>
+				   
+				    <div class="govuk-radios">
+				      <div class="govuk-radios__item">
+				        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+				        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+				         I need help and support
+				        </label>
+				        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+				          Understand your debt but cannot pay, what to do next if you're struggling
+				        </span>
+				      </div>
+				      <div class="govuk-radios__item">
+				        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+				        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+				          I want to make a payment
+				        </label>
+				        <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+				          Pay a flexible monthly amount or pay your debt in full
+				        </span>
+				      </div>
+				    </div>
+				  </fieldset>
+				</div>
+			
+			
+			<button class="govuk-button" data-module="govuk-button">
+			  Continue
+			</button>
+			</form>
+			
+
+                  
+    </div>
+</div>
+
+{% endblock %}
+
+
+

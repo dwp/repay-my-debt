@@ -12,6 +12,9 @@
 	&:first-child {
 		margin-top: 0;
 	}
+	&:last-child {
+		margin-bottom: 40px;
+	}
 	h2 {
 		background: govuk-colour("light-grey");
 		padding: .8em 1em;
@@ -94,6 +97,7 @@
 				background: rgba(govuk-colour("red"), 0.05);
 				padding: 1em;
 				margin-bottom: 30px;
+				clear: both;
 				p {
 					margin: 0;
 				}
@@ -131,6 +135,12 @@
 	text-decoration: none;
 	&:hover {
 		background: rgba(govuk-colour("green"), 0.05);
+	}
+	&.help-support-cta {
+		margin-top: 45px;
+	}
+	&.dash-pay {
+		margin-top: 28px;
 	}
 }
 
@@ -335,11 +345,15 @@
 }
 
 .govuk-inset-text {
+	b {
+		display: block;
+	}
 	span {
 		font-weight: bold;
 		display: block;
 		font-size:28px;
 	}
+
 }
 
 .inner-question {
@@ -353,4 +367,52 @@
 	.govuk-button {
 		margin: 0;
 	}
+}
+
+
+.form-border {
+	border-top: 1px solid #000;
+	padding-top: 30px;
+}
+
+.govuk-heading-xl {
+	margin-bottom: 0;
+}
+
+
+.customer-name {
+	margin: 0 0 10px 0;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.c-form-input-denote {
+	position: absolute;
+	margin: 2px 0 0 2px;
+	padding: 8.5px 10px;
+	background-color: #dee0e2;
+	line-height: 1;
+}
+.c-form-input-denote__input {
+	padding-left: 39px;
+	&:focus {
+		border: 0;
+		padding-left: 41px;
+	}
+}
+
+.summary-table {
+	margin-top: 30px;
+}
+
+
+.page-break {
+	border-top: 1px solid #000;
+	padding-top: 30px;
+	margin-top: 30px;
+}
+
+
+.summary-pay {
+	margin-top: 30px;
 }
