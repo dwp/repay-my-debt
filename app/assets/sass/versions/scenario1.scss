@@ -511,3 +511,13 @@
 		}
 	}
 }
+
+
+@media only screen and (max-width: 800px) {
+  .attention-card {
+	  padding: 2em;
+	  li {
+		font-size: 19px;
+		}
+  }
+}
