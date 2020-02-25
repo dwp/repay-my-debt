@@ -22,7 +22,7 @@
         <div class="govuk-grid-column-two-thirds">
 	   
 	   
-
+	<span class="govuk-caption-xl">Harvey Chamberlain</span>
 	   <h1 class="govuk-heading-xl">What do you want to do? </h1>
 	   
 	    <div class="govuk-inset-text">
@@ -33,11 +33,11 @@
       
 			
 			
-			<form class="form" action="/scenario-8/choosePayment" method="post">
+			<form class="form" action="/scenario-8/choice" method="post">
 
 			
 			<div class="govuk-form-group">
-				  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+				  <fieldset class="govuk-fieldset">
 				    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 				      <h1 class="govuk-heading-m">
 				        Choose an option:
@@ -45,24 +45,22 @@
 				    </legend>
 				   
 				    <div class="govuk-radios">
-				      <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-				         I need help and support
-				        </label>
-				        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-				          Understand your debt but cannot pay, what to do next if you're struggling
-				        </span>
-				      </div>
-				      <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+				    
+				    <div class="govuk-radios__item">
+				        <input class="govuk-radios__input" id="want-pay" name="choose-what" type="radio" value="want-pay">
+				        <label class="govuk-label govuk-radios__label" for="want-pay">
 				          I want to make a payment
 				        </label>
-				        <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-				          Pay a flexible monthly amount or pay your debt in full
-				        </span>
+				       
 				      </div>
+				      <div class="govuk-radios__item">
+				        <input class="govuk-radios__input" id="want-help" name="choose-what" type="radio" value="want-help">
+				        <label class="govuk-label govuk-radios__label" for="want-help">
+				         I need help and support
+				        </label>
+				        
+				      </div>
+				      
 				    </div>
 				  </fieldset>
 				</div>

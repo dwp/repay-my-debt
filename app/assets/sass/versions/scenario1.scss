@@ -152,6 +152,22 @@
 	}
 }
 
+.attention-invert {
+	margin-top: 10px;
+	display: inline-block;
+	padding: 0;
+	border: 1px solid #000;
+	border-bottom: 3px solid #000;
+	background: #fff;
+	font-size: 19px;
+	color: #000!important;
+	padding: 7px 14px;
+	text-decoration: none;
+	&:hover {
+		background: govuk-colour("mid-grey");
+	}
+}
+
 
 .clear-bar {
 		overflow: hidden;
@@ -165,6 +181,7 @@
 			border-bottom: 0;
 			padding-bottom: 0;
 			margin-top: -16px;
+			
 		}
 		h2 {
 			float: left; 
@@ -187,7 +204,7 @@
 			h3 {
 				display: block;
 				margin: 0;
-				padding: 15px 0 0 0;
+				padding: 0 0 0 0;
 				span {
 					display: block;
 					font-weight: normal;
@@ -195,6 +212,9 @@
 					color: govuk-colour("dark-grey");
 					margin-top: 5px;
 				}
+			}
+			.govuk-caption-l {
+				padding-top: 5px;
 			}
 			ul {
 				margin: 5px 0 0 0;
@@ -236,6 +256,7 @@
 			margin: 0;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			color: govuk-colour("dark-grey");
 		}
 		
 		.warning {
@@ -362,6 +383,7 @@
 		font-weight: bold;
 		display: block;
 		font-size:28px;
+		color: #0b0c0c;
 	}
 
 }
@@ -434,4 +456,58 @@
 
 .govuk-panel--confirmation {
 	margin-bottom: 30px;
+}
+
+
+
+.attention-card {
+	background: govuk-colour("blue");
+	padding: 3em 16em 3em 3em;
+	color: #fff;
+	.govuk-list {
+		color: #fff;
+	}
+	h1 {
+		color: #fff;
+	}
+
+
+	li {
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 40px;
+		padding-top: 10px;
+		padding-left: 75px;
+		position: relative;
+		&:before {
+			content: "1";
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 20px;
+			color: #000;
+			background: #fff;
+			border-radius: 100px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 48px;
+			text-align: center;
+			border: 1px solid #000;
+		}
+		&.two {
+			&:before {
+				content: "2";
+			}
+		}
+		&.three {
+			&:before {
+				content: "3";
+			}
+		}
+		&.four {
+			&:before {
+				content: "4";
+			}
+		}
+	}
 }
