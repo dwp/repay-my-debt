@@ -520,4 +520,14 @@
 		font-size: 19px;
 		}
   }
+  .clear-bar {
+  	.govuk-inset-text {
+	  	float: none;
+	  	margin-top: 20px;
+  	}
+  	.identifier {
+	  	float: none;
+  	}
+	  
+  }
 }
