@@ -150,6 +150,9 @@
 	&.dash-pay {
 		margin-top: 13px;
 	}
+	&.dash-paid {
+		margin-top: 31px;
+	}
 }
 
 .attention-invert {
@@ -530,4 +533,13 @@
   	}
 	  
   }
+  
+  .secondary-invert {
+
+	&.dash-paid {
+		margin-top: 0;
+	}
+  }
+  
+  
 }
