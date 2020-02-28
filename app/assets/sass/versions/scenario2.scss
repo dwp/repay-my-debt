@@ -9,8 +9,6 @@
 	margin: 20px 0;
 	border: 1px solid govuk-colour("mid-grey");
 	
-
-	
 	&:first-child {
 		margin-top: 0;
 	}
@@ -21,7 +19,7 @@
 		background: govuk-colour("light-grey");
 		padding: .8em 1em;
 		margin: 0;
-
+		
 	}
 	.scenario-inner-panel {
 		padding: 1.2em 1.2em 1.6em 1.2em;
@@ -82,15 +80,6 @@
 	
 	button {
 		margin: 0;
-	}
-	
-	
-	&.lab-tested {
-		border: 2px solid govuk-colour("blue");
-		h2 {
-			background: govuk-colour("blue");
-			color: #fff;
-		}
 	}
 }
 
@@ -216,6 +205,7 @@
 			width: 60%;
 			margin: 0;
 			padding: 0;
+
 			h3 {
 				display: block;
 				margin: 0;
