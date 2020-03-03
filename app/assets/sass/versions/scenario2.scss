@@ -514,6 +514,11 @@
 				content: "4";
 			}
 		}
+		&.five {
+			&:before {
+				content: "5";
+			}
+		}
 	}
 }
 

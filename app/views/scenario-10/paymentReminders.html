@@ -23,38 +23,17 @@
 	   
 	   
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
-		
-	   <h1 class="govuk-heading-xl">Payment summary</h1>
-	   
-	   
-	   <table class="govuk-table summary-table mb40">
-		  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
-
-		  <tbody class="govuk-table__body">
-		  
-		  
-		  <tr class="govuk-table__row">
-		      <th scope="row" class="govuk-table__header">Payment type</th>
-		      <td class="govuk-table__cell">Flexible amount</td>
-		    </tr>
-		  
-		  <tr class="govuk-table__row">
-		      <th scope="row" class="govuk-table__header">Payment amount</th>
-		      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
-		    </tr>
-
-
-		  </tbody>
-		</table>
 
 	   
-	  <form class="form" action="flexibleFinish" method="post">
+
+	   
+	   <form class="form" action="flexibleFinish" method="post">
 
 			
 			 
 			<div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
         Would you like to sign up for payment reminders?
       </h1>
@@ -73,7 +52,7 @@
       
       
 		  	<fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
         How would you like to be contacted?
       </h1>
@@ -105,7 +84,7 @@
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-text">
-            Mobile number
+            Mobile phone number
           </label>
           <input class="govuk-input govuk-input--width-20" id="contact-by-text" name="contact-by-text" type="tel">
         </div>
@@ -138,7 +117,8 @@
 			<button class="govuk-button" data-module="govuk-button">
 			  Continue to pay
 			</button>
-			</form>			                  
+			</form>
+			                  
     </div>
 </div>
 

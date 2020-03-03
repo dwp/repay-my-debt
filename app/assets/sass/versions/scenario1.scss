@@ -91,6 +91,19 @@
 			background: govuk-colour("blue");
 			color: #fff;
 		}
+		
+		
+		
+		.secondary-invert {
+			border: 2px solid govuk-colour("blue");
+			color: govuk-colour("blue")!important;
+			&:hover {
+				background: rgba(govuk-colour("blue"), 0.05);
+			}
+	
+}
+		
+		
 	}
 }
 
@@ -477,7 +490,7 @@
 
 .attention-card {
 	background: govuk-colour("blue");
-	padding: 3em 16em 3em 3em;
+	padding: 3em 10em 3em 3em;
 	color: #fff;
 	.govuk-list {
 		color: #fff;
@@ -522,6 +535,11 @@
 		&.four {
 			&:before {
 				content: "4";
+			}
+		}
+		&.five {
+			&:before {
+				content: "5";
 			}
 		}
 	}
