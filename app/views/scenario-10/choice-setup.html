@@ -35,7 +35,7 @@
         <div class="govuk-grid-column-two-thirds">
     
 			
-			<form class="form" action="fullPayment" method="post">
+			<form class="form" action="fullPayment-setup" method="post">
 			<div class="govuk-form-group">
 			  <fieldset class="govuk-fieldset">
 			    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -65,7 +65,7 @@
 				          Pay what you can afford
 				        </span>
 				      </div>
-				     <div class="govuk-radios__item">
+				      <div class="govuk-radios__item">
 				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
 				        <label class="govuk-label govuk-radios__label govuk-label--s" for="fixed-plan">
 				          Set up a fixed payment plan
@@ -93,15 +93,17 @@
 									
 									
 									{% elif data['choose-what']=='want-help'%}
+									 <h1 class="govuk-heading-xl mb30">Help and support </h1>
 
+
+					
 					<form class="form" action="/scenario-10/helpSupport" method="post">
 
 						          
 						        
 						        <div class="govuk-form-group">
 										  <fieldset class="govuk-fieldset">
-										    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-										
+										    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 										      <h1 class="govuk-fieldset__heading">
 										       What type of help do you need?
 										      </h1>

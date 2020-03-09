@@ -103,6 +103,7 @@
 				padding: 1em 3em 1em 1em;
 				margin-bottom: 30px;
 				clear: both;
+				
 				p {
 					margin: 0!important;
 				}
@@ -112,6 +113,24 @@
 				&.info-alert {
 					border-left: 5px solid govuk-colour("blue");
 					background: rgba(govuk-colour("blue"), 0.05);
+					position: relative;
+						.counter {
+							font-family: "GDS Transport", Arial, sans-serif;
+							position: absolute;
+							top: .8em;
+							right: 1em;
+							color: #fff;
+							line-height: 1.2em;
+							background: govuk-colour("blue");
+							padding: .5em;
+							border-radius: .2em .2em .2em;
+							font-size: 16px;
+							text-align: center;
+							b {
+								font-size: 20px;
+								display: block;
+							}
+						}
 					}
 				&.complete-alert {
 				border-left: 5px solid govuk-colour("green");
@@ -520,10 +539,55 @@
 			}
 		}
 	}
+	.notforme {
+		color: #fff;
+
+		&:hover {
+			color: govuk-colour("mid-grey");
+		}
+	}
 }
 
 
-@media only screen and (max-width: 800px) {
+
+.number-display {
+margin: 30px 0 50px 0;
+	li {
+		display: inline-block;
+		width: 24%;
+		margin: 0 -4px 0 1%;
+		padding: 1.5em 0;
+		background:  govuk-colour("light-grey");
+		text-align: center;
+		font-size: 22px;
+
+
+		span {
+			display: block;
+			font-size: 38px;
+			font-weight: bold;
+	
+			margin-top: 10px;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
   .attention-card {
 	  padding: 2em;
 	  li {
@@ -550,4 +614,36 @@
   }
   
   
+  .number-display {
+	  li {
+		  display: block;
+		  width: auto;
+		  margin: 0 0 10px 0;
+		  padding: 1em 0;
+		  span {
+			  font-size: 24px;
+		  }
+	  }
+  }
+  
+  .counter {
+			position: relative!important;
+			top: auto!important;
+			right: auto!important;
+			padding: .5em!important;
+			display: inline-block!important;
+			margin-top: 10px;
+			b {
+				display: inline!important;
+				font-size: 17px!important;
+				margin-right: 3px!important;
+			}
+		}
+  
+  
+  
+  
 }
+
+
+
