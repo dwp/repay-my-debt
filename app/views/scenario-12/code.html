@@ -1,0 +1,75 @@
+
+{% extends "layout-3.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+    
+   <!-- <div class="clear-bar">
+	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
+	   		<p>What you owe:
+	   				<span>&pound;120.00</span></p>
+
+	   </div> -->
+	   
+	   
+	   <div class="govuk-grid-row">
+      
+        <div class="govuk-grid-column-two-thirds">
+        
+       <span class="back-link"> <a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+	   
+	   <h1 class="govuk-heading-l">Enter the security code in the letter we sent you</h1>
+	   
+	    <div class="govuk-inset-text">You'll need to use this code every time you sign in.</div>
+	    
+	    
+	   <form class="form" action="index" method="post">
+	    
+	    <fieldset class="govuk-fieldset">
+	    <legend></legend>
+	    
+	    <div class="govuk-form-group">
+		  <label class="govuk-label" for="width-20">
+		    Security code
+		  </label>
+		  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+		</div>
+		
+	    </fieldset>
+	    
+	    <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Lost your code?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Magical content which is currently being processed in the head of the great Amer Rana will appear here in due course.
+  </div>
+</details>
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Sign in
+</button>
+	    
+	    
+
+	    </form>
+	   
+	   
+
+			
+		                  
+    </div>
+</div>
+
+{% endblock %}
+
+
+

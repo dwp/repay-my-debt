@@ -84,6 +84,14 @@
 		margin: 0;
 	}
 	
+	&.mvpJourney {
+		border: 2px solid govuk-colour("green");
+			h2 {
+				background: govuk-colour("green");
+				color: #fff;
+			}
+		}
+	
 	
 	&.lab-tested {
 		border: 2px solid govuk-colour("blue");
@@ -91,9 +99,7 @@
 			background: govuk-colour("blue");
 			color: #fff;
 		}
-		
-		
-		
+
 		.secondary-invert {
 			border: 2px solid govuk-colour("blue");
 			color: govuk-colour("blue")!important;
@@ -101,10 +107,11 @@
 				background: rgba(govuk-colour("blue"), 0.05);
 			}
 	
-}
-		
-		
+		}
+	
 	}
+	
+
 }
 
 

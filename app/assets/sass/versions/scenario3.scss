@@ -237,6 +237,12 @@
 					margin-top: 5px;
 				}
 			}
+			.signOut {
+				font-weight: normal;
+				font-size: 19px;
+				display: inline-block;
+				margin-left: 5px;
+			}
 			.govuk-caption-l {
 				padding-top: 5px;
 			}
@@ -644,6 +650,27 @@ margin: 30px 0 50px 0;
   
   
 }
+
+
+.loginBar {
+	text-align: right;
+	border-bottom: 1px solid govuk-colour("mid-grey");
+	margin-bottom: 30px;
+	margin-top: -48px;
+	padding: 10px 00;
+	p {
+		margin: 0;
+		font-size: 17px;
+		a {
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+	span {
+		font-weight: bold;
+	}
+}
+
 
 
 
