@@ -1,3 +1,9 @@
+.govuk-phase-banner {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
 // global styles for <a> and <p> tags
 .back-link {
 	.govuk-back-link {
@@ -438,7 +444,7 @@
 }
 
 .govuk-heading-xl {
-	margin-bottom: 0;
+	margin-bottom: 30px;
 }
 
 
@@ -583,15 +589,55 @@ margin: 30px 0 50px 0;
 
 
 
+.loginBar {
+	text-align: right;
+	margin-bottom: 30px;
+	margin-top: -48px;
+	padding: 10px 0 10px 0;
+	p {
+		margin: 0;
+		font-size: 17px;
+		color: #fff;
+		a {
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+	span {
+		font-weight: bold;
+	}
+}
+
+
+.govuk-header__content {
+	width: 50%;
+}
+.loggedIn {
+	float: right;
+	width: 14%;
+	text-align: right;
+	padding-top: 5px;
+	p {
+		margin: 0;
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+		a {
+			color: #fff;
+			display: inline-block;
+			margin-left: 3px;
+			font-size: 17px;
+			&:hover {
+				color: govuk-colour("light-blue");
+			}
+		}
+	}
+}
 
 
 
 
-
-
-
-
-
+//////////////// Media ///////////////
 
 @media only screen and (max-width: 900px) {
   .attention-card {
@@ -644,33 +690,20 @@ margin: 30px 0 50px 0;
 				font-size: 17px!important;
 				margin-right: 3px!important;
 			}
-		}
-  
-  
-  
+		}  
   
 }
 
 
-.loginBar {
-	text-align: right;
-	border-bottom: 1px solid govuk-colour("mid-grey");
-	margin-bottom: 30px;
-	margin-top: -48px;
-	padding: 10px 00;
-	p {
-		margin: 0;
-		font-size: 17px;
-		a {
-			display: inline-block;
-			margin-left: 5px;
-		}
-	}
-	span {
-		font-weight: bold;
-	}
+@media only screen and (max-width: 770px) {
+
+.loggedIn {
+	  float: none;
+	  display: block;
+	  clear: both;
+	  width: 90%;
+	  text-align: left;
+	  padding-bottom: 10px;
+  }
+
 }
-
-
-
-
