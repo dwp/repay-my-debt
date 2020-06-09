@@ -39,12 +39,43 @@
 		  
 		  <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment amount</th>
-		      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
+		      <td class="govuk-table__cell">			      
+			      
+			      
+						
+				
+		{% if data['how-much']=='five'%}
+		
+				&pound;5	
+				
+				
+		{% elif data['how-much']=='ten'%}
+		
+				&pound;10	
+				
+		{% elif data['how-much']=='twenty'%}
+		
+				&pound;20	
+				
+		{% elif data['how-much']=='thirty'%}
+		
+				&pound;30					
+		
+		{% else %}
+		
+				&pound;{{ data['payment-amount'] }}
+		
+		{% endif %}
+			      
+			      
+		      </td>
 		    </tr>
 
 
 		  </tbody>
 		</table>
+		
+		
 		
 		
 		

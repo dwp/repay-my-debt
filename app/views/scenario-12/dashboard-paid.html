@@ -26,7 +26,7 @@
 	   			<h3 class="govuk-heading-l">Ashley Chamberlain</h3>
 	   		</div>
 	   		<div class="govuk-inset-text">
-			 Total amount owed: <span class="total-amount">&pound;120.00</span>
+			 Total amount owed: <span class="total-amount">&pound;90.00</span>
 			</div>
 	   		
 	   	
@@ -61,7 +61,7 @@
 					 
 						 	<div class="warning-message info-alert">
 								
-								 	<p>You have made a payment for:<br><b>March 2020</b></p>
+								 	<p>You have made a payment to cover:<br><b>June 2020</b></p>
 								 </div>
 								 
 								 <p class="statement">You can still make more payments this month.</p>
@@ -89,11 +89,37 @@
 							  <tbody class="govuk-table__body">
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Amount</th>
-							      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
+							      <td class="govuk-table__cell">
+								      
+								      {% if data['how-much']=='five'%}
+		
+											&pound;5	
+											
+											
+									{% elif data['how-much']=='ten'%}
+									
+											&pound;10	
+											
+									{% elif data['how-much']=='twenty'%}
+									
+											&pound;20	
+											
+									{% elif data['how-much']=='thirty'%}
+									
+											&pound;30					
+									
+									{% else %}
+									
+											&pound;{{ data['payment-amount'] }}
+									
+									{% endif %}
+
+								      
+							      </td>
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Date</th>
-							      <td class="govuk-table__cell">12 March 2020</td>
+							      <td class="govuk-table__cell">26 June 2020</td>
 							    </tr>
 							   <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Status</th>

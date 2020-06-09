@@ -61,9 +61,9 @@
 					 
 						 	<div class="warning-message info-alert">
 								
-								 	<p>Next payment due by the end of:<br><b>April 2020</b></p>
+								 	<p>A payment is due to cover:<br><b>July 2020</b></p>
 								 	
-								 	<span class="counter"><b>24</b>days</span>
+								 	<span class="counter"><b>31</b>days</span>
 								 	
 								 </div>
 								 
@@ -93,15 +93,40 @@
 							  <tbody class="govuk-table__body">
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Amount</th>
-							      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
+							      <td class="govuk-table__cell">
+								      
+								      {% if data['how-much']=='five'%}
+		
+											&pound;5	
+											
+											
+									{% elif data['how-much']=='ten'%}
+									
+											&pound;10	
+											
+									{% elif data['how-much']=='twenty'%}
+									
+											&pound;20	
+											
+									{% elif data['how-much']=='thirty'%}
+									
+											&pound;30					
+									
+									{% else %}
+									
+											&pound;{{ data['payment-amount'] }}
+									
+									{% endif %}
+								      
+							      </td>
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Date</th>
-							      <td class="govuk-table__cell">12 March 2020</td>
+							      <td class="govuk-table__cell">26 June 2020</td>
 							    </tr>
 							   <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Status</th>
-							      <td class="govuk-table__cell">Accepted</td>
+							      <th scope="row" class="govuk-table__header">Type</th>
+							      <td class="govuk-table__cell">Flexible payment</td>
 							    </tr>
 
 							   
