@@ -22,10 +22,10 @@
         <div class="govuk-grid-column-two-thirds">
 
        <span class="back-link"> <a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
-       
-       
-       
-       
+
+
+
+
        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
 			  <h2 class="govuk-error-summary__title" id="error-summary-title">
 			    There is a problem
@@ -33,17 +33,17 @@
 			  <div class="govuk-error-summary__body">
 			    <ul class="govuk-list govuk-error-summary__list">
 			      <li>
-			        <a href="#code-error">Your security code is incorrect</a>
+			        <a href="#code-error">Security code cannot be more than 11 digits</a>
 			      </li>
 			      <li>
-			        <a href="#passport-issued-error">Your date of birth must be in the past</a>
+			        <a href="#passport-issued-error">Date of birth must be in the past</a>
 			      </li>
-			 
+
 			    </ul>
 			  </div>
 			</div>
-       
-       
+
+
 
 	   <h1 class="govuk-heading-xl">Sign in</h1>
 
@@ -58,7 +58,7 @@
 		    Enter your security code
 		  </label>
 		  <span id="code-error" class="govuk-error-message mt10">
-		    <span class="govuk-visually-hidden">Error:</span> Your security code is incorrect
+		    <span class="govuk-visually-hidden">Error:</span> Security code cannot be more than 11 digits
 		  </span>
 		  <span id="security-hint" class="govuk-hint mt5">
 		    This code contains only numbers and it can be up to 11 digits
@@ -82,10 +82,10 @@
 		  </div>
 		</details>
 		</div>
-		
-		
-		
-		
+
+
+
+
 		<div class="govuk-form-group govuk-form-group--error">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-error">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -94,10 +94,10 @@
       </h1>
     </legend>
     <span id="passport-issued-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Your date of birth must be in the past
+      <span class="govuk-visually-hidden">Error:</span> Date of birth must be in the past
     </span>
     <span id="passport-issued-hint" class="govuk-hint">
-      For example, 12 11 2007
+      For example, 02 11 2007
     </span>
     <div class="govuk-date-input" id="passport-issued">
       <div class="govuk-date-input__item">
@@ -127,10 +127,10 @@
     </div>
   </fieldset>
 </div>
-		
-		
-		
-		
+
+
+
+
 
 
 	    </fieldset>
