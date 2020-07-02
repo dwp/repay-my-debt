@@ -109,18 +109,9 @@
 				padding: 1em 3em 1em 1em;
 				margin-bottom: 30px;
 				clear: both;
+				position: relative;
 				
-				p {
-					margin: 0!important;
-				}
-				h5 {
-					margin: 0 0 10px 0;
-				}
-				&.info-alert {
-					border-left: 5px solid govuk-colour("blue");
-					background: rgba(govuk-colour("blue"), 0.05);
-					position: relative;
-						.counter {
+				.counter {
 							font-family: "GDS Transport", Arial, sans-serif;
 							position: absolute;
 							top: .8em;
@@ -137,10 +128,29 @@
 								display: block;
 							}
 						}
+				
+				p {
+					margin: 0!important;
+				}
+				h5 {
+					margin: 0 0 10px 0;
+				}
+				&.info-alert {
+					border-left: 5px solid govuk-colour("blue");
+					background: rgba(govuk-colour("blue"), 0.05);
+					
+					
 					}
 				&.complete-alert {
 				border-left: 5px solid govuk-colour("green");
 				background: rgba(govuk-colour("green"), 0.05);
+				}
+				&.todo-alert {
+				border-left: 5px solid govuk-colour("orange");
+				background: rgba(govuk-colour("orange"), 0.05);
+					.counter {
+						background: govuk-colour("orange");
+					}
 				}
 				&.info-group {
 					border-left: 5px solid govuk-colour("mid-grey");

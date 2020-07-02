@@ -53,7 +53,7 @@
       
       
       
-        <div class="govuk-grid-column-one-half">
+       <div class="govuk-grid-column-one-half">
     
 		    <div class="scenario-panel">
 					 <h2 class="govuk-heading-s">Make a payment</h2>
@@ -62,7 +62,69 @@
 					 
 						 	<div class="warning-message info-alert">
 								
-								 	<p>You have made a payment to cover:<br><b>June 2020</b></p>
+								 	<p>A minimum payment of <b>&pound;30</b> is due for:<br><b>July 2020</b></p>
+								 	
+								 	<span class="counter"><b>31</b>days</span>
+								 	
+								 </div>
+								 
+								 <p class="statement">This could be spread over multiple payments within the month</p>
+							   					 
+	
+		            <span><a href="choice-setup" class="secondary-invert">Choose a payment option</a></span>		             
+					 </div>
+				 </div>	 
+				 
+        </div>
+        
+        
+        
+      <div class="govuk-grid-column-one-half">
+    
+		    <div class="scenario-panel">
+					 <h2 class="govuk-heading-s">Make a payment</h2>
+					 
+					 <div class="scenario-inner-panel">
+					 
+						 	<div class="warning-message todo-alert">
+								
+								 	<p>Another payment of <b>&pound;10</b> is due for:<br><b>July 2020</b></p>
+								 	
+								 	<span class="counter"><b>30</b>days</span>
+								 	
+								 </div>
+								 
+								 <p class="statement">You should try to pay this amount to prevent higher payments going forward.</p>
+							   					 
+	
+		            <span><a href="choice-setup" class="secondary-invert">Choose a payment option</a></span>		             
+					 </div>
+				 </div>	 
+				 
+        </div>
+
+        
+      </div>
+      
+      
+      
+      
+       <div class="govuk-grid-row">
+      
+      
+      
+      
+      
+        <div class="govuk-grid-column-one-half">
+    
+		    <div class="scenario-panel">
+					 <h2 class="govuk-heading-s">Make a payment</h2>
+					 
+					 <div class="scenario-inner-panel">
+					 
+						 	<div class="warning-message complete-alert">
+								
+								 	<p>You have paid the minimum amount for:<br><b>July 2020</b></p>
 								 </div>
 								 
 								 <p class="statement">You can still make more payments this month.</p>
@@ -76,39 +138,27 @@
         
         
         
-        <div class="govuk-grid-column-one-half">
+       <div class="govuk-grid-column-one-half">
     
 		    <div class="scenario-panel">
-					 <h2 class="govuk-heading-s">Last payment</h2>
+					 <h2 class="govuk-heading-s">Make a payment</h2>
 					 
 					 <div class="scenario-inner-panel">
-			
-					 	
-					 			
-					 		<table class="govuk-table">
-
-							  <tbody class="govuk-table__body">
-							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Amount</th>
-							      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
-							    </tr>
-							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Date</th>
-							      <td class="govuk-table__cell">12 March 2020</td>
-							    </tr>
-							   <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Type</th>
-							      <td class="govuk-table__cell">Flexible payment</td>
-							    </tr>
-
-							   
-							  </tbody>
-							</table>
-							
-																
+					 
+						 	<div class="warning-message">
+								
+								 	<p>You have failed to make a payment for:<br><b>July 2020</b></p>
+								 </div>
+								 
+								 <p class="statement">You need to contact Debt Management.</p>
+								 
+								  <ul class="govuk-list">
+									    <li>Telephone: 020 7946 0101</li>
+									    <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+									  </ul>
+							   					 
 	
-		             <span><a href="paymentHistory" class="secondary-invert">View your full payment history</a></span>
-		             
+		           <!-- <span><a href="choice-setup" class="secondary-invert dash-paid">Choose a payment option</a></span> -->		             
 					 </div>
 				 </div>	 
 				 
@@ -116,6 +166,7 @@
 
         
       </div>
+
       
       
       

@@ -7,9 +7,7 @@
 
 {% block content %}
 
-<div class="loginBar">
-		<p>Logged in as <span>Ashley Chamberlain</span> <a href="start">Sign out</a></p>
-	</div>
+
     
    <!-- <div class="clear-bar">
 	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
@@ -36,7 +34,7 @@
 									 </div>
 										<form class="form" action="#" method="post">
 							
-										<p>You will need your card details. Make sure you have enough money in your bank account to cover this payment.</p>
+										<p>Make sure you have enough money in your bank account to cover this payment.</p>
 										
 										<a href="fullFinish" class="govuk-button">
 										  Continue
@@ -53,7 +51,7 @@
 									{% elif data['payment-options']=='flexible-amount'%}
 									
 		
-									<h1 class="govuk-heading-xl">Pay a flexible amount</h1>
+									<h1 class="govuk-heading-xl">Pay in a flexible way</h1>
 	   
 									    <div class="govuk-inset-text">
 										 Total amount owed: <span class="total-amount">&pound;120.00</span>
@@ -72,44 +70,32 @@
 												    </legend>
 												    
 												    <span id="changed-name-hint" class="govuk-hint">
-								      You will need your card details.<br>Make sure you have enough money in your bank account to cover this payment.
+								     Make sure you have enough money in your bank account to cover this payment.
 								    </span>
 
 												    
 												     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 												    <div class="govuk-radios">
-												      <div class="govuk-radios__item">
-												        <input class="govuk-radios__input" id="fivepound" name="how-much" type="radio" value="5">
-												        <label class="govuk-label govuk-radios__label" for="fivepound">
-												          &pound;5.00
-												        </label>
-												      </div>
-												      <div class="govuk-radios__item">
-												        <input class="govuk-radios__input" id="tenpound" name="how-much" type="radio" value="10">
-												        <label class="govuk-label govuk-radios__label" for="tenpound">
-												          &pound;10.00												        </label>
-												      </div>
-												      <div class="govuk-radios__item">
-												        <input class="govuk-radios__input" id="twentypound" name="how-much" type="radio" value="20">
-												        <label class="govuk-label govuk-radios__label" for="twentypound">
-												          &pound;20.00
-												        </label>
-												      </div>
+
 												      <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="thirtypound" name="how-much" type="radio" value="30">
-												        <label class="govuk-label govuk-radios__label" for="thirtypound">
-												          &pound;30.00
+												        <label class="govuk-label govuk-radios__label govuk-label--s" for="thirtypound">
+												          &pound;10.00
 												        </label>
+												        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
+				          This is the minimum amount that will cover you for the month
+				        </span>
 												      </div>
-												      <div class="govuk-radios__divider">or</div>
+									
 												      
 												      
 												     
 								      <div class="govuk-radios__item">
 								        <input class="govuk-radios__input" id="otherAmount" name="how-much" type="radio" value="other-amount" data-aria-controls="conditional-how-much">
-								        <label class="govuk-label govuk-radios__label" for="otherAmount">
+								        <label class="govuk-label govuk-radios__label govuk-label--s" for="otherAmount">
 								          Pay a different amount
 								        </label>
+		
 								      </div>
 								      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-much">
 								       
@@ -118,9 +104,9 @@
 								       
 								       
 								       <fieldset class="govuk-fieldset">
-											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+											          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
 												      <h1 class="govuk-fieldset__heading">
-												        Enter the amount you want to pay
+												        Enter the amount you can afford
 												      </h1>
 												    </legend>
 													
