@@ -481,6 +481,11 @@
 
 .summary-table {
 	margin-top: 30px;
+	.textNumber {
+		display: block;
+		color: govuk-colour("dark-grey");
+		margin-top: 2px;
+	}
 }
 
 
