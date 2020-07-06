@@ -90,11 +90,31 @@
 							  <tbody class="govuk-table__body">
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Amount</th>
-							      <td class="govuk-table__cell">£30.00</td>
+							      <td class="govuk-table__cell">
+							      
+							      {% if data['how-much']=='thirty'%}
+		    
+		    &pound;30
+
+			{% elif data['how-much']=='other-amount'%}
+			
+			&pound;{{ data['payment-amount'] }}
+			
+			
+			{% else %}
+			
+			
+			
+			{% endif %}
+			
+							      </td>							      
+							      
+							      
+							      
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Date</th>
-							      <td class="govuk-table__cell">1 July 2020</td>
+							      <td class="govuk-table__cell">8 July 2020</td>
 							    </tr>
 							   <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Type</th>

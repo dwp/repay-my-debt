@@ -108,9 +108,19 @@
 
 		  </tbody>
 		</table>
+
+			{% if data['how-much']=='other-amount'%}
+			
+			<div class="govuk-inset-text">This payment is lower than the suggest amount &ndash; try to make more payments this month if you can.</div>
+			
+			
+			{% else %}
+			
+			
+			
+			{% endif %}
 		
 		
-		<div class="govuk-inset-text">This payment is lower than the suggest amount &ndash; try to make more payments this month if you can.</div>
 
 
 

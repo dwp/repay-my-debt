@@ -26,27 +26,24 @@
 	   
 	   
 	   
-	  <!-- <div class="number-display">
+	  <div class="number-display">
 	   	
 	   	<ul class="govuk-list">
 	   		<li>Payments made
-	   			<span>1</span>
+	   			<span>6</span>
 	   		</li>
-	   		<li>Payments missed
-	   			<span>0</span>
-	   		</li>
-	   		<li>Average payment
-	   			<span>£{{ data['payment-amount'] }}</span>
+	   		<li>Monthly average
+	   			<span>£25.00</span>
 	   		</li>
 	   		<li>Total repaid
-	   			<span>£{{ data['payment-amount'] }}</span>
+	   			<span>£150.00</span>
 	   		</li>
-	   		<li>Left to pay
-	   			<span>£90.00</span>
+	   		<li class="blueUpdate">Left to pay
+	   			<span>£30.00</span>
 	   		</li>
 	   	</ul>
 	   	
-	   </div> -->
+	   </div>
 	   
 	   
     
@@ -75,12 +72,69 @@
     <tr class="govuk-table__row">
     
       
-      <td class="govuk-table__cell">26 June 2020</td>
+      <td class="govuk-table__cell">8 July 2020</td>
 
 
-      <td class="govuk-table__cell govuk-table__cell--numeric">£{{ data['payment-amount'] }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">
+	      
+	      {% if data['how-much']=='thirty'%}
+		    
+		    &pound;30
+
+			{% elif data['how-much']=='other-amount'%}
+			
+			&pound;{{ data['payment-amount'] }}
+			
+			
+			{% else %}
+			
+			
+			
+			{% endif %}
+	      
+      </td>
       
     
+    </tr>
+    
+     <tr class="govuk-table__row">  
+      
+      <td class="govuk-table__cell">26 June 2020</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
+         
+    </tr>
+    
+    <tr class="govuk-table__row">  
+      
+      <td class="govuk-table__cell">26 May 2020</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
+         
+    </tr>
+    
+    <tr class="govuk-table__row">  
+      
+      <td class="govuk-table__cell">20 April 2020</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10</td>
+         
+    </tr>
+    
+    <tr class="govuk-table__row">  
+      
+      <td class="govuk-table__cell">7 April 2020</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20</td>
+         
+    </tr>
+    
+    <tr class="govuk-table__row">  
+      
+      <td class="govuk-table__cell">2 March 2020</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
+         
     </tr>
 
     

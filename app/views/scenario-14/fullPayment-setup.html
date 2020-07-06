@@ -51,6 +51,7 @@
 									{% elif data['payment-options']=='flexible-amount'%}
 									
 		
+									
 									<h1 class="govuk-heading-xl">Pay in a flexible way</h1>
 	   
 									    <div class="govuk-inset-text">
@@ -58,7 +59,7 @@
 										 </div>
    
    	
-											<form class="form" action="paymentDetail-alt" method="post">
+											<form class="form" action="paymentReminders" method="post">
 								
 											
 											<div class="govuk-form-group">
@@ -78,12 +79,12 @@
 												    <div class="govuk-radios">
 
 												      <div class="govuk-radios__item">
-												        <input class="govuk-radios__input" id="thirtypound" name="how-much" type="radio" value="30">
+												        <input class="govuk-radios__input" id="thirtypound" name="how-much" type="radio" value="thirty">
 												        <label class="govuk-label govuk-radios__label govuk-label--s" for="thirtypound">
-												          &pound;10.00
+												          &pound;30.00
 												        </label>
 												        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				         This is the suggested payment amount
+				          This is the suggested payment amount
 				        </span>
 												      </div>
 									
@@ -95,7 +96,6 @@
 								        <label class="govuk-label govuk-radios__label govuk-label--s" for="otherAmount">
 								          Pay a different amount
 								        </label>
-		
 								      </div>
 								      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-much">
 								       
@@ -135,7 +135,8 @@
 											<button class="govuk-button" data-module="govuk-button">
 											  Continue
 											</button>
-											</form>								
+											</form>
+									
 									<!--// Flexible amount end -->
 									
 									

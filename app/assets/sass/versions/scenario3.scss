@@ -587,6 +587,11 @@ margin: 30px 0 50px 0;
 		background:  govuk-colour("light-grey");
 		text-align: center;
 		font-size: 22px;
+		
+		&.blueUpdate {
+			background:  govuk-colour("blue");
+			color: #fff;
+		}
 
 
 		span {
