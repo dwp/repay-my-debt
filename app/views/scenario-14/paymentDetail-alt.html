@@ -37,25 +37,79 @@
 		      <td class="govuk-table__cell">Flexible amount</td>
 		      <td class="govuk-table__cell">&nbsp;</td>
 		    </tr>
+		    
+		    
+		    
+		    
+		    
 
 		  <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment amount</th>
-		      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
+		      <td class="govuk-table__cell">
+			      
+			      
+			{% if data['how-much']=='thirty'%}
+		    
+		    &pound;30
+
+			{% elif data['how-much']=='other-amount'%}
+			
+			&pound;{{ data['payment-amount'] }}
+			
+			
+			{% else %}
+			
+			
+			
+			{% endif %}
+			      
+			      
+		      </td>
 		      <td class="govuk-table__cell"><a href="flexibleStart">Change</a></td>
 		    </tr>
+
 		    
 		    
-		    <tr class="govuk-table__row">
-		      <th scope="row" class="govuk-table__header">Payment reminder</th>
-		      <td class="govuk-table__cell">Text message<span class="textNumber">07890 000 000</span></td>
-		       <td class="govuk-table__cell"><a href="paymentReminders">Change</a></td>
+		<tr class="govuk-table__row">
+		    <th scope="row" class="govuk-table__header">Payment reminder</th>
+			<td class="govuk-table__cell">
+			
+			{% if data['how-contacted']=='yesReminder'%}
+			
+			
+			
+			
+				{% if data['citizenChoice']=='email'%}  
+			   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
+			    {% elif data['citizenChoice']=='textMessage'%}
+			     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
+			    {% else %}
+			    {% endif %}
+			    
+			    
+			    
+	
+				{% elif data['how-contacted']=='noReminder'%}
+				
+				No
+				
+				
+				{% else %}
+				
+				
+				
+				{% endif %}
+			
+			</td>
+			<td class="govuk-table__cell"><a href="paymentReminders">Change</a></td>
 		    </tr>
+
 
 
 		  </tbody>
 		</table>
 		
-
+		
 
 
 

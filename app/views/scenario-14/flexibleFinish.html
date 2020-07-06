@@ -53,15 +53,80 @@
 		  <tbody class="govuk-table__body">
 		  
 		  
-		  <tr class="govuk-table__row">
+		  
+		   <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment type</th>
 		      <td class="govuk-table__cell">Flexible amount</td>
+		      <td class="govuk-table__cell">&nbsp;</td>
+		    </tr>
+		    
+		    
+		    
+		    
+		    
+
+		  <tr class="govuk-table__row">
+		      <th scope="row" class="govuk-table__header">Payment amount</th>
+		      <td class="govuk-table__cell">
+			      
+			      
+			{% if data['how-much']=='thirty'%}
+		    
+		    &pound;30
+
+			{% elif data['how-much']=='other-amount'%}
+			
+			&pound;{{ data['payment-amount'] }}
+			
+			
+			{% else %}
+			
+			
+			
+			{% endif %}
+			      
+			      
+		      </td>
+	
+		    </tr>
+
+		    
+		    
+		<tr class="govuk-table__row">
+		    <th scope="row" class="govuk-table__header">Payment reminder</th>
+			<td class="govuk-table__cell">
+			
+			{% if data['how-contacted']=='yesReminder'%}
+			
+			
+			
+			
+				{% if data['citizenChoice']=='email'%}  
+			   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
+			    {% elif data['citizenChoice']=='textMessage'%}
+			     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
+			    {% else %}
+			    {% endif %}
+			    
+			    
+			    
+	
+				{% elif data['how-contacted']=='noReminder'%}
+				
+				No
+				
+				
+				{% else %}
+				
+				
+				
+				{% endif %}
+			
+			</td>
+
 		    </tr>
 		  
-		  <tr class="govuk-table__row">
-		      <th scope="row" class="govuk-table__header">Amount</th>
-		      <td class="govuk-table__cell">£{{ data['payment-amount'] }}</td>
-		    </tr>
+		 
 		 
 		
 		    <tr class="govuk-table__row">
@@ -71,7 +136,7 @@
 		    
 		    <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment date</th>
-		      <td class="govuk-table__cell">27 February 2020</td>
+		      <td class="govuk-table__cell">27 July 2020</td>
 		    </tr>
 		  </tbody>
 		</table>
