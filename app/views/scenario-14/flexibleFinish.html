@@ -92,42 +92,7 @@
 
 		    
 		    
-		<tr class="govuk-table__row">
-		    <th scope="row" class="govuk-table__header">Payment reminder</th>
-			<td class="govuk-table__cell">
-			
-			{% if data['how-contacted']=='yesReminder'%}
-			
-			
-			
-			
-				{% if data['citizenChoice']=='email'%}  
-			   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
-			    {% elif data['citizenChoice']=='textMessage'%}
-			     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
-			    {% else %}
-			    {% endif %}
-			    
-			    
-			    
-	
-				{% elif data['how-contacted']=='noReminder'%}
-				
-				No
-				
-				
-				{% else %}
-				
-				
-				
-				{% endif %}
-			
-			</td>
-
-		    </tr>
-		  
-		 
-		 
+				 
 		
 		    <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment to</th>
@@ -136,7 +101,7 @@
 		    
 		    <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment date</th>
-		      <td class="govuk-table__cell">27 July 2020</td>
+		      <td class="govuk-table__cell">13 July 2020</td>
 		    </tr>
 		  </tbody>
 		</table>

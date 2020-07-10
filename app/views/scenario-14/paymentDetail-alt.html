@@ -111,7 +111,10 @@
 
 			{% if data['how-much']=='other-amount'%}
 			
-			<div class="govuk-inset-text">This payment is lower than the suggested amount &ndash; try to make more payments this month if you can as this will clear your debt quicker</div>
+			<div class="warning-message info-alert">
+			<h2 class="govuk-heading-s">This payment is lower than the suggested amount</h2>
+			<p>Try to make more payments this month if you can as this will clear your debt quicker</p>
+			</div>
 			
 			
 			{% else %}
@@ -126,11 +129,11 @@
 
 		<h2 class="govuk-heading-m">Declaration</h2>
 
-		<p>By continuing, you confirm that:</p>
+		<p>By continuing, you confirm that you will:</p>
 
 		<ul class="govuk-list govuk-list--bullet mb30">
-      <li>you will make at least one payment each month &ndash; this does not have to be the same amount</li>
-			<li>you will let us know immediately if your financial situation changes</li>
+      <li>make at least one affordable payment each month</li>
+			<li>let us know immediately if your financial situation changes</li>
 		</ul>
 
 
