@@ -31,7 +31,7 @@
             Your payment was successful
           </h1>
           <div class="govuk-panel__body">
-            This will take up to 48 hours to update your account
+            This will take 2 to 5 working days to update your account
           </div>
         </div>
 
@@ -40,7 +40,7 @@
         <h2 class="govuk-heading-m">What happens next</h2>
 
         <p class="govuk-body">
-         We have sent you a confirmation email.
+         We have sent you a confirmation email &ndash; you should allow your account to update before logging back in.
         </p>
         
         
@@ -70,9 +70,9 @@
 		      <td class="govuk-table__cell">
 			      
 			      
-			{% if data['how-much']=='thirty'%}
+			{% if data['how-much']=='fifty'%}
 		    
-		    &pound;30
+		    &pound;50
 
 			{% elif data['how-much']=='other-amount'%}
 			
@@ -101,14 +101,14 @@
 		    
 		    <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment date</th>
-		      <td class="govuk-table__cell">13 July 2020</td>
+		      <td class="govuk-table__cell">27 July 2020</td>
 		    </tr>
 		  </tbody>
 		</table>
 		
 
 		
-		<p><a href="dashboard3" class="govuk-button">Go to account home</a></p>
+		<p><a href="/index" class="govuk-button">Sign out</a></p>
 
         
 
