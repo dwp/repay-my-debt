@@ -190,6 +190,9 @@
 	&.dash-paid {
 		margin-top: 31px;
 	}
+	&.dash-history {
+		margin-top: 23px;
+	}
 }
 
 .attention-invert {
@@ -487,6 +490,7 @@
 		color: govuk-colour("dark-grey");
 		margin-top: 2px;
 	}
+
 }
 
 
@@ -706,6 +710,11 @@ margin: 30px 0 50px 0;
 	&.dash-paid {
 		margin-top: 0;
 	}
+	
+	&.dash-history {
+		margin-top: 0;
+	}
+	
   }
   
   

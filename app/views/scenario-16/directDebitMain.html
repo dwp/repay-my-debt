@@ -1,0 +1,204 @@
+
+{% extends "layout-4.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+   <!-- <div class="clear-bar">
+	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
+	   		<p>What you owe:
+	   				<span>&pound;120.00</span></p>
+
+	   </div> -->
+
+
+	   <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+
+		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+
+
+
+
+									{% if data['how-much2']=='other-amount'%}
+									<h1 class="govuk-heading-xl">Payment amount is low</h1>
+								
+
+									  <p>We would like to talk to you to discuss your situation and what you can afford.</p>
+
+
+					   				<h2 class="govuk-heading-m">Debt Management</h2>
+									  <ul class="govuk-list">
+									    <li>Telephone: 0800 916 0647</li>
+									    <li>Monday to Friday, 10am to 4pm</li>
+									  </ul>
+									 
+			</div>
+
+
+									  
+									
+			
+
+										<!--// Full amount end -->
+
+
+
+
+
+
+									{% else %}
+
+									<h1 class="govuk-heading-xl">Direct Debit summary</h1>
+
+									{% include "includes/amountOwed.html" %}
+									
+									
+									 <table class="govuk-table summary-table mb40">
+										  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
+								
+										  <tbody class="govuk-table__body">
+										  
+										
+
+										    
+										    
+								
+										  <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
+										      <td class="govuk-table__cell">
+											      
+											      
+											{% if data['how-much2']=='oneHundredPound'%}
+										    
+										    6 payments of &pound;100
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											12 payments of &pound;50
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											18 payments of &pound;25
+
+											
+											{% else %}
+											
+											No amount entered
+											
+											{% endif %}
+											      
+											      
+										      </td>
+										      
+										    </tr>
+										    
+										    
+										     <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">First payment date</th>
+										      <td class="govuk-table__cell">
+											      
+											      
+											September 2020
+											      
+											      
+										      </td>
+										     
+										    </tr>
+										    
+										    
+										  										    
+										    <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Expected final payment date</th>
+										      <td class="govuk-table__cell">
+											      
+											      
+											{% if data['how-much2']=='oneHundredPound'%}
+										    
+										    February 2021
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											September 2021
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											February 2022
+
+											
+											{% else %}
+											
+											No amount entered
+											
+											{% endif %}
+											      
+											      
+										      </td>
+										      
+										    </tr>
+
+								
+	
+								
+								
+								
+										  </tbody>
+										</table>
+										
+										
+										
+										<div class="warning-message info-alert">
+
+			<p>You can choose the date the Direct Debit payment comes out of your account when you enter your bank details</p>
+			
+			</div>
+
+													
+													
+													
+													
+													
+													
+													
+										<h2 class="govuk-heading-m">Declaration</h2>
+
+		<p>By continuing, you confirm that you will:</p>
+
+		<ul class="govuk-list govuk-list--bullet mb30">
+			<li>pay the agreed monthly amount</li>
+			<li>let us know immediately if you’re struggling to keep up with payments</li>
+		</ul>
+
+
+		<div class="govuk-warning-text">
+		  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+		  <strong class="govuk-warning-text__text">
+		    <span class="govuk-warning-text__assistive">Warning</span>
+		    If you do not keep up with your payments, we will ask your employer to make deductions from your pay or ask a debt collection agency to collect this money for us.
+		  </strong>
+		</div>
+
+
+			<p><a href="directFinish" class="govuk-button">Continue to pay</a></p>							
+									
+									
+
+
+									{% endif %}
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

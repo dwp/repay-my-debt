@@ -28,9 +28,7 @@
 									{% if data['choose-what']=='want-pay'%}
 									 <h1 class="govuk-heading-xl">Payment options </h1>
 
-	    <div class="govuk-inset-text">
-		 Total amount owed: <span class="total-amount">&pound;1000.00</span>
-		 </div>
+	    {% include "includes/amountOwed.html" %}
 
 
       <div class="govuk-grid-row">
@@ -60,7 +58,7 @@
 				      <div class="govuk-radios__item">
 				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
 				        <label class="govuk-label govuk-radios__label" for="fixed-plan">
-				          Set up a direct debit
+				          Set up a Direct Debit
 				        </label>
 				      </div>
 				      <div class="govuk-radios__item">

@@ -31,9 +31,7 @@
 
 									<h1 class="govuk-heading-xl">Make a flexible payment</h1>
 	   
-									    <div class="govuk-inset-text">
-										 Total amount owed: <span class="total-amount">&pound;1000.00</span>
-										 </div>
+									    {% include "includes/amountOwed.html" %}
    
    	
 											<form class="form" action="paymentReminders" method="post">
@@ -61,7 +59,7 @@
 												          &pound;50.00
 												        </label>
 												        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          This is the suggested amount based on what you were paying on Universal Credit
+				          This suggested amount is based on clearing your debt<br>over a 12 month period
 				        </span>
 												      </div>
 									
