@@ -26,10 +26,59 @@
 		
 		
 		
+		<h1 class="govuk-heading-xl">Pay in a flexible way</h1>
+	   
+									    <div class="govuk-inset-text">
+										 Total amount owed: <span class="total-amount">&pound;980.00</span>
+										 </div>
+										 
+										 
+										 <div class="warning-message info-alert">
+											 <h2 class="govuk-heading-s">Suggested amount</h2>
+											 <p>The suggested amount based on what you were paying on Universal Credit is: <b>&pound;30.00</b> </p>
+											</div>
+											
+											<div class="warning-message info-alert">
+											 <h2 class="govuk-heading-s">Suggested amount</h2>
+											 <p>The suggested amount based on clearing your debt over a 12 month period is: <b>&pound;30.00</b> </p>
+											</div>
+   
+   	
+										<form class="form" action="paymentReminders" method="post">
+								
+											
+											<div class="govuk-form-group">
+										          <fieldset class="govuk-fieldset">
+											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+												      <h1 class="govuk-fieldset__heading">
+												        How much do you want to pay?
+												      </h1>
+												    </legend>
+													
+
+											         <div id="example-question" class="form-group inline">
+											            <span class="c-form-input-denote govuk-body">£</span>
+											            <input class="form-control c-form-input-denote__input govuk-input form-control-1-4 govuk-input--width-10" type="number" name="payment-amount">
+											          </div>
+										
+										          </fieldset>
+									        </div>
+											
+											
+											<button class="govuk-button" data-module="govuk-button">
+											  Continue
+											</button>
+											</form>
+											
+											
+											
+		
+		
+		
 
 									
 
-									<h1 class="govuk-heading-xl">Make a flexible payment</h1>
+							<!--		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
 	   
 									    {% include "includes/amountOwed.html" %}
    
@@ -44,11 +93,7 @@
 												        How much do you want to pay?
 												      </h1>
 												    </legend>
-												    
-												   <!-- <span id="changed-name-hint" class="govuk-hint">
-								     Make sure you have enough money in your account to cover this payment
-								    </span> -->
-
+					
 												    
 												     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 												    <div class="govuk-radios">
@@ -71,7 +116,7 @@
 								        <label class="govuk-label govuk-radios__label govuk-label--s" for="otherAmount">
 								          Pay a different amount
 								        </label>
-										<!-- This can be higher or lower than the suggested amount based on what you can afford -->
+							
 								      </div>
 								      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-much">
 								       
@@ -112,6 +157,8 @@
 											  Continue
 											</button>
 											</form>
+											
+											-->
 									
 									<!--// Flexible amount end -->
 									
