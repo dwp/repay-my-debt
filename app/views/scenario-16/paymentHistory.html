@@ -29,9 +29,9 @@
 	  <div class="number-display">
 	   	
 	   	<ul class="govuk-list">
-	   		<li>Payments made
+	   		<!--<li>Payments made
 	   			<span>6</span>
-	   		</li>
+	   		</li> -->
 	   		
 	   		<li>Total repaid
 	   			<span>£150.00</span>
@@ -52,93 +52,210 @@
   <h2 class="govuk-heading-m">All payments</h2>
   
   
+	
 	 <table class="govuk-table summary-pay">
-  
-  
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-    
-      <th class="govuk-table__header" scope="col">Date of payment</th>
-
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount</th>
-    
-    </tr>
-  </thead>
-  
-  <tbody class="govuk-table__body">
-    
-    <tr class="govuk-table__row">
-    
-      
-      <td class="govuk-table__cell">27 July 2020</td>
-
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">
-	      
-	      {% if data['how-much']=='fifty'%}
-		    
-		    &pound;50
-
-			{% elif data['how-much']=='other-amount'%}
-			
-			&pound;{{ data['payment-amount'] }}
-			
-			
-			{% else %}
-			
-			
-			
-			{% endif %}
-	      
-      </td>
-      
-    
-    </tr>
-    
-     <tr class="govuk-table__row">  
-      
-      <td class="govuk-table__cell">26 June 2020</td>
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
-         
-    </tr>
-    
-    <tr class="govuk-table__row">  
-      
-      <td class="govuk-table__cell">26 May 2020</td>
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
-         
-    </tr>
-    
-    <tr class="govuk-table__row">  
-      
-      <td class="govuk-table__cell">20 April 2020</td>
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10</td>
-         
-    </tr>
-    
-    <tr class="govuk-table__row">  
-      
-      <td class="govuk-table__cell">7 April 2020</td>
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20</td>
-         
-    </tr>
-    
-    <tr class="govuk-table__row">  
-      
-      <td class="govuk-table__cell">2 March 2020</td>
-
-      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;30</td>
-         
-    </tr>
-
-    
-        
-  </tbody>
-</table>
+		  
+		  
+							  <thead class="govuk-table__head">
+							    <tr class="govuk-table__row">
+							    
+							      <th class="govuk-table__header" scope="col">Date of payment</th>
+							
+							      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount</th>
+							      
+							        <th class="govuk-table__header govuk-table__header--numeric" scope="col">Balance</th>
+							      
+							    
+							    </tr>
+							  </thead>
+							  
+							  <tbody class="govuk-table__body">
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">26 June 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;25.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">0.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">11 May 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;25.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">8 April 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;35.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">3 March 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;45.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">5 Febuary 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;55.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">21 January 2020</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;65.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">16 December 2019</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;75.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">20 November 2019</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;85.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">14 October 2019</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;95.00</td>
+							      
+							    
+							    </tr>
+							    
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">2 September 2019</td>
+							
+							
+							     <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;105.00</td>					      
+							    
+							    </tr>
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">7 August 2019</td>
+							
+							
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;115.00</td>
+							      
+							    
+							    </tr>
+							    
+							    <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__cell">4 July 2019</td>
+							
+							
+							     <td class="govuk-table__cell govuk-table__cell--numeric">&pound;10.00</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;125.00</td>
+							      
+							    
+							    </tr>
+							    
+							     <tr class="govuk-table__row">
+							    
+							      
+							      <td class="govuk-table__header govuk-table__cell">Opening balance</td>
+							
+							
+							     <td class="govuk-table__cell govuk-table__cell--numeric">&ndash;</td>
+							      
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;135.00</td>
+							      
+							    
+							    </tr>
+							
+							    
+							        
+							  </tbody>
+							</table>
+	
+	
+	
+	
   </div>
 </div>			
 
