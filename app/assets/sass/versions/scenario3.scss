@@ -582,6 +582,37 @@
 
 
 
+.attention-card-list {
+	background: govuk-colour("blue");
+	padding: 3em 10em 3em 3em;
+	color: #fff;
+	.govuk-list {
+		color: #fff;
+	}
+	h1 {
+		color: #fff;
+	}
+
+
+	li {
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 40px;
+		padding-top: 10px;
+		position: relative;
+		
+	}
+	.notforme {
+		color: #fff;
+
+		&:hover {
+			color: govuk-colour("mid-grey");
+		}
+	}
+}
+
+
+
 .number-display {
 margin: 30px 0 50px 0;
 	li {
@@ -660,7 +691,7 @@ margin: 30px 0 50px 0;
 	}
 	
 	&.loggedDetail {
-		width: 40%;
+		width: 30%;
 		p {
 			span {
 				display: block;
