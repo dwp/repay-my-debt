@@ -19,41 +19,110 @@
 
 	   <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-three-quarters">
 
 
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+		
+		
+		
+		
+		
+									{% if data['how-much3']=='noAfford'%}
+									
+
+							<h1 class="govuk-heading-xl mb30">Help and support</h1>
+
+
+					   			<p>If you cannot pay, contact Debt Management to discuss the options available to you.</p>
+
+
+					   					<h2 class="govuk-heading-m">Debt Management</h2>
+									  <ul class="govuk-list">
+									  <li>Telephone: 0800 916 0647</li>
+									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
+									</ul>
+									<p class="govuk-body">
+									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+									</p>
+
+
+									{% else %}
+
+
+									
+		
+		
+		
+		
+		
+		
 
 
 
 		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
 
-									    <div class="govuk-inset-text">
-										 Total amount owed: <span class="total-amount">&pound;980.00</span>
-										 </div>
 
-										 
-										<!-- <div class="warning-message info-alert">
-											 <h2 class="govuk-heading-s">Suggested amount</h2>
-											 <p>The suggested amount based on what you were paying on Universal Credit is: <b>&pound;30.00</b> </p>
-											</div> -->
 
-											<div class="warning-message info-alert">
-											 <h2 class="govuk-heading-s">Suggested amount</h2>
-											 <p>The suggested amount based on clearing your debt over a 24 month period is: <b>&pound;30.00</b> </p>
+
+											<div class="flexibleBanner">
+											
+											
+											<ul class="govuk-list">
+												<li>
+													<h3>Total amount owed</h3>
+													<b>&pound;600.00</b>
+												</li>
+												<li>
+													<h3>Monthly payment target</h3>
+
+														{% if data['how-much3']=='FlexoneHundredPound'%}
+													    
+													    <b>&pound;100.00</b>
+													    
+											
+														{% elif data['how-much3']=='FlexfiftyPound'%}
+														
+														<b>&pound;50.00</b>
+														
+														
+														
+														{% elif data['how-much3']=='FlextwentyFivePound'%}
+														
+														<b>&pound;25.00</b>
+																	
+														
+														{% else %}
+														
+														<b>&pound;0.00</b>
+													
+														
+														{% endif %}
+								
+												</li>
+											</ul>
+											
 											</div>
+											
+											
+											
+											
 
 
 										<form class="form" action="paymentReminders" method="post">
 
 
 											<div class="govuk-form-group">
-										          <fieldset class="govuk-fieldset">
+										          <fieldset class="govuk-fieldset" aria-describedby="pay-hint">
 											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 												      <h1 class="govuk-fieldset__heading">
 												        How much do you want to pay?
 												      </h1>
 												    </legend>
+												    
+												   <div id="pay-hint" class="govuk-hint mb20">
+												   	 You can make multiple payments in a month to meet your target
+												    </div>
 
 
 											         <div id="example-question" class="form-group inline">
@@ -72,95 +141,7 @@
 
 
 
-
-
-
-
-
-
-							<!--		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
-
-									    {% include "includes/amountOwed.html" %}
-
-
-											<form class="form" action="paymentReminders" method="post">
-
-
-											<div class="govuk-form-group">
-												  <fieldset class="govuk-fieldset">
-												    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-												      <h1 class="govuk-fieldset__heading">
-												        How much do you want to pay?
-												      </h1>
-												    </legend>
-
-
-												     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-												    <div class="govuk-radios">
-
-												      <div class="govuk-radios__item">
-												        <input class="govuk-radios__input" id="fiftypound" name="how-much" type="radio" value="fifty">
-												        <label class="govuk-label govuk-radios__label govuk-label--s" for="fiftypound">
-												          &pound;50.00
-												        </label>
-												        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          This suggested amount is based on clearing your debt<br>over a 12 month period
-				        </span>
-												      </div>
-
-
-
-
-								      <div class="govuk-radios__item">
-								        <input class="govuk-radios__input" id="otherAmount" name="how-much" type="radio" value="other-amount" data-aria-controls="conditional-how-much">
-								        <label class="govuk-label govuk-radios__label govuk-label--s" for="otherAmount">
-								          Pay a different amount
-								        </label>
-
-								      </div>
-								      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-much">
-
-
-
-
-
-								       <fieldset class="govuk-fieldset">
-											          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
-												      <h1 class="govuk-fieldset__heading">
-												        Enter the amount
-												      </h1>
-												    </legend>
-
-
-											          <div id="example-question" class="form-group inline">
-											            <span class="c-form-input-denote govuk-body">£</span>
-											            <input class="form-control c-form-input-denote__input govuk-input form-control-1-4 govuk-input--width-10" type="number" name="payment-amount">
-											          </div>
-
-										          </fieldset>
-
-
-
-
-
-								      </div>
-									</div>
-
-
-
-												    </div>
-												  </fieldset>
-												</div>
-
-
-											<button class="govuk-button" data-module="govuk-button">
-											  Continue
-											</button>
-											</form>
-
-											-->
-
-									<!--// Flexible amount end -->
+{% endif %}
 
 
 
@@ -168,11 +149,7 @@
 
 
 
-
-
-
-
-
+						
 
 
     </div>
