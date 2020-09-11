@@ -75,7 +75,7 @@
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
-							      <td class="govuk-table__cell">5 October 2020</td>
+							      <td class="govuk-table__cell">{{ data['paymentDay'] }} November 2020</td>
 							    </tr>
 							  </tbody>
 							</table>	
@@ -103,7 +103,7 @@
 					 
 					 <div class="warning-message complete-alert">
 								
-								 	<p>A payment of &pound;50 was taken from your account on 5 September 2020</p>
+								 	<p>A payment of &pound;50 was taken from your account on {{ data['paymentDay'] }} October 2020</p>
 								 </div>
 					 	
 					 			
@@ -126,7 +126,7 @@
 							
 																
 	
-		             <span><a href="paymentHistoryDD" class="secondary-invert dash-history">View your full payment history</a></span>
+		             <span><a href="paymentHistoryDDfull" class="secondary-invert dash-history">View your full payment history</a></span>
 	
 				 
         </div>

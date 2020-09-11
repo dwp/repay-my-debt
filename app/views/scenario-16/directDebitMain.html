@@ -62,11 +62,12 @@
 
 
 									{% else %}
+									
+									<form class="form" action="directDebitDay" method="post">
 
 									<h1 class="govuk-heading-xl">Direct Debit summary</h1>
 
-									{% include "includes/amountOwed.html" %}
-									
+								
 									
 									 <table class="govuk-table summary-table mb40">
 										  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
@@ -74,7 +75,12 @@
 										  <tbody class="govuk-table__body">
 										  
 										
-
+											 <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Total amount owed</th>
+										      <td class="govuk-table__cell">&pound;600.00
+										      </td>
+											 </tr>
+										      
 										    
 										    
 								
@@ -114,7 +120,7 @@
 										      <td class="govuk-table__cell">
 											      
 											      
-											September 2020
+											{{ data['paymentDay'] }} October 2020
 											      
 											      
 										      </td>
@@ -130,16 +136,16 @@
 											      
 											{% if data['how-much2']=='oneHundredPound'%}
 										    
-										    February 2021
+										    {{ data['paymentDay'] }} March 2021
 								
 											{% elif data['how-much2']=='fiftyPound'%}
 											
-											September 2021
+											{{ data['paymentDay'] }} October 2021
 											
 											
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
-											September 2022
+											{{ data['paymentDay'] }} October 2022
 
 											
 											{% else %}
@@ -163,27 +169,39 @@
 										
 										
 										
-										<div class="warning-message info-alert">
+		<!--<div class="flexibleBanner">
+		
+		<p id="email-hint">You’ll be sent an email with confirmation of this agreement before the first payment is taken from your account</p>
 
-			<p>You can choose the date the Direct Debit payment comes out of your account when you enter your bank details</p>
-			
+		    <fieldset class="govuk-fieldset" aria-describedby="email-hint">
+			   <legend class="visually-hidden">Email address
+				    </legend>
+	
+		    <div class="govuk-form-group mb10">
+			  <label class="govuk-label govuk-label--s" for="emailAddy" aria-describedby="email-hint">
+			    Enter your email address
+			  </label>
+
+			  <input class="govuk-input govuk-input--width-20" id="emailAddy" name="emailAddy" type="text">
+
 			</div>
-
+										
+		    </fieldset> </div> -->
+										
+								
 													
 													
 													
 													
 													
-													
-													
-										<h2 class="govuk-heading-m">Declaration</h2>
+						<!--				<h2 class="govuk-heading-m">Declaration</h2>
 
 		<p>By continuing, you confirm that you will:</p>
 
 		<ul class="govuk-list govuk-list--bullet mb30">
 			<li>pay the agreed monthly amount</li>
 			<li>let us know immediately if you’re struggling to keep up with payments</li>
-		</ul>
+		</ul> -->
 
 
 		<div class="govuk-warning-text">
@@ -195,9 +213,9 @@
 		</div>
 
 
-			<p><a href="directFinish" class="govuk-button">Continue to pay</a></p>							
+			<p><a href="directFinish" class="govuk-button">Confirm</a></p>							
 									
-									
+		    </form>
 
 
 									{% endif %}

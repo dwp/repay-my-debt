@@ -92,7 +92,7 @@
 										      <td class="govuk-table__cell">
 											      
 											      
-											5 September 2020
+											{{ data['paymentDay'] }} September 2020
 											      
 											      
 										      </td>
@@ -108,16 +108,16 @@
 											      
 											{% if data['how-much2']=='oneHundredPound'%}
 										    
-										    5 February 2021
+										    {{ data['paymentDay'] }} March 2021
 								
 											{% elif data['how-much2']=='fiftyPound'%}
 											
-											5 September 2021
+											{{ data['paymentDay'] }} October 2021
 											
 											
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
-											5 September 2022
+											{{ data['paymentDay'] }} October 2022
 
 											
 											{% else %}
