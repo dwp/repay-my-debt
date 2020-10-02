@@ -36,12 +36,12 @@
 		  <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Start date</th>
 		      <td class="govuk-table__cell">
-			      
 
-			
+
+
 			1 November 2020
 
-			      
+
 		      </td>
 		      <td class="govuk-table__cell">&nbsp;</td>
 		    </tr>
@@ -50,65 +50,65 @@
 			 <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Monthly payment target</th>
 		      <td class="govuk-table__cell">
-			      
+
 			      {% if data['how-much3']=='FlexoneHundredPound'%}
-													    
+
 													    &pound;100.00
-													    
-											
+
+
 														{% elif data['how-much3']=='FlexfiftyPound'%}
-														
+
 														&pound;50.00
-														
-														
-														
+
+
+
 														{% elif data['how-much3']=='FlextwentyFivePound'%}
-														
+
 														&pound;25.00
-																	
-														
+
+
 														{% else %}
-														
+
 														&pound;30.00
-													
-														
+
+
 														{% endif %}
-			      
+
 		      </td>
 		      <td class="govuk-table__cell"><a href="flexSuggested">Change</a></td>
 		    </tr>
-		    
-		    
+
+
 		<tr class="govuk-table__row">
 		    <th scope="row" class="govuk-table__header">Payment reminders</th>
 			<td class="govuk-table__cell">
-			
+
 			{% if data['how-contacted']=='yesReminder'%}
-			
-			
-			
-			
-				{% if data['citizenChoice']=='email'%}  
+
+
+
+
+				{% if data['citizenChoice']=='email'%}
 			   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
 			    {% elif data['citizenChoice']=='textMessage'%}
 			     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
 			    {% else %}
 			    {% endif %}
-			    
-			    
-			    
-	
+
+
+
+
 				{% elif data['how-contacted']=='noReminder'%}
-				
+
 				No
-				
-				
+
+
 				{% else %}
-				
-				
-				
+
+
+
 				{% endif %}
-			
+
 			</td>
 			<td class="govuk-table__cell"><a href="paymentReminders">Change</a></td>
 		    </tr>
@@ -119,9 +119,9 @@
 		</table>
 
 
-		
 
-		
+
+
 
 
 
@@ -130,7 +130,7 @@
 		<p>By continuing, you confirm that you will:</p>
 
 		<ul class="govuk-list govuk-list--bullet mb30">
-      <li> you must sign in each month and make at least one payment</li>
+      <li>sign in each month and make at least one payment</li>
 			<li>let us know immediately if you’re struggling to keep up with payments</li>
 		</ul>
 
