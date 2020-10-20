@@ -7,6 +7,9 @@
 
 {% block content %}
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
 
 
    <!-- <div class="clear-bar">
@@ -15,161 +18,121 @@
 	   				<span>&pound;120.00</span></p>
 
 	   </div> -->
+	    <span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 
 
-	   <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-full">
-
-
-		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+      <div class="govuk-grid-row">
 
 
 
 
-									{% if data['help-choice']=='help-struggling'%}
+        <div class="govuk-grid-column-two-thirds">
 
 
-								<div class="attention-card-list">
 
 
-											<h1 class="govuk-heading-l mb30">A flexible payment plan may work for you</h1>
+	   <h1 class="govuk-heading-xl">Help and support </h1>
 
-											<ul class="govuk-list govuk-list--bullet">
-												<li>This is not a fixed plan &ndash; you must sign in each month and make at least one payment</li>
-												<li class="two">Choose a monthly payment target which works for you &ndash; you can make multiple payments in a month to meet your target</li>
-												<li class="three">You can pay less than your monthly target during difficult times but regular low payments mean we may contact you to discuss your situation</li>
 
-												<!--<li class="three">This is not a fixed plan and your payments can change</li>-->
-												<li class="four">Sign up for helpful payment reminders</li>
-												<!--<li class="five">If you do not keep up with your payments, we will ask your employer to make deductions from your pay or ask a debt collection agency to collect this money for us</li>-->
-											</ul>
 
-											<p><a href="flexSuggestedTarget" class="attention-invert">Continue</a></p>
-											<p><a href="helpEnd" class="notforme">This option is not for me</a></p>
 
+					<div class="govuk-inset-text">
+					  <h2 class="govuk-heading-m">If you're struggling to pay, contact Debt Management immediately.</h2>
+					  <ul class="govuk-list">
+					    <li>Telephone: 020 7946 0101</li>
+					    <li>Textphone: 020 7946 0102</li>
+					    <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
+					  </ul>
+
+					</div>
+
+
+
+
+
+
+					<form class="form" action="/scenario-8/paymentDetail" method="post">
+
+
+						<div class="govuk-form-group">
+					          <fieldset class="govuk-fieldset">
+						          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							      <h1 class="govuk-fieldset__heading">
+							        Or alternatively, we can call you
+							      </h1>
+							    </legend>
+
+						          <div class="govuk-form-group">
+						          <label class="govuk-label govuk-label--s" for="contact-by-email">
+						            Contact number
+						          </label>
+						          <input class="govuk-input govuk-input--width-20" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false">
+						        </div>
+
+
+
+						        <div class="govuk-form-group">
+										  <fieldset class="govuk-fieldset">
+										    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+										      <h1 class="govuk-fieldset__heading">
+										       When will you be available?
+										      </h1>
+										    </legend>
+
+
+										    <div class="govuk-radios">
+										      <div class="govuk-radios__item">
+										        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england" aria-describedby="suitable-time">
+										        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+										          Morning
+										        </label>
+										      </div>
+										      <div class="govuk-radios__item">
+										        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland" aria-describedby="suitable-time">
+										        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+										          Afternoon
+										        </label>
+										      </div>
+										      <div class="govuk-radios__item">
+										        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales" aria-describedby="suitable-time">
+										        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+										          Evening
+										        </label>
+										      </div>
+
+										    </div>
+										  </fieldset>
 										</div>
 
-									<!--// flexible suggestion amount end -->
-
-
-
-										<!--// Struggling to pay end -->
-
-
-
-
-									{% elif data['help-choice']=='help-understanding'%}
-
-									<h1 class="govuk-heading-xl mb30">I do not understand my debt</h1>
-
-
-
-					   					<div class="list-display">
-
-
-
-									        	<h2 class="govuk-heading-m">Universal Credit</h2>
-
-
-									        	<table class="govuk-table">
-												  <caption class="govuk-table__caption"><span class="visually-hidden">Details of debt</span></caption>
-												  <thead class="govuk-table__head">
-
-												  <tbody class="govuk-table__body">
-
-												  <tr class="govuk-table__row">
-												      <th scope="row" class="govuk-table__header">Amount owed</th>
-												      <td class="govuk-table__cell">&pound;600.00</td>
-												    </tr>
-
-												     <tr class="govuk-table__row">
-												      <th scope="row" class="govuk-table__header">Debt type</th>
-												      <td class="govuk-table__cell">Advance payment</td>
-												    </tr>
-
-												  <tr class="govuk-table__row">
-												      <th scope="row" class="govuk-table__header">Date debt started</th>
-												      <td class="govuk-table__cell">10 October 2019</td>
-												    </tr>
-
-
-												  </tbody>
-												</table>
-
-												<p>If you have any questions, contact Universal Credit directly:</p>
-
-
-												<ul class="govuk-list">
-												  <li>Telephone: 0800 328 5644</li>
-												    <li>Textphone: 0800 328 1344</li>
-												    <li>Monday to Friday, 8am to 6pm (closed on bank holidays)</li>
-												</ul>
-
-											<p class="govuk-body">
-											  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-											</p>
-
-
-											</div>
-
-
-										<p><a href="index" class="govuk-button">Finish</a></p>
-
-									<!--// Flexible amount end -->
 
 
 
 
 
-									{% elif data['help-choice']=='help-advice'%}
+					          </fieldset>
+				        </div>
 
 
-									  <h1 class="govuk-heading-xl mb30">Help and support</h1>
+					<!--	<button class="govuk-button" data-module="govuk-button">
+						  Continue
+						</button> -->
 
-
-					   			<p>If you cannot pay, you can temporarily reduce your payments. Alternatively, contact Debt Management to discuss the <br>options available to you.</p>
-
-
-					   					<h2 class="govuk-heading-m">Debt Management</h2>
-									  <ul class="govuk-list">
-										  <li>Telephone: 0800 916 0647</li>
-										  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-										</ul>
-										<p class="govuk-body">
-										  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-										</p>
+						</form>
 
 
 
-					   				<h2 class="govuk-heading-m">Further advice</h2>
-
-					   				<p>In the meantime get:</p>
-
-
-									  <ul class="govuk-list govuk-list--bullet">
-									          <li>help dealing with money problems from <a href="https://www.citizensadvice.org.uk/">Citizens Advice (opens in new tab)</a> </li>
-									          <li>expert debt advice from <a href="https://www.stepchange.org/">StepChange Debt Charity (opens in new tab)</a></li>
-									          <li>advice to improve your finances from <a href="https://www.moneyadviceservice.org.uk">Money Advice Service (opens in new tab)</a></li>
-									  </ul>
 
 
 
-									<!--	<p><a href="index" class="govuk-button">Finish</a></p> -->
 
-									<!--// Fixed amount end -->
-
-
-									{% else %}
-
-									<h1 class="govuk-heading-l">Oops! you didn't select a help option</h1>
-
-									<p>Don't worry, you can go back and try again.</p>
+        </div>
 
 
-									{% endif %}
 
 
+
+      </div>
 
 
     </div>
