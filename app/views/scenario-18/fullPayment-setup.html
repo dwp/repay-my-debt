@@ -27,31 +27,7 @@
 		
 		
 		
-									{% if data['payment-options']=='full-amount'%}
-									<h1 class="govuk-heading-xl">Pay the full amount</h1>
-								    <div class="govuk-inset-text">
-									 Total amount owed: <span class="total-amount">&pound;950.00</span>
-									 </div>
-										<form class="form" action="#" method="post">
-							
-										<p>Make sure you have enough money in your bank account to cover this payment.</p>
-										
-										<a href="fullFinish" class="govuk-button">
-										  Continue
-										</a>
-										</form>
-										
-										<!--// Full amount end -->
-									
-									
-									
-									
-									
-									
-									{% elif data['payment-options']=='flexible-amount'%}
-									
-		
-									
+																	
 									<h1 class="govuk-heading-xl">Make a flexible payment</h1>
 	   
 									    	<div class="flexibleBanner flexiBannerReturn">
@@ -60,7 +36,7 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;560.00</b>
+													<b>&pound;960.00</b>
 												</li>
 												<li>
 													<h3>Monthly payment target</h3>
@@ -138,36 +114,7 @@
 									
 									
 									
-									{% elif data['payment-options']=='fixed-plan'%}
-									 <h1 class="govuk-heading-xl">Set up a fixed payment plan</h1>
-	   
-								    <div class="govuk-inset-text">
-									 Total amount owed: <span class="total-amount">&pound;120.00</span>
-									 </div>
-								   
-										<p>To set up a Direct Debit payment, contact Debt Management.<br>You will need your bank account details.</p>
-										
-										
-										<h2 class="govuk-heading-m">Debt management</h2>
-										<ul class="govuk-list">
-												    <li>Telephone: 020 7946 0101</li>
-												    <li>Textphone: 020 7946 0102</li>
-												    <li>Monday to Friday, 9am to 5pm (except public holidays)</li>
-												  </ul>
-												  
-									<!--// Fixed amount end -->	
-									
-									
-									{% else %}
-									
-									<h1 class="govuk-heading-l">Oops! you didn't select a payment option</h1>	
-									
-									<p>Don't worry, you can go back and try again.</p>	  
-       
-		
-									{% endif %}
-
-
+								
 
                   
     </div>
