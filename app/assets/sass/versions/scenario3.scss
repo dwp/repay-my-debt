@@ -27,10 +27,17 @@
 		margin: 0;
 		
 	}
+	
+	.govuk-button--secondary {
+		margin-bottom: 10px;
+	}
+	
+	
 	.scenario-inner-panel {
 		padding: 1.2em 1.2em 1.6em 1.2em;
 		p {
 			margin: 0 0 20px 0;
+			font-size: 18px;
 		}
 		h3 {
 		margin: 0 0 20px 0;
@@ -63,6 +70,10 @@
 		
 		.warning-message {
 			margin-bottom: 20px!important;
+		}
+		
+		th {
+			font-size: 17px;
 		}
 
 		
@@ -170,6 +181,7 @@
 
 .secondary-invert {
 	margin-top: 10px;
+	margin-bottom: 10px;
 	display: inline-block;
 	padding: 0;
 	border: 2px solid govuk-colour("green");
@@ -191,11 +203,12 @@
 		margin-top: 31px;
 	}
 	&.dash-history {
-		margin-top: 23px;
+		margin-top: 33px;
 	}
 	&.dash-spacer {
 		margin-top: 35px;
 	}
+
 }
 
 .attention-invert {
@@ -765,6 +778,36 @@ margin: 30px 0 50px 0;
 
 			}
 		}
+	}
+	
+	&.dashboardTarget {
+	
+		padding: .8em 1em;
+		position: relative;
+
+		h3 {
+			margin-bottom: 0;
+			font-size: 16px;
+		}
+		li {
+			padding: .2em .8em;
+			b {
+				font-size: 20px;
+			}
+		}
+
+		
+	}
+	
+	&.dashboardTargetMet {
+		
+		border-left: 5px solid govuk-colour("green");
+		background: rgba(govuk-colour("green"), 0.05);
+		
+		li {
+			border-left: 1px solid govuk-colour("green");
+		}
+		
 	}
 	
 	

@@ -125,20 +125,26 @@
 
 		  </tbody>
 		</table>
-		
-		  <h2 class="govuk-heading-m">What happens next</h2>
-		  
 
 
-               		{% if data['how-contacted']=='yesReminder'%}
+       
+       <h2 class="govuk-heading-m">What happens next</h2>
+
+       
+       {% if data['how-contacted']=='yesReminder'%}
 
 				<p>We will text you at the start of the month to let you know your plan is active and a payment is due.</p>
 
 				{% else %}
 				{% endif %}
-				
-				
-         <p>You can still make payments to reduce your debt before your plan starts.</p>
+       
+       <p>You can still make payments to reduce your debt before your plan starts.</p>
+ 
+     <!--  <p>You can also:</p>
+	   <ul class="govuk-list govuk-list--bullet">
+	   	<li>start your plan early with a payment now</li>
+		<li>pay a lump sum to reduce your debt before your plan starts</li>
+	   </ul> -->
          
          
          <!-- 	<h2 class="govuk-heading-m">Before your plan starts</h2>
@@ -150,8 +156,14 @@
 
 
 		
-		<p class="mb0"><a href="paymentToday" class="govuk-button">Make a payment now</a></p>
-		<p><a href="../index">Finish and sign out</a></p>
+		<p class="mb0"><a href="paymentToday" class="secondary-invert">Make a payment</a></p>
+		<br>
+		
+		<br>
+       <hr>
+       <br>
+       
+		<p><a href="../index" class="govuk-button">Finish and sign out</a></p>
 									
 									
 
