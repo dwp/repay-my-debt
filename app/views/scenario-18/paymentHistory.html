@@ -48,7 +48,7 @@
 											<ul class="govuk-list">
 												
 												<li>
-													<h3>Monthly payment average</h3>
+													<h3>Monthly target</h3>
 
 														{% if data['how-much3']=='FlexoneHundredPound'%}
 													    
@@ -82,7 +82,7 @@
 													<h3>Payments made</h3>
 
 														
-														<b>12</b>
+														<b>1</b>
 									
 
 								
@@ -100,12 +100,12 @@
 												
 												<li>
 													<h3>Total amount repaid</h3>
-													<b>&pound;100.00</b>
+													<b>&pound;{{ data['payment-amount'] }}</b>
 												</li>
 												
 												<li>
 													<h3>Total amount left to pay</h3>
-													<b>&pound;580.00</b>
+													<b>&pound;570.00</b>
 												</li>
 											</ul>
 											
@@ -128,7 +128,7 @@
 							  <thead class="govuk-table__head">
 							    <tr class="govuk-table__row">
 							    
-							      <th class="govuk-table__header" scope="col">Date of payment</th>
+							      <th class="govuk-table__header" scope="col">Payment date</th>
 							      
 						
 							
@@ -143,12 +143,12 @@
 							    <tr class="govuk-table__row">
 							    
 							      
-							      <td class="govuk-table__cell">20 October 2020</td>
+							      <td class="govuk-table__cell">10 November 2020</td>
 							      
 				
 							
 							
-							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20.00</td>
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;{{ data['payment-amount'] }}</td>
  
 							    
 							    </tr>

@@ -8,7 +8,6 @@
 {% block content %}
 
 
-
    <!-- <div class="clear-bar">
 	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
 	   		<p>What you owe:
@@ -23,29 +22,18 @@
 
 
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
-		
-		
-		
-		
-		
 
-									
-									
-									 <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
-          	Your payment was successful and your plan is setup
-           
-          </h1>
-          <div class="govuk-panel__body">
- 
-            It will take 2 to 5 working days to update your account
-          </div>
-        </div>
+	   <h1 class="govuk-heading-xl">
+	   	<span class="govuk-caption-xl">Flexible payment plan</span>Summary</h1>
+	   	
 
-        <!--<p class="govuk-body">We have sent you a confirmation email.</p>-->
-        
-        
-        <h2 class="govuk-heading-m">Summary</h2>
+	   <!--	<div class="flexibleBanner">
+	   	<h2 class="govuk-heading-m">Your plan will start in November</h2>
+	   	<p>Pay anytime you like during the month &ndash; when you pay is up to you.</p>
+	   	<p>Make multiple payments in the month to meet your chosen target.</p>
+	   	</div> -->
+	   	
+
 
 	   <table class="govuk-table summary-table mb40">
 		  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
@@ -85,7 +73,7 @@
 		    
 		    
 		    <tr class="govuk-table__row">
-		      <th scope="row" class="govuk-table__header">Payment taken today</th>
+		      <th scope="row" class="govuk-table__header">Payment today</th>
 		      <td class="govuk-table__cell">
 		     &pound;{{ data['payment-amount'] }}
 		      </td>
@@ -134,27 +122,32 @@
 		</table>
 
 
-       
-       <h2 class="govuk-heading-m">What happens next</h2>
 
-       
-       {% if data['how-contacted']=='yesReminder'%}
 
-				<p>We will text you at the start of the month to let you know your plan is active and a payment is due.</p>
 
-				{% else %}
-				{% endif %}
-       
-      <p>We have sent you a payment confirmation email &ndash; you should allow your account to update before logging back in.</p>
-      
-      <p>Once your account has been updated, you can continue to make payments towards your target.</p>
-      <p>You must sign in each month and make at least one payment.</p>
 
-       
-		<p><a href="../index" class="govuk-button">Finish and sign out</a></p>
-									
-									
 
+
+		<h2 class="govuk-heading-m">Declaration</h2>
+
+		<p>By continuing, you confirm that you will:</p>
+
+		<ul class="govuk-list govuk-list--bullet mb30">
+      <li>sign in each month and make at least one payment</li>
+			<li>let us know immediately if you’re struggling to keep up with payments</li>
+		</ul>
+
+
+		<div class="govuk-warning-text">
+		  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+		  <strong class="govuk-warning-text__text">
+		    <span class="govuk-warning-text__assistive">Warning</span>
+		    If you do not keep up with your payments, we will ask your employer to make deductions from your pay or ask a debt collection agency to collect this money for us.
+		  </strong>
+		</div>
+
+
+			<p><a href="flexyFinishPath" class="govuk-button">Continue to pay</a></p>
 
 
 

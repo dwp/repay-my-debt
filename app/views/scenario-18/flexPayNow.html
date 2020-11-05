@@ -27,8 +27,7 @@
 		
 		
 		
-		
-									{% if data['how-much3']=='noAfford'%}
+		{% if data['how-much3']=='noAfford'%}
 
 
 							<h1 class="govuk-heading-xl mb30">Help and support</h1>
@@ -48,19 +47,11 @@
 
 
 									{% else %}
-
-
 									
-		
-		
-		
-		
-		
-		
-
-
-
-		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
+									
+									
+									
+										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment towards November's target</h1>
 
 
 
@@ -71,7 +62,7 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;570.00</b>
+													<b>&pound;600.00</b>
 												</li>
 												<li>
 													<h3>Monthly target</h3>
@@ -102,10 +93,8 @@
 												</li>
 												<li>
 													<h3>Paid this month</h3>
-													<b>&pound;{{ data['payment-amount'] }}</b>
+													<b>&pound;0.00</b>
 												</li>
-												
-												
 											</ul>
 											
 											</div>
@@ -114,8 +103,7 @@
 											
 											
 
-
-										<form class="form" action="paymentDetail" method="post">
+										<form class="form" action="paymentRemindersFirst" method="post">
 
 
 											<div class="govuk-form-group">
@@ -140,23 +128,16 @@
 									        </div>
 
 
-											<button class="govuk-button" data-module="govuk-button">
-											  Continue
-											</button>
-											</form>
 
 
-
-{% endif %}
-
-
-
-
-
-
-
-						
-
+			<button class="govuk-button" data-module="govuk-button">
+			  Continue
+			</button>
+			</form>
+			
+			
+			{% endif %}
+			
 
     </div>
 </div>
