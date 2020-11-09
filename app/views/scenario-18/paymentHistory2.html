@@ -48,7 +48,7 @@
 											<ul class="govuk-list">
 												
 												<li>
-													<h3>Monthly payment target</h3>
+													<h3>Monthly target</h3>
 
 														{% if data['how-much3']=='FlexoneHundredPound'%}
 													    
@@ -79,23 +79,33 @@
 												</li>
 												
 												<li>
-													<h3>Monthly payment average</h3>
+													<h3>Payments made</h3>
 
 														
-														<b>&pound;20.00</b>
+														<b>2</b>
 									
 
 								
 												</li> 
 												
+												<!--<li>
+													<h3>Monthly payment average</h3>
+
+														
+														<b>&pound;0.00</b>
+									
+
+								
+												</li> -->
+												
 												<li>
 													<h3>Total amount repaid</h3>
-													<b>&pound;20.00</b>
+													<b>&pound;50</b>
 												</li>
 												
 												<li>
 													<h3>Total amount left to pay</h3>
-													<b>&pound;960.00</b>
+													<b>&pound;550.00</b>
 												</li>
 											</ul>
 											
@@ -118,9 +128,9 @@
 							  <thead class="govuk-table__head">
 							    <tr class="govuk-table__row">
 							    
-							      <th class="govuk-table__header" scope="col">Date of payment</th>
+							      <th class="govuk-table__header" scope="col">Payment date</th>
 							      
-							      <th class="govuk-table__header" scope="col">Type</th>
+						
 							
 							      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Amount</th>
 							      
@@ -130,16 +140,15 @@
 							  
 							  <tbody class="govuk-table__body">
 							  
-							  
 							  <tr class="govuk-table__row">
 							    
 							      
-							      <td class="govuk-table__cell">1 November 2020</td>
+							      <td class="govuk-table__cell">20 November 2020</td>
 							      
-							      <td class="govuk-table__cell">Flexible payment</td>
+				
 							
 							
-							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20.00</td>
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20</td>
  
 							    
 							    </tr>
@@ -149,12 +158,12 @@
 							    <tr class="govuk-table__row">
 							    
 							      
-							      <td class="govuk-table__cell">20 October 2020</td>
+							      <td class="govuk-table__cell">10 November 2020</td>
 							      
-							      <td class="govuk-table__cell">Initial payment</td>
+				
 							
 							
-							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;20.00</td>
+							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;{{ data['payment-amount'] }}</td>
  
 							    
 							    </tr>
