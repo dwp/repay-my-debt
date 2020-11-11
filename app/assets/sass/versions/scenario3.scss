@@ -930,6 +930,29 @@ margin: 30px 0 50px 0;
 	}
 	
 	
+	&.dashboardTarget {
+	
+		padding: .8em 1em;
+		position: relative;
+
+		li {
+			padding: .5em 0;
+
+		}
+
+		
+	}
+	
+	&.dashboardTargetMet {
+
+		
+		li {
+			border-left: none;
+		}
+		
+	}
+	
+	
 }
 
 .govuk-phase-banner__content__tag {
