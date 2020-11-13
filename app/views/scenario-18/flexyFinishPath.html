@@ -32,10 +32,21 @@
 									
 									
 									 <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
-          	Your payment was successful and your plan is setup
-           
-          </h1>
+									 
+									 
+
+							   
+							   
+							   <h1 class="govuk-panel__title">
+					          	Your payment was successful and your plan is setup
+					           </h1>
+		   
+		
+									 
+									 
+									 
+									 
+          
           <div class="govuk-panel__body">
  
             It will take 2 to 5 working days to update your account
@@ -52,7 +63,12 @@
 
 		  <tbody class="govuk-table__body">
 
-			  <tr class="govuk-table__row">
+			   {% if data['how-much3']=='noAfford'%}
+
+		   {% else %}
+		   
+		   
+		   <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Monthly target</th>
 		      <td class="govuk-table__cell">
 
@@ -72,9 +88,7 @@
 														&pound;25.00
 
 
-														{% else %}
-
-														&pound;30.00
+											
 
 
 														{% endif %}
@@ -82,7 +96,11 @@
 		      </td>
 		      <td class="govuk-table__cell"><a href="flexSuggestedTarget">Change</a></td>
 		    </tr>
-		    
+
+		   
+		   
+		   
+		   {% endif %}		    
 		    
 		    <tr class="govuk-table__row">
 		      <th scope="row" class="govuk-table__header">Payment taken today</th>
@@ -141,7 +159,27 @@
        
       <p>We have sent you a payment confirmation email &ndash; you should allow your account to update before logging back in.</p>
       
-      <p>Once your account has been updated, you can continue to make payments towards your target.</p>
+      
+      
+      
+      {% if data['how-much3']=='noAfford'%}
+									  
+									  <p>Once your account has been updated, you can continue to make payments.</p>
+
+							   {% else %}
+							   
+							   
+							   <p>Once your account has been updated, you can continue to make payments towards your target.</p>
+		   
+							{% endif %}
+      
+      
+      
+      
+      
+      
+      
+      
       <p>You must sign in each month and make at least one payment.</p>
 
        
