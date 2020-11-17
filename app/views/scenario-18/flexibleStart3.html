@@ -27,73 +27,40 @@
 		
 		
 		
-		{% if data['how-much3']=='noAfford'%}
+		
+									{% if data['how-much3']=='noAfford'%}
 
 
-								<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a flexible payment</h1>
+							<h1 class="govuk-heading-xl mb30">Help and support</h1>
 
 
+					   			<p>Contact Debt Management to discuss the options available to you.</p>
 
 
-											<div class="flexibleBanner">
-											
-											
-											<ul class="govuk-list">
-												<li>
-													<h3>Total amount owed</h3>
-													<b>&pound;600.00</b>
-												</li>
-
-												<li>
-													<h3>Paid this month</h3>
-													<b>&pound;0.00</b>
-												</li>
-											</ul>
-											
-											</div>
-											
-											
-											
-											
-
-										<form class="form" action="paymentRemindersFirst" method="post">
-
-
-											<div class="govuk-form-group">
-										          <fieldset class="govuk-fieldset" aria-describedby="pay-hint">
-											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-												      <h1 class="govuk-fieldset__heading">
-												        How much do you want to pay?
-												      </h1>
-												    </legend>
-												    
-												   <div id="pay-hint" class="govuk-hint mb20">
-												  Make sure you have enough money in your account to cover this payment</div>
-
-
-											         <div id="example-question" class="form-group inline">
-											            <span class="c-form-input-denote govuk-body">£</span>
-											            <input class="form-control c-form-input-denote__input govuk-input form-control-1-4 govuk-input--width-10" type="number" name="payment-amount">
-											          </div>
-
-										          </fieldset>
-									        </div>
-
-
-
-
-			<button class="govuk-button" data-module="govuk-button">
-			  Continue
-			</button>
-			</form>
+					   					<h2 class="govuk-heading-m">Debt Management</h2>
+									  <ul class="govuk-list">
+									  <li>Telephone: 0800 916 0647</li>
+									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
+									</ul>
+									<p class="govuk-body">
+									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+									</p>
 
 
 									{% else %}
+
+
 									
-									
-									
-									
-										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment towards November's target</h1>
+		
+		
+		
+		
+		
+		
+
+
+
+		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
 
 
 
@@ -104,7 +71,7 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;600.00</b>
+													<b>&pound;950.00</b>
 												</li>
 												<li>
 													<h3>Monthly target</h3>
@@ -135,8 +102,10 @@
 												</li>
 												<li>
 													<h3>Paid this month</h3>
-													<b>&pound;0.00</b>
+													<b>&pound;50</b>
 												</li>
+												
+												
 											</ul>
 											
 											</div>
@@ -145,19 +114,21 @@
 											
 											
 
-										<form class="form" action="paymentRemindersFirst" method="post">
+
+										<form class="form" action="paymentDetail" method="post">
 
 
 											<div class="govuk-form-group">
 										          <fieldset class="govuk-fieldset" aria-describedby="pay-hint">
 											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 												      <h1 class="govuk-fieldset__heading">
-												        How much do you want to pay today?
+												        How much do you want to pay?
 												      </h1>
 												    </legend>
 												    
 												   <div id="pay-hint" class="govuk-hint mb20">
-												  You can make multiple payments in a month to meet your target</div>
+												  You can make multiple payments in a month to meet your target
+												    </div>
 
 
 											         <div id="example-question" class="form-group inline">
@@ -169,16 +140,23 @@
 									        </div>
 
 
+											<button class="govuk-button" data-module="govuk-button">
+											  Continue
+											</button>
+											</form>
 
 
-			<button class="govuk-button" data-module="govuk-button">
-			  Continue
-			</button>
-			</form>
-			
-			
-			{% endif %}
-			
+
+{% endif %}
+
+
+
+
+
+
+
+						
+
 
     </div>
 </div>
