@@ -543,7 +543,7 @@
 		color: #fff;
 	}
 	.title {
-		font-size: 22px;
+		font-size: 21px;
 		font-weight: bold;
 		color: #fff;
 		margin-bottom: 40px;
@@ -551,7 +551,7 @@
 	}
 
 	li {
-		font-size: 22px;
+		font-size: 21px;
 		font-weight: bold;
 		margin-bottom: 40px;
 		padding-top: 10px;
@@ -601,6 +601,62 @@
 		}
 	}
 }
+
+
+
+
+.attention-card2 {
+
+	.title {
+		margin-bottom: 40px;
+		display: block;
+	}
+
+	li {
+		margin-bottom: 40px;
+		padding-top: 10px;
+		padding-left: 75px;
+		position: relative;
+		&:before {
+			content: "1";
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 20px;
+			color: #000;
+			background: #fff;
+			border-radius: 100px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 48px;
+			text-align: center;
+			border: 1px solid #000;
+			font-weight: bold;
+		}
+		&.two {
+			&:before {
+				content: "2";
+			}
+		}
+		&.three {
+			&:before {
+				content: "3";
+			}
+		}
+		&.four {
+			&:before {
+				content: "4";
+			}
+		}
+		&.five {
+			&:before {
+				content: "5";
+			}
+		}
+	}
+
+}
+
 
 
 
