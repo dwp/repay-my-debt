@@ -28,17 +28,14 @@
 	   	
 
 
-	   	 {% if data['how-much3']=='noAfford'%}
-
-		   {% else %}
 	   <div class="flexibleBanner">
-	   	<h2 class="govuk-heading-m">Your plan will start today</h2>
-	   	<p>When you make today's payment, your plan will start immediately.</p>
+	   	<h2 class="govuk-heading-m">Monthly targets</h2>
+	   	<p>When you make today's payment, your chosen target will be set.</p>
 	   	<p>You will receive a text message at the start of next month reminding you that a payment is due.</p>
 	   
 	   	</div>
 	   	
-	   	{% endif %}
+	
 	   	
 	   	
 	   	
@@ -51,9 +48,7 @@
 		  
 		  
 		  
-		   {% if data['how-much3']=='noAfford'%}
-
-		   {% else %}
+	
 		   
 		   
 		   <tr class="govuk-table__row">
@@ -86,9 +81,6 @@
 		    </tr>
 
 		   
-		   
-		   
-		   {% endif %}
 
 													 			  		    
 		    
@@ -168,7 +160,7 @@
 		</div>
 
 
-			<p><a href="flexyFinishPath" class="govuk-button">Continue to pay</a></p>
+			<p><a href="flexyFinishExisting" class="govuk-button">Continue to pay</a></p>
 
 
 
