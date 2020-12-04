@@ -506,7 +506,13 @@
 		color: govuk-colour("dark-grey");
 		margin-top: 2px;
 	}
-
+	
+	th {
+		width: 45%;
+	}
+	
+	
+	
 }
 
 
@@ -891,6 +897,16 @@ margin: 30px 0 50px 0;
 	}
 }
 
+
+
+.ddGuarantee {
+	background: govuk-colour("light-grey");
+	padding: 2.5em;
+	margin-bottom: 30px;
+	li {
+		margin-top: 20px;
+	}
+}
 
 
 
