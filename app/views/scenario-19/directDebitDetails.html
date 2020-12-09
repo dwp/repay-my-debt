@@ -29,10 +29,26 @@
 		{% if data['how-much2']=='other-amount'%}
 		
 		
-			<h1 class="govuk-heading-xl mb30">The amount you have entered is low</h1>
+			<h1 class="govuk-heading-xl mb30">The amount you have entered is too low to set up a Direct Debit</h1>
+			
+			
+			
+			
+			
+										<div class="govuk-inset-text">
+							<h2 class="govuk-heading-m">A flexible payment plan may work for you</h2>
 
-
-					   			<p>Contact Debt Management to discuss the options available to you.</p>
+										<p>This is not a Direct Debit &ndash; you must sign in each month and make at least one payment.</p>
+						
+						<p><a href="helpSupportDD" class="secondary-invert">Flexible payment plan</a></p>
+								</div>
+								
+								
+																
+								
+<p>Alternatively, you must contact Debt Management to discuss the options available to you.</p>
+			
+			
 
 
 					   					<h2 class="govuk-heading-m">Debt Management</h2>
@@ -52,7 +68,7 @@
 
 		<h1 class="govuk-heading-xl">
 			<span class="govuk-caption-xl">Step 3 of 4</span>
-			Enter your account details</h1>
+			Bank or building society <br>account details</h1>
 		
 		<div class="flexibleBanner">
 		
@@ -119,10 +135,23 @@
 	
 		    <div class="govuk-form-group">
 			  <label class="govuk-label" for="accountName">
-			    Account name
+			    Name on the account
 			  </label>
 
 			  <input class="govuk-input govuk-input--width-30" id="accountName" name="accountName" type="text">
+
+			</div>
+			
+			
+			<div class="govuk-form-group">
+			  <label class="govuk-label" for="sortCode">
+			    Sort code
+			  </label>
+			  <div id="sort-code-hint" class="govuk-hint">
+			    Must be 6 digits long
+			  </div>
+
+			  <input class="govuk-input govuk-input--width-10" id="sortCode" name="sortCode" type="text" aria-describedby="sort-code-hint">
 
 			</div>
 		
@@ -131,19 +160,26 @@
 			  <label class="govuk-label" for="accountNumber">
 			    Account number
 			  </label>
+			  
+			  <div id="account-number-hint" class="govuk-hint">
+			    Must be between 6 and 8 digits long
+			  </div>
 
-			  <input class="govuk-input govuk-input--width-10" id="accountNumber" name="accountNumber" type="text">
+			  <input class="govuk-input govuk-input--width-10" id="accountNumber" name="accountNumber" type="text" aria-describedby="account-number-hint">
 
 			</div>
 			
 			<div class="govuk-form-group">
-			  <label class="govuk-label" for="sortCode">
-			    Sort code
-			  </label>
-
-			  <input class="govuk-input govuk-input--width-10" id="sortCode" name="sortCode" type="text">
-
-			</div>
+  <label class="govuk-label" for="roll-number">
+    Building society roll number (if you have one)
+  </label>
+  <div id="roll-number-hint" class="govuk-hint">
+    You can find it on your card, statement or passbook
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="roll-number" name="roll-number" type="text" spellcheck="false" aria-describedby="roll-number-hint">
+</div>
+			
+			
 			
 			
 		    </fieldset>
