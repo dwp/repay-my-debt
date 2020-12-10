@@ -84,7 +84,33 @@
 												
 												<li>
 													<h3>Total amount left to pay</h3>
-													<b>&pound;550.00</b>
+													<b>
+													
+													{% if data['how-much2']=='oneHundredPound'%}
+										    
+										    &pound;500.00
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											&pound;550.00
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											&pound;566.50
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											&pound;575.00
+
+											
+											{% else %}
+											
+											&pound;600.00
+											
+											{% endif %}
+													
+													</b>
 												</li>
 												
 												<li>

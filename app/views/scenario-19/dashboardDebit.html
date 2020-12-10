@@ -29,7 +29,36 @@
 	   		
 	   		</div>
 	   		<div class="govuk-inset-text">
-			 Total amount owed: <span class="total-amount">&pound;550.00</span>
+			 Total amount owed: <span class="total-amount">
+			 
+			 							 {% if data['how-much2']=='oneHundredPound'%}
+										    
+										    &pound;500.00
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											&pound;550.00
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											&pound;566.50
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											&pound;575.00
+
+											
+											{% else %}
+											
+											&pound;600.00
+											
+											{% endif %}
+			 						
+			 						</span>
+			 
+
+			 
 			</div>
 	   		
 	   	
