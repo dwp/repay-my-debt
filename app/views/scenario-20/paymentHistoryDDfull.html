@@ -70,7 +70,7 @@
 											
 											{% else %}
 											
-											No amount entered
+											&pound;16.50
 											
 											{% endif %}</b>
 												</li>
@@ -106,7 +106,7 @@
 											
 											{% else %}
 											
-											&pound;600.00
+											&pound;583.50
 											
 											{% endif %}
 													
@@ -137,7 +137,7 @@
 											
 											{% else %}
 											
-											No amount entered
+											{{ data['paymentDay'] }} January 2024
 											
 											{% endif %}
 													
@@ -186,7 +186,38 @@
 							      <td class="govuk-table__cell">{{ data['paymentDay'] }} January 2021</td>
 							
 							
-							      <td class="govuk-table__cell govuk-table__cell--numeric">&pound;50.00</td>
+							      <td class="govuk-table__cell govuk-table__cell--numeric">
+								      
+								      
+								      
+								      {% if data['how-much2']=='oneHundredPound'%}
+										    
+										    &pound;100.00
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											&pound;50.00
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											&pound;33.50
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											&pound;25.00
+
+											
+											{% else %}
+											
+											&pound;16.50
+											
+											{% endif %}
+								      
+								      
+								      
+								      
+							      </td>
 							      
 							     <!-- <td class="govuk-table__cell govuk-table__cell--numeric">550.00</td> -->
 							      
