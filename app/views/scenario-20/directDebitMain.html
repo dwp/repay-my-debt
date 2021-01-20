@@ -82,7 +82,7 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell">&pound;600.00
+										      <td class="govuk-table__cell">&pound;2000.00
 										      </td>
 										      
 									
@@ -98,25 +98,40 @@
 											      
 											{% if data['how-much2']=='oneHundredPound'%}
 										    
-										    6 payments of &pound;100
+										  <ul class="govuk-list govuk-list--bullet mb0">
+										  	<li>5 payments of &pound;334.00</li>
+										    <li><span class="payDivide">1 payment of &pound;330.00</span></li>
+										  </ul>
 								
 											{% elif data['how-much2']=='fiftyPound'%}
 											
-											12 payments of &pound;50
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>11 payments of &pound;167.00</li>
+												<li><span class="payDivide">1 payment of &pound;163.00</span></li>
+											</ul>
 											
 											{% elif data['how-much2']=='thirtyThree'%}
 											
-											18 payments of &pound;33.50
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>17 payments of &pound;112.00</li>
+										  		<li><span class="payDivide">1 payment of &pound;96.00</span></li>
+											</ul>
 											
 											
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
-											24 payments of &pound;25
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>23 payments of &pound;84.00</li>
+										  		<li><span class="payDivide">1 payment of &pound;68.00</span></li>
+											</ul>
 
 											
 											{% else %}
 											
-											36 payments of &pound;16.50
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>35 payments of &pound;56.00</li>
+										  		<li><span class="payDivide">1 payment of &pound;40.00</span></li>
+											</ul>
 											
 											{% endif %}
 											      
