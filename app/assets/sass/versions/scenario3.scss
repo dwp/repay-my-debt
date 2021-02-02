@@ -852,6 +852,7 @@ margin: 30px 0 50px 0;
 	
 		padding: .8em 1em;
 		position: relative;
+		margin-bottom: 25px;
 
 		h3 {
 			margin-bottom: 0;
@@ -921,6 +922,41 @@ margin: 30px 0 50px 0;
 	margin-top: 8px;
 }
 
+
+
+.extraDetailTable {
+width: 60%!important;
+	span {
+		display: block;
+		font-weight: normal;
+		font-size: 16px;
+	}
+}
+
+
+.changeDetails {
+	text-align: right;
+}
+
+
+.dtList {
+	dl {
+		margin: 0;
+		padding: 0;
+		dt {
+			margin: 0;
+			padding: 0 0 3px 0;
+			font-weight: bold;
+		}
+		dd {
+			margin: 0;
+			padding: 0 0 10px 0;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
 
 
 //////////////// Media ///////////////

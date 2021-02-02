@@ -25,7 +25,7 @@
 
 	   		</div>
 	   		<div class="govuk-inset-text">
-			 Total amount owed: <span class="total-amount">&pound;570.00</span>
+			 Total amount owed: <span class="total-amount">&pound;1900.00</span>
 			</div>
 
 
@@ -58,7 +58,7 @@
 
 					 <div class="scenario-inner-panel">
 	 	
-						 <p class="activeMonth">Active month: <b>November 2020</b> <!--<span>11 days remaining</span>--></p>
+						 <p class="activeMonth">Active month: <b>February 2021</b> <!--<span>11 days remaining</span>--></p>
 
 					 
 					 
@@ -71,25 +71,32 @@
 												<li>
 													<h3>Monthly target</h3>
 
-														{% if data['how-much3']=='FlexoneHundredPound'%}
+															{% if data['how-much3']=='flex334'%}
 													    
-													    <b>&pound;100.00</b>
+													    <b>&pound;334.00</b>
 													    
 											
-														{% elif data['how-much3']=='FlexfiftyPound'%}
+														{% elif data['how-much3']=='flex167'%}
 														
-														<b>&pound;50.00</b>
+														<b>&pound;167.00</b>
 														
 														
 														
-														{% elif data['how-much3']=='FlextwentyFivePound'%}
+														{% elif data['how-much3']=='flex112'%}
 														
-														<b>&pound;25.00</b>
-																	
+														<b>&pound;112.00</b>
+														
+														{% elif data['how-much3']=='flex84'%}
+														
+														<b>&pound;84.00</b>
+														
+														{% elif data['how-much3']=='flex56'%}
+														
+														<b>&pound;56.00</b>																	
 														
 														{% else %}
 														
-														<b>&pound;30.00</b>
+														<b>No target</b>
 													
 														
 														{% endif %}
@@ -101,10 +108,10 @@
 													<b>&pound;{{ data['payment-amount'] }}</b>
 												</li>
 												
-											<li>
+											<!--<li>
 													<h3>Left to pay</h3>
-													<b>&pound;20.00</b>
-												</li>
+													<b>&pound;67.00</b>
+												</li>-->
 								
 									
 											</ul>
@@ -117,7 +124,7 @@
 											
 					
 
-					<span><a href="flexibleStart" class="secondary-invert mt20">Make a flexible payment</a></span>
+					<span><a href="flexibleStart" class="secondary-invert mt10">Make a flexible payment</a></span>
 					
 					<span><a href="fpManage" class="secondary-invert">Manage your payment plan</a></span>
 
@@ -130,39 +137,86 @@
       <div class="govuk-grid-column-one-half">
 
 		    <div class="scenario-panel">
-					 <h2 class="govuk-heading-s">Payment history</h2>
+					 <h2 class="govuk-heading-s">Plan summary</h2>
 
 
 					 <div class="scenario-inner-panel">
 
 						 
-						  <h4 class="govuk-heading-s">Last payment</h4>
+						 <!-- <h4 class="govuk-heading-s">Last payment</h4>
 						 
 								
-								 	<p>A payment of &pound;30 was made on 12 November 2020.</p>
+								 	<p>A payment of &pound;100 was made on 12 February 2021.</p> -->
 								 
 					 	
 					 			
-					 		<table class="govuk-table mbextender">
+					 		<table class="govuk-table">
 
 							  <tbody class="govuk-table__body">
-
-					
-							   <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Total payments made</th>
-							      <td class="govuk-table__cell">1</td>
-							   </tr>
-							    <tr class="govuk-table__row">
+							  
+							  <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
 							      <td class="govuk-table__cell">&pound;{{ data['payment-amount'] }}</td>
 							    </tr>
+
+								  
+								  <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Monthly target</th>
+							      <td class="govuk-table__cell">
+								      
+								      {% if data['how-much3']=='flex334'%}
+													    
+													    &pound;334.00
+													    
+											
+														{% elif data['how-much3']=='flex167'%}
+														
+														&pound;167.00
+														
+														
+														
+														{% elif data['how-much3']=='flex112'%}
+														
+														&pound;112.00
+														
+														{% elif data['how-much3']=='flex84'%}
+														
+														&pound;84.00
+														
+														{% elif data['how-much3']=='flex56'%}
+														
+														&pound;56.00																	
+														
+														{% else %}
+														
+														No target
+													
+														
+														{% endif %}
+								      
+								      
+							      </td>
+							    </tr>
+								  
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Monthly repayment average</th>
+							      <td class="govuk-table__cell">&pound;{{ data['payment-amount'] }}</td>
+							    </tr>
+							    
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Expected end of debt</th>
+							      <td class="govuk-table__cell">November 2022</td>
+							    </tr>
+
+
+
 
 
 							  </tbody>
 							</table>
 													
 	
-		             <span><a href="paymentHistory" class="secondary-invert">View my payment history</a></span>
+		             <span><a href="paymentHistory" class="secondary-invert">View your payment history</a></span>
 	
 				 
         </div>

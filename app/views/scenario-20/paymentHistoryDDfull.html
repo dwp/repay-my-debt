@@ -77,7 +77,38 @@
 												
 												<li>
 													<h3>Payments made</h3>
-													<b>1 of 12</b>
+													
+
+											
+											
+											
+											
+											{% if data['how-much2']=='oneHundredPound'%}
+										    
+										   <b>1 of 6</b>
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											<b>1 of 12</b>
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											<b>1 of 18</b>
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											<b>1 of 24</b>
+
+											
+											{% else %}
+											
+											<b>1 of 36</b>
+											
+											{% endif %}
+													
+													
+													
 												</li>
 												
 												

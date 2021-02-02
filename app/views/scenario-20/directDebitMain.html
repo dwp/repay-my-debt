@@ -74,15 +74,17 @@
 									
 																	
 																	
-									 <table class="govuk-table summary-table mb40">
-										  <caption class="govuk-table__caption mb20 govuk-heading-m">Payment plan</caption>
+									 <table class="govuk-table mb40">
+									 
+									 <caption class="visually-hidden">Plan summary</caption>
+										
 								
 										  <tbody class="govuk-table__body">
 										  
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell">&pound;2000.00
+										      <td class="govuk-table__cell" colspan="2">&pound;2000.00
 										      </td>
 										      
 									
@@ -100,21 +102,21 @@
 										    
 										  <ul class="govuk-list govuk-list--bullet mb0">
 										  	<li>5 payments of &pound;334.00</li>
-										    <li><span class="payDivide">1 payment of &pound;330.00</span></li>
+										    <li><span class="payDivide">1 final payment of &pound;330.00</span></li>
 										  </ul>
 								
 											{% elif data['how-much2']=='fiftyPound'%}
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>11 payments of &pound;167.00</li>
-												<li><span class="payDivide">1 payment of &pound;163.00</span></li>
+												<li><span class="payDivide">1 final payment of &pound;163.00</span></li>
 											</ul>
 											
 											{% elif data['how-much2']=='thirtyThree'%}
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>17 payments of &pound;112.00</li>
-										  		<li><span class="payDivide">1 payment of &pound;96.00</span></li>
+										  		<li><span class="payDivide">1 final payment of &pound;96.00</span></li>
 											</ul>
 											
 											
@@ -122,7 +124,7 @@
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>23 payments of &pound;84.00</li>
-										  		<li><span class="payDivide">1 payment of &pound;68.00</span></li>
+										  		<li><span class="payDivide">1 final payment of &pound;68.00</span></li>
 											</ul>
 
 											
@@ -130,40 +132,32 @@
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>35 payments of &pound;56.00</li>
-										  		<li><span class="payDivide">1 payment of &pound;40.00</span></li>
+										  		<li><span class="payDivide">1 final payment of &pound;40.00</span></li>
 											</ul>
 											
 											{% endif %}
 											      
 											      
 										      </td>
+										      
+										      <td class="govuk-table__cell changeDetails"><a href="directAmountEdit">Change</a></td>
 			
 										      	
 										    </tr>
 										    
 										    
 										     <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">First payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{{ data['paymentDay'] }} January 2021
-											      
-											      
-										      </td>
+										      <th scope="row" class="govuk-table__header">Payment dates</th>
+										      <td class="govuk-table__cell dtList">
 										      
-							
-										     
-										    </tr>
-										    
-										    
-										  										    
-										    <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Expected final payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{% if data['how-much2']=='oneHundredPound'%}
+										      
+										      <dl>
+										      	<dt>First payment:</dt>
+										      	<dd>{{ data['paymentDay'] }} January 2021</dd>
+										      	<dt>Expected final payment:</dt>
+										      	<dd>
+										      	
+										      	{% if data['how-much2']=='oneHundredPound'%}
 										    
 										    {{ data['paymentDay'] }} June 2021
 								
@@ -186,58 +180,45 @@
 											{{ data['paymentDay'] }} January 2024
 											
 											{% endif %}
+										      	
+										      	</dd>
+										      </dl>
+											      
+		
 											      
 											      
 										      </td>
 										      
-										    
-										      
+										      <td class="govuk-table__cell changeDetails"><a href="directDebitDayEdit">Change</a></td>
+							
+										     
 										    </tr>
 
+										    
+										    
+										     <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Account details</th>
+										      <td class="govuk-table__cell dtList">
+										      <dl>
+										      	<dt>Account name</dt>
+										      	<dd>{{ data['accountName'] }}</dd>
+										      	<dt>Sort code</dt>
+										      	<dd>{{ data['sortCode'] }}</dd>
+										      	<dt>Account number</dt>
+										      	<dd>{{ data['accountNumber'] }}</dd>
+										      </dl>
+										      
+										      </td>
+										      <td class="govuk-table__cell changeDetails"><a href="directDebitDetailsEdit">Change</a></td>
+											 </tr>
+
 								
 										  </tbody>
 										</table>
 										
 										
 										
-										<table class="govuk-table summary-table mb40">
-										  <caption class="govuk-table__caption mb20 govuk-heading-m">Account details</caption>
-								
-										  <tbody class="govuk-table__body">
-										  
 										
-											 <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Name on account</th>
-										      <td class="govuk-table__cell">{{ data['accountName'] }}</td>
-											 </tr>
-											 
-											 <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Sort code</th>
-										      <td class="govuk-table__cell">{{ data['sortCode'] }}</td>
-											 </tr>
-											 
-											 <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Account number</th>
-										      <td class="govuk-table__cell">{{ data['accountNumber'] }}</td>
-
-											 </tr>
-											 
-											  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Building society roll number</th>
-										      <td class="govuk-table__cell">{{ data['rollNumber'] }}</td>
-
-											 </tr>
-										      
-										      
-										    
-										    
-										     
-										      										    
-								
-										 										    
-										  </tbody>
-										  
-										</table>
 										
 										
 										

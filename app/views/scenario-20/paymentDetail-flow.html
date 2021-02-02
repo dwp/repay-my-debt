@@ -60,29 +60,35 @@
 		      <th scope="row" class="govuk-table__header">Monthly target</th>
 		      <td class="govuk-table__cell">
 
-			      {% if data['how-much3']=='FlexoneHundredPound'%}
-
-													    &pound;100.00
-
-
-														{% elif data['how-much3']=='FlexfiftyPound'%}
-
-														&pound;50.00
-
-
-
-														{% elif data['how-much3']=='FlextwentyFivePound'%}
-
-														&pound;25.00
-
-
+			      	{% if data['how-much3']=='flex334'%}
+													    
+													    &pound;334.00
+													    
 											
-
-
+														{% elif data['how-much3']=='flex167'%}
+														
+														&pound;167.00
+														
+														
+														
+														{% elif data['how-much3']=='flex112'%}
+														
+														&pound;112.00
+														
+														{% elif data['how-much3']=='flex84'%}
+														
+														&pound;84.00
+																	
+														
+														{% else %}
+														
+														&pound;56.00
+													
+														
 														{% endif %}
 
 		      </td>
-		      <td class="govuk-table__cell"><a href="flexSuggestedTarget">Change</a></td>
+		      <td class="govuk-table__cell"><a href="flexSuggestedTarget2">Change</a></td>
 		    </tr>
 
 		   
@@ -97,7 +103,7 @@
 		      <td class="govuk-table__cell">
 		     &pound;{{ data['payment-amount'] }}
 		      </td>
-		      <td class="govuk-table__cell"><a href="flexPayNow">Change</a></td>
+		      <td class="govuk-table__cell"><a href="flexPayNow2">Change</a></td>
 		    </tr>
 		     
 

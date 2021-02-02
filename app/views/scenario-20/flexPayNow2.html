@@ -41,7 +41,7 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;600.00</b>
+													<b>&pound;2000.00</b>
 												</li>
 
 												<li>
@@ -68,7 +68,7 @@
 												    </legend>
 												    
 												   <div id="pay-hint" class="govuk-hint mb20">
-												  Make sure you have enough money in your account to cover this payment</div>
+												  You can make multiple payments in a month to reduce your debt</div>
 
 
 											         <div id="example-question" class="form-group inline">
@@ -93,41 +93,47 @@
 									
 									
 									
-										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment towards November's target</h1>
+										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment towards February's target</h1>
 
 
 
 
+
+										
 											<div class="flexibleBanner">
 											
 											
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;600.00</b>
+													<b>&pound;2000.00</b>
 												</li>
 												<li>
 													<h3>Monthly target</h3>
 
-														{% if data['how-much3']=='FlexoneHundredPound'%}
+														{% if data['how-much3']=='flex334'%}
 													    
-													    <b>&pound;100.00</b>
+													    <b>&pound;334.00</b>
 													    
 											
-														{% elif data['how-much3']=='FlexfiftyPound'%}
+														{% elif data['how-much3']=='flex167'%}
 														
-														<b>&pound;50.00</b>
+														<b>&pound;167.00</b>
 														
 														
 														
-														{% elif data['how-much3']=='FlextwentyFivePound'%}
+														{% elif data['how-much3']=='flex112'%}
 														
-														<b>&pound;25.00</b>
+														<b>&pound;112.00</b>
+														
+														{% elif data['how-much3']=='flex84'%}
+														
+														<b>&pound;84.00</b>
 																	
 														
 														{% else %}
 														
-														<b>&pound;30.00</b>
+														<b>&pound;56.00</b>
 													
 														
 														{% endif %}
