@@ -28,36 +28,7 @@
 		
 		
 		
-									{% if data['how-much3']=='noAfford'%}
-
-
-							<h1 class="govuk-heading-xl mb30">Help and support</h1>
-
-
-					   			<p>Contact Debt Management to discuss the options available to you.</p>
-
-
-					   					<h2 class="govuk-heading-m">Debt Management</h2>
-									  <ul class="govuk-list">
-									  <li>Telephone: 0800 916 0647</li>
-									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-									</ul>
-									<p class="govuk-body">
-									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-									</p>
-
-
-									{% else %}
-
-
 									
-		
-		
-		
-		
-		
-		
-
 
 
 		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
@@ -71,30 +42,37 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;570.00</b>
+													<b>&pound;1900.00</b>
 												</li>
 												<li>
 													<h3>Monthly target</h3>
 
-														{% if data['how-much3']=='FlexoneHundredPound'%}
+														{% if data['how-much3']=='flex334'%}
 													    
-													    <b>&pound;100.00</b>
+													    <b>&pound;334.00</b>
 													    
 											
-														{% elif data['how-much3']=='FlexfiftyPound'%}
+														{% elif data['how-much3']=='flex167'%}
 														
-														<b>&pound;50.00</b>
+														<b>&pound;167.00</b>
 														
 														
 														
-														{% elif data['how-much3']=='FlextwentyFivePound'%}
+														{% elif data['how-much3']=='flex112'%}
 														
-														<b>&pound;25.00</b>
-																	
+														<b>&pound;112.00</b>
+														
+														{% elif data['how-much3']=='flex84'%}
+														
+														<b>&pound;84.00</b>
+														
+														{% elif data['how-much3']=='flex56'%}
+														
+														<b>&pound;56.00</b>																	
 														
 														{% else %}
 														
-														<b>&pound;30.00</b>
+														<b>No target</b>
 													
 														
 														{% endif %}
@@ -144,13 +122,6 @@
 											  Continue
 											</button>
 											</form>
-
-
-
-{% endif %}
-
-
-
 
 
 
