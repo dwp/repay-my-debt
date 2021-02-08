@@ -42,7 +42,7 @@
 	   </div> -->
 	   
 	   
-	   <div class="flexibleBanner flexiBannerReturn flexiBannerFour">
+	   <div class="flexibleBanner">
 											
 											
 											<ul class="govuk-list">
@@ -112,6 +112,38 @@
 												</li>
 												
 												
+												<li>
+													<h3>Total amount repaid</h3>
+													<b>
+													
+													  {% if data['how-much2']=='oneHundredPound'%}
+										    
+										    &pound;334.00
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											&pound;167.00
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											&pound;112.00
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											&pound;84.00
+
+											
+											{% else %}
+											
+											&pound;56.00
+											
+											{% endif %}
+													
+													</b>
+												</li>
+												
+												
 												
 												<li>
 													<h3>Total amount left to pay</h3>
@@ -144,7 +176,7 @@
 													</b>
 												</li>
 												
-												<li>
+											<!--	<li>
 													<h3>Date debt cleared</h3>
 													<b>
 													
@@ -173,7 +205,7 @@
 											{% endif %}													
 													
 													</b>
-												</li>
+												</li> -->
 												
 												
 											</ul>
