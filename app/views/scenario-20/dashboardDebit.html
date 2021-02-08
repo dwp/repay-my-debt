@@ -221,8 +221,35 @@
 							  <tbody class="govuk-table__body">
 
 							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Total payments made</th>
-							      <td class="govuk-table__cell">1</td>
+							      <th scope="row" class="govuk-table__header">Payments made</th>
+							      <td class="govuk-table__cell">
+								      
+								      	{% if data['how-much2']=='oneHundredPound'%}
+										    
+										   1 of 6
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											1 of 12
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											1 of 18
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											1 of 24
+
+											
+											{% else %}
+											
+											1 of 36
+											
+											{% endif %}
+								      
+								      
+							      </td>
 							    </tr>
 							   <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
