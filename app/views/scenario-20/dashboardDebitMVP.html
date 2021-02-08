@@ -125,11 +125,38 @@
 							      </td>
 							    </tr>
 							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Remaining payments</th>
+							      <th scope="row" class="govuk-table__header">Payments made</th>
 							      <td class="govuk-table__cell">
 							      
 							      
+							      
 							      {% if data['how-much2']=='oneHundredPound'%}
+										    
+										   1 of 6
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											1 of 12
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											1 of 18
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											1 of 24
+
+											
+											{% else %}
+											
+											1 of 36
+											
+											{% endif %}
+							      
+							      
+							      
+							     <!-- {% if data['how-much2']=='oneHundredPound'%}
 										    
 										  5
 								
@@ -151,7 +178,7 @@
 											
 											35
 											
-											{% endif %}
+											{% endif %} -->
 
 							      
 							      
@@ -160,16 +187,20 @@
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
-							      <td class="govuk-table__cell">{{ data['paymentDay'] }} February 2021</td>
+							      <td class="govuk-table__cell">{{ data['paymentDay'] }} April 2021</td>
 							    </tr>
 							  </tbody>
 							</table>	
 							
-							<p class="statement">Make sure you have enough money in your account to cover your next payment.</p>					   					 
+						<!--	<p class="statement">Make sure you have enough money in your account to cover your next payment.</p>	-->
+						
+									   					 
 							   					 
 	
-				<span><a href="ddManageMVP" class="secondary-invert">Manage your payment plan</a></span> 
-
+					<span><a href="ddManageMVP" class="secondary-invert mt10">Manage your payment plan</a></span>
+					
+					<span><a href="#" class="secondary-invert">Make an additional payment</a></span>	
+					
 		           		             
 					 </div>
 				 </div>	 
@@ -180,7 +211,7 @@
       <div class="govuk-grid-column-one-half">
     
 		    <div class="scenario-panel">
-					 <h2 class="govuk-heading-s">Payment history</h2>
+					 <h2 class="govuk-heading-s">Plan summary</h2>
 					
 					 
 					 <div class="scenario-inner-panel">
@@ -210,7 +241,7 @@
 											
 											&pound;56.00
 											
-											{% endif %} was taken from your account on {{ data['paymentDay'] }} January 2021</p>
+											{% endif %} was taken from your account on {{ data['paymentDay'] }} March 2021</p>
 								 </div>
 					 	
 					 			
@@ -218,10 +249,7 @@
 
 							  <tbody class="govuk-table__body">
 
-							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Total payments made</th>
-							      <td class="govuk-table__cell">1</td>
-							    </tr>
+							    
 							   <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
 							      <td class="govuk-table__cell">
@@ -256,6 +284,63 @@
 							      </td>
 							    </tr>
 							    
+							    
+							    
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Date debt cleared</th>
+							      <td class="govuk-table__cell">
+								      
+								      <!--	{% if data['how-much2']=='oneHundredPound'%}
+										    
+										   1 of 6
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											1 of 12
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											1 of 18
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											1 of 24
+
+											
+											{% else %}
+											
+											1 of 36
+											
+											{% endif %} -->
+											
+											{% if data['how-much2']=='oneHundredPound'%}
+										    
+										    {{ data['paymentDay'] }} August 2021
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											{{ data['paymentDay'] }} March 2022
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											{{ data['paymentDay'] }} August 2022
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											{{ data['paymentDay'] }} March 2023
+
+											
+											{% else %}
+											
+											{{ data['paymentDay'] }} March 2024
+											
+											{% endif %}		
+								      
+								      
+							      </td>
+							    </tr>
 							   
 
 							    
@@ -267,7 +352,7 @@
 							
 																
 	
-		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt20">View your full payment history</a></span>
+		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt20">View your payment history</a></span>
 	
 				 
         </div>
