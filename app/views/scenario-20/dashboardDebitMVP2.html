@@ -91,7 +91,7 @@
 					 
 					 <div class="scenario-inner-panel">
 					 
-						 	<table class="govuk-table">
+						 	<table class="govuk-table mb22">
 
 							  <tbody class="govuk-table__body">
 							    <tr class="govuk-table__row">
@@ -125,32 +125,32 @@
 							      </td>
 							    </tr>
 							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Payments made</th>
+							      <th scope="row" class="govuk-table__header">Payments remaining</th>
 							      <td class="govuk-table__cell">
 							      
 							      
 							      
 							      {% if data['how-much2']=='oneHundredPound'%}
 										    
-										   1 of 6
+										   5
 								
 											{% elif data['how-much2']=='fiftyPound'%}
 											
-											1 of 12
+											11
 											
 											{% elif data['how-much2']=='thirtyThree'%}
 											
-											1 of 18
+											17
 											
 											
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
-											1 of 24
+											23
 
 											
 											{% else %}
 											
-											1 of 36
+											35
 											
 											{% endif %}
 							      
@@ -192,14 +192,14 @@
 							  </tbody>
 							</table>	
 							
-						<!--	<p class="statement">Make sure you have enough money in your account to cover your next payment.</p>	-->
+						<p class="statement mb20">Make sure you have enough money in your account to cover your next payment.</p>
 						
 									   					 
 							   					 
 	
-					<!--<span><a href="ddManageMVP" class="secondary-invert mt10">Manage your payment plan</a></span> -->
-					<br><br>
-					<span><a href="#" class="secondary-invert mt40">Make an additional payment</a></span>	
+				<!--	<span><a href="ddManage" class="secondary-invert">Manage your payment plan</a></span> -->
+					
+					<span><a href="#" class="secondary-invert mt50">Make an additional payment</a></span>	
 					
 		           		             
 					 </div>
@@ -248,6 +248,41 @@
 					 		<table class="govuk-table">
 
 							  <tbody class="govuk-table__body">
+							  
+							  
+							  
+							   <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Payments made</th>
+							      <td class="govuk-table__cell">
+							      
+							      
+							      
+							      {% if data['how-much2']=='oneHundredPound'%}
+										    
+										   1 of 6
+								
+											{% elif data['how-much2']=='fiftyPound'%}
+											
+											1 of 12
+											
+											{% elif data['how-much2']=='thirtyThree'%}
+											
+											1 of 18
+											
+											
+											{% elif data['how-much2']=='twentyFivePound'%}
+											
+											1 of 24
+
+											
+											{% else %}
+											
+											1 of 36
+											
+											{% endif %}
+											
+							      </td>
+							   </tr>
 
 							    
 							   <tr class="govuk-table__row">
@@ -287,7 +322,7 @@
 							    
 							    
 							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Expected end of debt</th>
+							      <th scope="row" class="govuk-table__header">Expected final payment</th>
 							      <td class="govuk-table__cell">
 								      
 								      <!--	{% if data['how-much2']=='oneHundredPound'%}
@@ -352,7 +387,7 @@
 							
 																
 	
-		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt20">View your payment history</a></span>
+		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt10">View your payment history</a></span>
 	
 				 
         </div>
@@ -401,7 +436,7 @@
 					 <h2 class="govuk-heading-s">Help and support</h2>
 
 					 <div class="scenario-inner-panel">
-					  <p>Get help if you're struggling to pay or need to make changes to your plan.</p>
+					 <p>Get help if you're struggling to pay or need to make changes to your plan.</p>
 
 		             <span><a href="helpSupportDDplan2" class="secondary-invert">Get help and support</a></span> 
 					 </div>
