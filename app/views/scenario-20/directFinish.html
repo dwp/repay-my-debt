@@ -99,12 +99,18 @@
 										  		<li><span class="payDivide">1 final payment of &pound;68.00</span></li>
 											</ul>
 											
-											{% else %}
+											{% elif data['how-much2']=='sixteenFifty'%}
+											
+											
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>35 payments of &pound;56.00</li>
 										  		<li><span class="payDivide">1 final payment of &pound;40.00</span></li>
 											</ul>
+											
+											{% else %}
+											
+											<p>100 payments of &pound;20.00</p>
 
 											
 											{% endif %}
@@ -150,11 +156,16 @@
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
 											{{ data['paymentDay'] }} March 2023
+											
+											
+											{% elif data['how-much2']=='sixteenFifty'%}
+											
+											{{ data['paymentDay'] }} March 2024
 
 											
 											{% else %}
 											
-											{{ data['paymentDay'] }} March 2024
+											{{ data['paymentDay'] }} May 2029
 											
 											{% endif %}
 											      

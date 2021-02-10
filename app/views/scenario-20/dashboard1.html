@@ -69,34 +69,34 @@
 							
 												
 												<li>
-													<h3>Monthly target</h3>
+													
 
 															{% if data['how-much3']=='flex334'%}
-													    
+													    <h3>Monthly target</h3>
 													    <b>&pound;334.00</b>
 													    
 											
 														{% elif data['how-much3']=='flex167'%}
-														
+														<h3>Monthly target</h3>
 														<b>&pound;167.00</b>
 														
 														
 														
 														{% elif data['how-much3']=='flex112'%}
-														
+														<h3>Monthly target</h3>
 														<b>&pound;112.00</b>
 														
 														{% elif data['how-much3']=='flex84'%}
-														
+														<h3>Monthly target</h3>
 														<b>&pound;84.00</b>
 														
 														{% elif data['how-much3']=='flex56'%}
-														
+														<h3>Monthly target</h3>
 														<b>&pound;56.00</b>																	
 														
 														{% else %}
-														
-														<b>No target</b>
+														<h3>Minimum to pay this month</h3>
+														<b>&pound;20.00</b>
 													
 														
 														{% endif %}
@@ -160,44 +160,52 @@
 							    </tr>
 
 								  
+								  
+								  {% if data['how-much3']=='flex334'%}
 								  <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">
-								      
-								      {% if data['how-much3']=='flex334'%}
-													    
-													    &pound;334.00
-													    
-											
-														{% elif data['how-much3']=='flex167'%}
-														
+							      <td class="govuk-table__cell">  
+													    &pound;334.00									    
+							      </td>
+								  </tr>
+								
+								  {% elif data['how-much3']=='flex167'%}
+								  <tr class="govuk-table__row">
+								  <th scope="row" class="govuk-table__header">Monthly target</th>
+							      <td class="govuk-table__cell">					
 														&pound;167.00
-														
-														
-														
-														{% elif data['how-much3']=='flex112'%}
-														
+							      </td>
+								  </tr>
+								  
+								   {% elif data['how-much3']=='flex112'%}
+								   <tr class="govuk-table__row">
+								  <th scope="row" class="govuk-table__header">Monthly target</th>
+							      <td class="govuk-table__cell">	
 														&pound;112.00
+							      </td>
+								   </tr>
 														
-														{% elif data['how-much3']=='flex84'%}
-														
+								   {% elif data['how-much3']=='flex84'%}
+								   <tr class="govuk-table__row">
+								  <th scope="row" class="govuk-table__header">Monthly target</th>
+							      <td class="govuk-table__cell">	
 														&pound;84.00
+							      </td>
+								   </tr>
 														
-														{% elif data['how-much3']=='flex56'%}
-														
-														&pound;56.00																	
+								  {% elif data['how-much3']=='flex56'%}
+								  <tr class="govuk-table__row">
+								  <th scope="row" class="govuk-table__header">Monthly target</th>
+							      <td class="govuk-table__cell">					
+														&pound;56.00	
+							      </td>								
+								  </tr>								
 														
 														{% else %}
+		
 														
-														No target
-													
-														
-														{% endif %}
-								      
-								      
-							      </td>
-							    </tr>
-								  
+							      {% endif %}
+		
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Monthly repayment average</th>
 							      <td class="govuk-table__cell">&pound;{{ data['payment-amount'] }}</td>

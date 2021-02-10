@@ -26,42 +26,6 @@
 
 
 
-
-									{% if data['how-much2']=='other-amount'%}
-									<h1 class="govuk-heading-xl">Payment amount is low</h1>
-								
-
-									  <p>We would like to talk to you to discuss your situation and what you can afford.</p>
-
-
-					   				<h2 class="govuk-heading-m">Debt Management</h2>
-		
-									  
-									  <ul class="govuk-list">
-											  <li>Telephone: 0800 916 0647</li>
-											  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-											</ul>
-											<p class="govuk-body">
-											  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-											</p>
-									  
-									  
-									 
-			</div>
-
-
-									  
-									
-			
-
-										<!--// Full amount end -->
-
-
-
-
-
-
-									{% else %}
 									
 									<form class="form" action="directDebitDay" method="post">
 
@@ -128,12 +92,19 @@
 											</ul>
 
 											
-											{% else %}
+											{% elif data['how-much2']=='sixteenFifty'%}
+
+											
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
 										  		<li>35 payments of &pound;56.00</li>
 										  		<li><span class="payDivide">1 final payment of &pound;40.00</span></li>
 											</ul>
+											
+											
+											{% else %}
+											
+											<p>100 payments of &pound;20.00</p>
 											
 											{% endif %}
 											      
@@ -173,11 +144,15 @@
 											{% elif data['how-much2']=='twentyFivePound'%}
 											
 											{{ data['paymentDay'] }} March 2023
+											
+											{% elif data['how-much2']=='sixteenFifty'%}
+											
+											{{ data['paymentDay'] }} March 2024
 
 											
 											{% else %}
 											
-											{{ data['paymentDay'] }} March 2024
+											{{ data['paymentDay'] }} May 2029
 											
 											{% endif %}
 										      	
@@ -273,7 +248,7 @@ Written confirmation may be required. Please also notify us.</li>
 		    </form>
 
 
-									{% endif %}
+							
 
 
 

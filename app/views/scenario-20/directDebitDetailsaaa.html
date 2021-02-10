@@ -19,7 +19,7 @@
 
 	   <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-three-quarters">
+        <div class="govuk-grid-column-full">
 
 
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
@@ -29,74 +29,25 @@
 		{% if data['how-much2']=='other-amount'%}
 		
 		
-		
-		
-		<h1 class="govuk-heading-xl">
-			<span class="govuk-caption-xl">Step 2 of 4</span>
-			Payment plan summary</h1>
-			
-			
-			
-			
-			
-			
-	   <div class="flexibleBanner">
-											
-											
-											<ul class="govuk-list">
+		<div class="attention-card">
 
-												
-												<li>
-													<h3>Payment amount</h3>
-													<b>										    
-										    &pound;20.00
-										    
-										    </b>
-												</li>
-												
-												<li>
-													<h3>Number of payments</h3>
-													
-													<b>100</b>
-											
-											
-											
-											
-																								
-													
-													
-												</li>
-												
-												
-												
-												
-												<li>
-													<h3>Expected last payment</h3>
-													<b>
-													May 2029
-													
-													
-													</b>
-												</li>
+			<h1 class="govuk-heading-l mb30">A flexible payment plan may work for you</h1>
+			
+			<p class="title">This is not a Direct Debit &ndash; you must sign in each month and make at least one payment.</p>
 
-												
-											</ul>
-											
-											</div>
-				
-				
-				<p>If you increase the amount you pay, it will clear your debt quicker.</p>
-				
-				<p>Due to the expected duration of your debt, we will review your situation in 12 months.</p>
-				
-				
-				
-				
-				<p><a href="directDebitDetailsTemp" class="govuk-button">Continue</a></p>
-				
-										    
-										     		
-		
+
+			<ul class="govuk-list">
+			<li>Set a target amount to aim for each month</li>	
+				<li class="two">You will need to make a payment today &ndash; this will start your plan</li>
+
+				<li class="three">Sign up for helpful payment reminders</li>
+			</ul>
+			
+
+			<p><a href="flexSuggestedTarget2" class="attention-invert mt30">Continue</a></p>
+		<!--	<p><a href="helpEnd" class="notforme">This option is not for me</a></p> -->
+
+		</div>	
 		
 									{% else %}
 									
