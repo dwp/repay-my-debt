@@ -36,7 +36,7 @@
 		
 				
 		
-		<p>This payment will reduce the duration of your debt &ndash; it will not reduce your monthly payments.</p>
+		<p>This payment will reduce the duration of your debt &ndash; it will not reduce your regular monthly payments but may affect your final payment.</p>
 
 
 
@@ -129,7 +129,7 @@
 											
 											{% elif data['how-much2']=='36Month'%}
 											
-											35
+											34
 											
 											{% elif data['how-much2']=='twentyFive'%}
 											
@@ -170,7 +170,7 @@
 											
 											{% elif data['how-much2']=='36Month'%}
 											
-											{{ data['paymentDay'] }} March 2024
+											{{ data['paymentDay'] }} February 2024
 											
 											{% elif data['how-much2']=='twentyFive'%}
 											
@@ -259,6 +259,43 @@
 										</table> -->
 										
 										
+										{% if data['how-much2']=='6Month'%}
+										
+										<p>Your final payment will be reduced to &pound;280.00.</p>
+											
+											
+											{% elif data['how-much2']=='12Month'%}
+											<p>Your final payment will be reduced to &pound;113.00.</p>
+											
+											
+											
+											{% elif data['how-much2']=='24Month'%}
+											<p>Your final payment will be reduced to &pound;18.00.</p>
+											
+											
+											{% elif data['how-much2']=='36Month'%}
+											
+											<p>Your final payment will be increased to &pound;46.00.</p>
+											
+											
+											{% elif data['how-much2']=='twentyFive'%}
+											
+											<p>Your final payment will remain the same at &pound;25.00.</p>
+											
+											
+											{% else %}
+											
+											<p>Your final payment will remain the same at &pound;10.00.</p>
+											
+											
+											
+											{% endif %}
+										
+										
+										
+										
+										
+																				
 										
 										<p><a href="additionalFinish" class="govuk-button">Continue</a></p>		
 						
