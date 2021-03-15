@@ -557,7 +557,7 @@
 	}
 
 	li {
-		font-size: 21px;
+		font-size: 22px;
 		font-weight: bold;
 		margin-bottom: 40px;
 		padding-top: 10px;
@@ -597,6 +597,17 @@
 			&:before {
 				content: "5";
 			}
+		}
+		h2 {
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+			font-size: 24px;
+		}
+		p {
+			color: #fff;
+			margin: 10px 0 0 0;
+			font-size: 21px;
 		}
 	}
 	.notforme {
@@ -979,6 +990,121 @@ margin: 40px 0;
 	padding: 25px 30px 15px 30px;
 	margin: 30px 0;
 }
+
+
+
+
+
+
+
+.attention-card-target {
+	background: govuk-colour("blue");
+	padding: 2.5em 2em 1.5em 2em;
+	color: #fff;
+	margin: 10px 0 30px 0;
+	.govuk-list {
+		color: #fff;
+	}
+	h2 {
+		color: #fff;
+		margin-bottom: 40px;
+	}
+	
+	p {
+		color: #fff;
+	}
+
+
+	li {
+		font-size: 19px;
+		font-weight: bold;
+		margin-bottom: 40px;
+		padding-top: 6px;
+		padding-left: 60px;
+		position: relative;
+		&:before {
+			content: "1";
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 21px;
+			color: #000;
+			background: #fff;
+			border-radius: 100px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			width: 37px;
+			text-align: center;
+			border: 1px solid #000;
+		}
+		&.two {
+			&:before {
+				content: "2";
+			}
+		}
+		&.three {
+			&:before {
+				content: "3";
+			}
+		}
+		&.four {
+			&:before {
+				content: "4";
+			}
+		}
+		&.five {
+			&:before {
+				content: "5";
+			}
+		}
+	}
+
+}
+
+
+
+
+.govuk-accordion__open-all {
+	top: -10px;
+}
+.govuk-accordion {
+
+	.govuk-accordion__section-content {
+		padding-top: 5px;
+		padding-bottom: 30px;
+		
+		.flexibleBanner {
+			b {
+				font-size: 19px;
+			}
+		}
+	}
+	
+	.govuk-accordion__section-summary {
+		//font-weight: bold;
+	}
+	
+	.debtlistDetails {
+	margin: 0;
+	dt, dd {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
+	dt {
+		font-weight: bold;
+		margin-left: 20px;
+		&:first-child {
+			margin: 0;
+		}
+	}
+}
+
+}
+
+
+
+
 
 
 //////////////// Media ///////////////

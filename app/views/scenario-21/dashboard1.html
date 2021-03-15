@@ -58,7 +58,7 @@
 
 					 <div class="scenario-inner-panel">
 	 	
-						 <p class="activeMonth">Active month: <b>February 2021</b> <!--<span>11 days remaining</span>--></p>
+						 <p class="activeMonth">Active month: <b>April 2021</b> <!--<span>11 days remaining</span>--></p>
 
 					 
 					 
@@ -66,37 +66,48 @@
 											
 											
 											<ul class="govuk-list">
+											
+											
+											
+											
 							
 												
 												<li>
 													
 
-															{% if data['how-much3']=='flex334'%}
-													    <h3>Monthly target</h3>
+														{% if data['targetAmountsChoice']=='6MonthTarget'%}
+													    
+													     <h3>Monthly target</h3>
 													    <b>&pound;334.00</b>
 													    
 											
-														{% elif data['how-much3']=='flex167'%}
-														<h3>Monthly target</h3>
-														<b>&pound;167.00</b>
+														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
+														
+														 <h3>Monthly target</h3>
+														<b>&pound;166.00</b>
 														
 														
 														
-														{% elif data['how-much3']=='flex112'%}
-														<h3>Monthly target</h3>
-														<b>&pound;112.00</b>
+														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
 														
-														{% elif data['how-much3']=='flex84'%}
-														<h3>Monthly target</h3>
+														 <h3>Monthly target</h3>
 														<b>&pound;84.00</b>
 														
-														{% elif data['how-much3']=='flex56'%}
-														<h3>Monthly target</h3>
-														<b>&pound;56.00</b>																	
+														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
+														
+														 <h3>Monthly target</h3>
+														<b>&pound;56.00</b>
+														
+														{% elif data['targetAmountsChoice']=='twentyFiveTarget'%}
+														
+														 <h3>Monthly target</h3>
+														<b>&pound;25.00</b>
+																	
 														
 														{% else %}
-														<h3>Minimum to pay this month</h3>
-														<b>&pound;20.00</b>
+														
+														 <h3>Monthly target</h3>
+														<b>&pound;{{ data['payment-amount-target'] }}</b>
 													
 														
 														{% endif %}
@@ -119,11 +130,8 @@
 										
 											
 											</div>
-											
-																						
-											
 					
-
+					
 					<span><a href="flexibleStart" class="secondary-invert mt10">Make a flexible payment</a></span>
 					
 					<span><a href="fpManage" class="secondary-invert">Manage your payment plan</a></span>
@@ -143,10 +151,10 @@
 					 <div class="scenario-inner-panel">
 
 						 
-						 <!-- <h4 class="govuk-heading-s">Last payment</h4>
+						  <h4 class="govuk-heading-s">Last payment</h4>
 						 
 								
-								 	<p>A payment of &pound;100 was made on 12 February 2021.</p> -->
+								 	<p>A payment of &pound;100 was made on 12 February 2021.</p> 
 								 
 					 	
 					 			
@@ -154,10 +162,10 @@
 
 							  <tbody class="govuk-table__body">
 							  
-							  <tr class="govuk-table__row">
+							<!--  <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
 							      <td class="govuk-table__cell">&pound;{{ data['payment-amount'] }}</td>
-							    </tr>
+							    </tr> -->
 
 								  
 								  
