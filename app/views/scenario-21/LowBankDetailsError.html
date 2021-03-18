@@ -25,52 +25,7 @@
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 		
 		
-		
-		{% if data['paymentChoices']=='lowPayments'%}
 
-
-		<!--<h1 class="govuk-heading-xl">
-			<span class="govuk-caption-xl">Step 2 of 4</span>
-			How a low monthly payment <br>plan works</h1>
-			<p><a href="lowPayChoice" class="govuk-button">Continue</a></p> -->
-			
-			
-			<div class="attention-card ">
-
-			<h1 class="govuk-heading-l mb40">How a lower payment plan works</h1>
-			
-			
-			<ul class="govuk-list">
-			
-			
-			
-			<li>
-				<h2>Start your plan by entering an amount you can afford to pay each month </h2>
-				<p>If your financial situation improves, you should increase your payment plan or pay additional amounts.</p>
-			</li>	
-				
-				<li class="two">
-					<h2>Sign up for helpful payment reminders</h2>
-					<p>We will send you reminders every three months to see if you are able to increase your payment plan or pay additional amounts.</p>
-				</li>
-
-				<li class="three">
-					<h2>We may review your plan after 12 months</h2>
-					<p>If you have been unable to increase your payment plan, we will contact you to review your situation and see how much you can afford.</p>
-				</li>
-			</ul>
-			
-
-			<p><a href="lowPayChoice" class="attention-invert mt30">Continue</a></p>
-
-		</div>
-				
-										    
-										     		
-		
-		
-									{% else %}
-									
 		
 		
 
@@ -78,6 +33,7 @@
 		<h1 class="govuk-heading-xl">
 			<span class="govuk-caption-xl">Step 3 of 4</span>
 			Bank or building society <br>account details</h1>
+		 
 
 		
 		
@@ -89,13 +45,19 @@
 					Enter Account details
 				</legend>
 	
-		    <div class="govuk-form-group">
+		    <div class="govuk-form-group govuk-form-group--error">
 			  <label class="govuk-label" for="accountName">
 			    Name on the account
 			  </label>
+			  
 			  <div id="account-name-hint" class="govuk-hint">
-			  If your name is longer than 18 characters, you should abbreviate it
+			 You can only enter up to 18 characters
 			  </div>
+			  
+			  
+			  <span id="national-insurance-number-error" class="govuk-error-message">
+			    <span class="govuk-visually-hidden">Error:</span> You should abbreviate or shorten your name so it is no longer than 18 characters
+			  </span>
 
 			  <input class="govuk-input govuk-input--width-30" id="accountName" name="accountName" type="text">
 
@@ -154,10 +116,7 @@
 
 								
 									
-									
-						{% endif %}		
-
-
+	
 									
 									
 									

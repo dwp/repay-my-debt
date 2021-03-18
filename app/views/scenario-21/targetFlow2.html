@@ -53,6 +53,13 @@
 												        Set a target amount <br>to aim for each month
 												      </h1>
 												    </legend>
+												    
+												    
+												    <div class="govuk-inset-text mt0">
+												    
+												    	<p>You must meet your target amount each month to clear your debt in the chosen timeframe &ndash; paying more will clear your debt quicker, if you pay less it will take longer.</p> 
+												    
+												    </div>
 
 												    
 												     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -63,7 +70,7 @@
 												      <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="6Month" name="targetAmountsChoice" type="radio" value="6MonthTarget">
 												        <label class="govuk-label govuk-radios__label" for="6Month">
-												          <b>&pound;334.00</b> &ndash; if you pay this you will clear your debt in 6 months
+												          <b>&pound;334.00</b> &ndash; debt will be cleared in 6 months
 												        </label>
 												        
 												      </div>
@@ -72,7 +79,7 @@
 												       <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="12Month" name="targetAmountsChoice" type="radio" value="12MonthTarget">
 												        <label class="govuk-label govuk-radios__label" for="12Month">
-												          <b>&pound;166.00</b> &ndash; if you pay this you will clear your debt in 12 months
+												          <b>&pound;166.00</b> &ndash; debt will be cleared in 12 months
 												        </label>
 												        
 												      </div>
@@ -82,7 +89,7 @@
 												       <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="24Month" name="targetAmountsChoice" type="radio" value="24MonthTarget">
 												        <label class="govuk-label govuk-radios__label" for="24Month">
-												          <b>&pound;84.00</b> &ndash; if you pay this you will clear your debt in 24 months
+												          <b>&pound;84.00</b> &ndash; debt will be cleared in 24 months
 												        </label>
 												        
 												      </div>
@@ -94,7 +101,15 @@
 												      <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="36Month" name="targetAmountsChoice" type="radio" value="36MonthTarget">
 												        <label class="govuk-label govuk-radios__label" for="36Month">
-												          <b>&pound;56.00</b> &ndash; if you pay this you will clear your debt in 36 months
+												          <b>&pound;56.00</b> &ndash; debt will be cleared in 36 months
+												        </label>
+												        
+												      </div>
+												      
+												       <div class="govuk-radios__item">
+												        <input class="govuk-radios__input" id="48Month" name="targetAmountsChoice" type="radio" value="48MonthTarget">
+												        <label class="govuk-label govuk-radios__label" for="48Month">
+												          <b>&pound;35.00</b> &ndash; debt will be cleared in 48 months
 												        </label>
 												        
 												      </div>
@@ -106,10 +121,12 @@
 												      <div class="govuk-radios__item">
 												        <input class="govuk-radios__input" id="twentyFive" name="targetAmountsChoice" type="radio" value="twentyFiveTarget">
 												        <label class="govuk-label govuk-radios__label" for="twentyFive">
-												          <b>&pound;25.00</b> &ndash; if you pay this you will clear your debt in 80 months
+												          <b>&pound;25.00</b> &ndash; debt will be cleared in 72 months
 												        </label>
 												        
 												      </div>
+												      
+												      <div class="govuk-radios__divider">or</div>
 												      
 
 												      
@@ -118,7 +135,7 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="noAffordTarget" name="targetAmountsChoice" type="radio" value="noAffordTarget" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="noAffordTarget">
-          <b>Choose a different target amount</b>
+          <b>I need a lower target amount</b>
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">

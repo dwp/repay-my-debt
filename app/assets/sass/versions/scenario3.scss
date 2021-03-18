@@ -915,9 +915,27 @@ margin: 30px 0 50px 0;
 	background: govuk-colour("light-grey");
 	padding: 2.5em;
 	margin-bottom: 30px;
+	position: relative;
 	li {
 		margin-top: 20px;
+		&:first-child {
+			margin-top: 35px;
+		}
 	}
+	/** &:after {
+		background: govuk-colour("red");
+		text-indent: -9999px;
+		height: 40px;
+		width: 140px;
+		content: 'Direct Debit Logo';
+		position: absolute;
+		top: 1.8em;
+		right: 2.5em;
+		background-image: url("/govuk/assets/images/govuk-crest.png");
+		background-repeat: no-repeat;
+		background-position: 50% 0%;
+		background-size: 125px 102px;
+	} **/
 }
 
 
