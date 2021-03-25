@@ -1,0 +1,144 @@
+
+{% extends "layout-4.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+    
+   <!-- <div class="clear-bar">
+	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
+	   		<p>What you owe:
+	   				<span>&pound;120.00</span></p>
+
+	   </div> -->
+	   
+
+	   
+	   <div class="govuk-grid-row">
+      
+         <div class="govuk-grid-column-three-quarters">
+         
+         
+         <span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+	   
+
+
+				      <h1 class="govuk-heading-xl">Your payment plan</h1>
+	   	
+	   	
+	   	
+	   	
+	   		 <table class="govuk-table mb40">
+									 
+									 <caption class="visually-hidden">Plan summary</caption>
+										
+								
+										  <tbody class="govuk-table__body">
+										  
+										  
+										   <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment plan type</th>
+										      <td class="govuk-table__cell" colspan="2">
+										      
+										      Flexible payment plan
+										      
+										      
+										      </td>
+										      
+									
+											 </tr>
+
+											 
+											 
+											 
+											 
+											  <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Monthly target amount</th>
+										      <td class="govuk-table__cell">
+											      
+											      
+											{% if data['how-much2']=='6Month'%}
+										    &pound;334.00
+								
+											{% elif data['how-much2']=='12Month'%}
+											
+											&pound;167.00
+											
+											{% elif data['how-much2']=='18Month'%}
+											
+											&pound;112.00
+											
+											
+											{% elif data['how-much2']=='24Month'%}
+											
+											&pound;84.00
+
+											
+											{% elif data['how-much2']=='36Month'%}
+
+											&pound;56.00
+											
+											
+											{% elif data['how-much2']=='twentyFive'%}
+
+											&pound;25.00
+											
+											
+											{% else %}
+											
+											&pound;10.00
+											
+											{% endif %}
+											      
+											      
+										      </td>
+										      
+										      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
+			
+										      	
+										    </tr>
+										    
+										    
+										    <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment reminders</th>
+										      <td class="govuk-table__cell">
+										      
+										     No
+										      
+										      
+										      </td>
+										      
+										      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
+
+										      
+									
+											 </tr>
+										      
+										    
+										    
+								
+										    
+										    										    
+										  
+
+								
+										  </tbody>
+										</table>
+										
+										
+										<p><a href="fullPayment3" class="govuk-button">Switch to a Direct Debit payment plan</a></p>
+	   	
+	   	
+				   
+                  
+    </div>
+</div>
+
+{% endblock %}
+
+
+
