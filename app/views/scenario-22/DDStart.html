@@ -27,60 +27,6 @@
 
 
 
-									{% if data['payment-options']=='full-amount'%}
-									<h1 class="govuk-heading-xl">Pay the full amount</h1>
-								
-								
-									  {% include "includes/amountOwed2.html" %} 
-								
-									
-								   
-										<form class="form" action="#" method="post">
-
-										<p>Make sure you have enough money in your account to cover this payment.</p>
-
-										<p><a href="fullFinish" class="govuk-button">
-										  Continue
-										</a></p>
-										</form>
-
-										<!--// Full amount end -->
-
-
-
-
-
-
-									{% elif data['payment-options']=='flexible-amount'%}
-
-		<div class="attention-card">
-
-			<h1 class="govuk-heading-l mb30">How a flexible payment plan works</h1>
-			
-			<p class="title">This is not a Direct Debit &ndash; you must sign in each month and make at least one payment.</p>
-
-
-			<ul class="govuk-list">
-			
-			<li>Set a target amount to aim for each month</li>	
-				<li class="two">You will need to make a payment today &ndash; this will start your plan</li>
-
-				<li class="three">Sign up for helpful payment reminders</li>
-			</ul>
-			
-
-			<p><a href="flexSuggestedTarget2" class="attention-invert mt30">Continue</a></p>
-
-		</div>
-
-									<!--// Flexible amount end -->
-
-
-
-
-
-									{% elif data['payment-options']=='fixed-plan'%}
-
 	   
 									
 											<h1 class="govuk-heading-xl">Set up a Direct Debit</h1>
@@ -163,18 +109,6 @@
 						
 						
 	
-
-
-									{% else %}
-
-									<h1 class="govuk-heading-l">Oops! you didn't select a payment option</h1>
-
-									<p>Don't worry, you can go back and try again.</p>
-
-
-									{% endif %}
-
-
 
 
     </div>
