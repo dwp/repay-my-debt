@@ -25,7 +25,7 @@
 
 	   		</div>
 	   		<div class="govuk-inset-text">
-			 Total amount owed: <span class="total-amount">&pound;1900.00</span>
+			 Total amount owed: <span class="total-amount">&pound;6000.00</span>
 			</div>
 
 
@@ -78,38 +78,36 @@
 														{% if data['targetAmountsChoice']=='6MonthTarget'%}
 													    
 													     <h3>Monthly target</h3>
-													    <b>&pound;334.00</b>
+													    <b>&pound;1000.00</b>
 													    
 											
 														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
 														
 														 <h3>Monthly target</h3>
-														<b>&pound;166.00</b>
+														<b>&pound;500.00</b>
 														
 														
 														
 														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
 														
 														 <h3>Monthly target</h3>
-														<b>&pound;84.00</b>
+														<b>&pound;250.00</b>
 														
 														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
 														
 														 <h3>Monthly target</h3>
-														<b>&pound;56.00</b>
+														<b>&pound;167.00</b>
 														
-														{% elif data['targetAmountsChoice']=='twentyFiveTarget'%}
-														
-														 <h3>Monthly target</h3>
-														<b>&pound;25.00</b>
-																	
-														
-														{% else %}
+														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
 														
 														 <h3>Monthly target</h3>
-														<b>&pound;{{ data['payment-amount-target'] }}</b>
-													
+														<b>&pound;125.00</b>
 														
+														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
+														
+														 <h3>Monthly target</h3>
+														<b>&pound;84.00</b>
+																											
 														{% endif %}
 								
 												</li>
@@ -154,7 +152,7 @@
 						  <h4 class="govuk-heading-s">Last payment</h4>
 						 
 								
-								 	<p>A payment of &pound;100 was made on 12 February 2021.</p> 
+								 	<p>A payment of &pound;{{ data['payment-amount'] }} was made on 12 February 2021.</p> 
 								 
 					 	
 					 			
@@ -167,52 +165,6 @@
 							      <td class="govuk-table__cell">&pound;{{ data['payment-amount'] }}</td>
 							    </tr> -->
 
-								  
-								  
-								  {% if data['how-much3']=='flex334'%}
-								  <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">  
-													    &pound;334.00									    
-							      </td>
-								  </tr>
-								
-								  {% elif data['how-much3']=='flex167'%}
-								  <tr class="govuk-table__row">
-								  <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">					
-														&pound;167.00
-							      </td>
-								  </tr>
-								  
-								   {% elif data['how-much3']=='flex112'%}
-								   <tr class="govuk-table__row">
-								  <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">	
-														&pound;112.00
-							      </td>
-								   </tr>
-														
-								   {% elif data['how-much3']=='flex84'%}
-								   <tr class="govuk-table__row">
-								  <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">	
-														&pound;84.00
-							      </td>
-								   </tr>
-														
-								  {% elif data['how-much3']=='flex56'%}
-								  <tr class="govuk-table__row">
-								  <th scope="row" class="govuk-table__header">Monthly target</th>
-							      <td class="govuk-table__cell">					
-														&pound;56.00	
-							      </td>								
-								  </tr>								
-														
-														{% else %}
-		
-														
-							      {% endif %}
 		
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Monthly repayment average</th>
@@ -291,7 +243,7 @@
 					  <p>Details of the debts you owe to DWP.</p>
 
 
-		             <span><a href="debtBreakdown" class="secondary-invert dash-spacer">View details of what you owe</a></span>
+		             <span><a href="debtBreakdownList" class="secondary-invert dash-spacer">View details of what you owe</a></span>
 					 </div>
 				 </div>
 

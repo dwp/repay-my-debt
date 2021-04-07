@@ -37,7 +37,7 @@
 
 							   
 							   
-							   {% if data['how-much3']=='noAfford'%}
+							   {% if data['targetChoice2']=='target-no2'%}
 							   
 							   <h1 class="govuk-panel__title">
 					          	Your payment was successful
@@ -84,7 +84,7 @@
       
       
       
-      {% if data['how-much3']=='noAfford'%}
+      {% if data['targetChoice2']=='target-no2'%}
 									  
 									  <p>Once your account has been updated, you can continue to make payments &ndash; when you pay is up to you.</p>
 
@@ -111,7 +111,7 @@
 
 		  <tbody class="govuk-table__body">
 
-			   {% if data['how-much3']=='noAfford'%}
+			   {% if data['targetChoice2']=='target-no2'%}
 
 		   {% else %}
 		   
@@ -120,31 +120,33 @@
 		      <th scope="row" class="govuk-table__header">Monthly target</th>
 		      <td class="govuk-table__cell">
 
-			     {% if data['how-much3']=='flex334'%}
+			     {% if data['targetAmountsChoice']=='6MonthTarget'%}
 													    
-													    &pound;334.00
+													    &pound;1000.00
 													    
 											
-														{% elif data['how-much3']=='flex167'%}
+														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
+														
+														&pound;500.00
+														
+														
+														
+														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
+														
+														&pound;250.00
+														
+														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
 														
 														&pound;167.00
 														
+														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
 														
+														&pound;125.00
 														
-														{% elif data['how-much3']=='flex112'%}
-														
-														&pound;112.00
-														
-														{% elif data['how-much3']=='flex84'%}
+														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
 														
 														&pound;84.00
-																	
-														
-														{% else %}
-														
-														&pound;56.00
-													
-														
+		
 														{% endif %}
 
 		      </td>

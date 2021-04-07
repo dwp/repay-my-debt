@@ -32,7 +32,7 @@
 	   	
 	   	
 	   	
-	   		 <table class="govuk-table mb40">
+	   		 <table class="govuk-table summary-table mb40">
 									 
 									 <caption class="visually-hidden">Plan summary</caption>
 										
@@ -55,69 +55,85 @@
 											 
 											 
 											 
-											 
-											  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Monthly target amount</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{% if data['how-much2']=='6Month'%}
-										    &pound;334.00
-								
-											{% elif data['how-much2']=='12Month'%}
-											
-											&pound;167.00
-											
-											{% elif data['how-much2']=='18Month'%}
-											
-											&pound;112.00
-											
-											
-											{% elif data['how-much2']=='24Month'%}
-											
-											&pound;84.00
+											 {% if data['targetChoice2']=='target-no2'%}
 
-											
-											{% elif data['how-much2']=='36Month'%}
+		   {% else %}
+		   
+		   
+		   <tr class="govuk-table__row">
+		      <th scope="row" class="govuk-table__header">Monthly target</th>
+		      <td class="govuk-table__cell">
 
-											&pound;56.00
+			     {% if data['targetAmountsChoice']=='6MonthTarget'%}
+													    
+													    &pound;1000.00
+													    
 											
-											
-											{% elif data['how-much2']=='twentyFive'%}
+														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
+														
+														&pound;500.00
+														
+														
+														
+														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
+														
+														&pound;250.00
+														
+														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
+														
+														&pound;167.00
+														
+														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
+														
+														&pound;125.00
+														
+														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
+														
+														&pound;84.00
+		
+														{% endif %}
 
-											&pound;25.00
-											
-											
-											{% else %}
-											
-											&pound;10.00
-											
-											{% endif %}
-											      
-											      
-										      </td>
-				
-										      	
-										    </tr>
+		      </td>
+		
+		    </tr>
+
+		   
+		   
+		   
+		   {% endif %}	
 										    
-										    
-										    <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Payment reminders</th>
-										      <td class="govuk-table__cell">
-										      
-										     No
-										      
-										      
-										      </td>
-										      
-										     
-										      
-									
-											 </tr>
-										      
-										    
-										    
-								
+<tr class="govuk-table__row">
+		    <th scope="row" class="govuk-table__header">Payment reminders</th>
+			<td class="govuk-table__cell">
+
+			{% if data['how-contacted']=='yesReminder'%}
+
+
+
+
+				{% if data['citizenChoice']=='email'%}
+			   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
+			    {% elif data['citizenChoice']=='textMessage'%}
+			     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
+			    {% else %}
+			    {% endif %}
+
+
+
+
+				{% elif data['how-contacted']=='noReminder'%}
+
+				No
+
+
+				{% else %}
+
+
+
+				{% endif %}
+
+			</td>
+		    </tr>
 										    
 										    										    
 										  
@@ -132,7 +148,7 @@
 										
 										
 										<div class="govuk-inset-text">
-										<p>If you need to make changes to your plan, you need to contact Debt Management.</p>
+										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
 										
 										
 					   					<h2 class="govuk-heading-s">Debt Management</h2>
