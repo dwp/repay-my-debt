@@ -31,38 +31,44 @@
 	   		<div class="govuk-inset-text">
 			 Total amount owed: <span class="total-amount">
 			 
-			 							 {% if data['how-much2']=='6Month'%}
+			 
+			 {% if data['paymentChoices']=='6Month'%}
 										    
-										    &pound;1666.00
+										    &pound;5000.00
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
-											&pound;1833.00
+											&pound;5500.00										
 											
-											{% elif data['how-much2']=='18Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;1888.00
+											&pound;5750.00
 											
+											{% elif data['paymentChoices']=='36Month'%}
 											
-											{% elif data['how-much2']=='24Month'%}
+											&pound;5832.00
 											
-											&pound;1916.00
+											{% elif data['paymentChoices']=='48Month'%}
 											
+											&pound;5875.00
 											
-											{% elif data['how-much2']=='36Month'%}
+											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;1944.00
-											
-											{% elif data['how-much2']=='twentyFive'%}
-											
-											&pound;1975.00
+											&pound;5916.00
 
 											
 											{% else %}
 											
-											&pound;1990.00
+											&pound;5980.00
+						
+											
 											
 											{% endif %}
+			 
+			 							
+											
+											
+							
 			 						
 			 						</span>
 			 
@@ -94,8 +100,62 @@
       
       
        <div class="govuk-grid-column-one-half">
-    
-		    <div class="scenario-panel">
+       
+       
+       
+       
+       
+       	{% if data['paymentChoices']=='lowPayments'%}
+       	
+       	
+       	
+       		<div class="scenario-panel">
+					 <h2 class="govuk-heading-s">Direct Debit &ndash; lower payment plan</h2>
+					 
+					 <div class="scenario-inner-panel">
+					 
+						 	<table class="govuk-table mb22">
+
+							  <tbody class="govuk-table__body">
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Monthly payment</th>
+							      <td class="govuk-table__cell">
+								      
+
+											&pound;{{ data['affordable-amount'] }}
+
+								      
+							      </td>
+							    </tr>
+							   
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Next payment date</th>
+							      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2021</td>
+							    </tr>
+							  </tbody>
+							</table>	
+							
+						<p class="statement mb20 mt50">Make sure you have enough money in your account to cover your next payment.</p>
+						
+									   					 
+							   					 
+	
+					<span><a href="ddPlan" class="secondary-invert mt30">View or manage your payment plan</a></span>
+					
+					<span><a href="additionalPayment" class="secondary-invert">Make an additional payment</a></span>	
+					
+		           		             
+					 </div>
+				 </div>	
+       	
+       	
+       	
+       	
+       	{% else %}
+       	
+       	
+       	
+       	<div class="scenario-panel">
 					 <h2 class="govuk-heading-s">Direct Debit payment plan</h2>
 					 
 					 <div class="scenario-inner-panel">
@@ -107,35 +167,34 @@
 							      <th scope="row" class="govuk-table__header">Monthly payment</th>
 							      <td class="govuk-table__cell">
 								      
-								      {% if data['how-much2']=='6Month'%}
+								      {% if data['paymentChoices']=='6Month'%}
 										    
-										    &pound;334.00
+										    &pound;1000.00
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
-											&pound;167.00
+											&pound;500.00										
 											
-											{% elif data['how-much2']=='18Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;112.00
+											&pound;250.00
 											
+											{% elif data['paymentChoices']=='36Month'%}
 											
-											{% elif data['how-much2']=='24Month'%}
+											&pound;168.00
+											
+											{% elif data['paymentChoices']=='48Month'%}
+											
+											&pound;125.00
+											
+											{% elif data['paymentChoices']=='72Month'%}
 											
 											&pound;84.00
-											
-											{% elif data['how-much2']=='36Month'%}
-											
-											&pound;56.00
-											
-											{% elif data['how-much2']=='twentyFive'%}
-											
-											&pound;25.00
 
 											
 											{% else %}
+						
 											
-											&pound;10.00
 											
 											{% endif %}
 								      
@@ -147,72 +206,45 @@
 							      
 							      
 							      
-							      {% if data['how-much2']=='6Month'%}
+							      {% if data['paymentChoices']=='6Month'%}
 										    
 										   5
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
 											11
 											
-											{% elif data['how-much2']=='18Month'%}
-											
-											17
-											
-											
-											{% elif data['how-much2']=='24Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
 											23
 											
-											{% elif data['how-much2']=='36Month'%}
+											
+											{% elif data['paymentChoices']=='36Month'%}
 											
 											35
 											
-											{% elif data['how-much2']=='twentyFive'%}
+											{% elif data['paymentChoices']=='48Month'%}
 											
-											79
+											48
+											
+											{% elif data['paymentChoices']=='72Month'%}
+											
+											71
 
 											
 											{% else %}
 											
-											199
+											
 											
 											{% endif %}
-							      
-							      
-							      
-							     <!-- {% if data['how-much2']=='oneHundredPound'%}
-										    
-										  5
-								
-											{% elif data['how-much2']=='fiftyPound'%}
-											
-											11
-											
-											{% elif data['how-much2']=='thirtyThree'%}
-											
-											17
-											
-											
-											{% elif data['how-much2']=='twentyFivePound'%}
-											
-											23
 
-											
-											{% else %}
-											
-											35
-											
-											{% endif %} -->
-
-							      
 							      
 							      
 							    </td>
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
-							      <td class="govuk-table__cell">{{ data['paymentDay'] }} April 2021</td>
+							      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2021</td>
 							    </tr>
 							  </tbody>
 							</table>	
@@ -228,14 +260,29 @@
 					
 		           		             
 					 </div>
-				 </div>	 
+				 </div>	
+       	
+       	
+       	
+
+	   	{% endif %}
+       
+       
+       
+       
+    
+		     
 				 
         </div>
         
         
       <div class="govuk-grid-column-one-half">
-    
-		    <div class="scenario-panel">
+      
+      	{% if data['paymentChoices']=='lowPayments'%}
+      	
+      	
+      	
+      	<div class="scenario-panel">
 					 <h2 class="govuk-heading-s">Plan summary</h2>
 					
 					 
@@ -244,37 +291,7 @@
 					 
 					 <div class="warning-message complete-alert">
 								
-								 	<p>A payment of  {% if data['how-much2']=='6Month'%}
-										    
-										    &pound;334.00
-								
-											{% elif data['how-much2']=='12Month'%}
-											
-											&pound;167.00
-											
-											{% elif data['how-much2']=='18Month'%}
-											
-											&pound;112.00
-											
-											
-											{% elif data['how-much2']=='24Month'%}
-											
-											&pound;84.00
-											
-											{% elif data['how-much2']=='36Month'%}
-											
-											&pound;56.00
-											
-											{% elif data['how-much2']=='twentyFive'%}
-											
-											&pound;25.00
-
-											
-											{% else %}
-											
-											&pound;10.00
-											
-											{% endif %} was taken from your account on {{ data['paymentDay'] }} March 2021</p>
+								 	<p>A payment of  &pound;{{ data['affordable-amount'] }} was taken from your account on {{ data['paymentDay'] }} May 2021</p>
 								 </div>
 					 	
 					 			
@@ -290,35 +307,141 @@
 							      
 							      
 							      
-							      {% if data['how-much2']=='6Month'%}
+							      1
+											
+							      </td>
+							   </tr>
+
+							    
+							   <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
+							      <td class="govuk-table__cell">
+								      
+								      
+								&pound;{{ data['affordable-amount'] }}
+								      
+								      
+							      </td>
+							    </tr>
+							    
+							    
+							    
+							    <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Plan review date</th>
+							      <td class="govuk-table__cell">
+							      
+							      
+							    {{ data['paymentDay'] }} May 2022
+							      
+							      
+							    </td>
+							    </tr>
+							   
+
+							    
+							    
+
+							   
+							  </tbody>
+							</table>
+							
+																
+	
+		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt30">View your payment history</a></span>
+	
+				 
+        </div>
+		    </div>
+		    
+      	
+      	
+      
+      	{% else %}
+      
+    
+		    <div class="scenario-panel">
+					 <h2 class="govuk-heading-s">Plan summary</h2>
+					
+					 
+					 <div class="scenario-inner-panel">
+
+					 
+					 <div class="warning-message complete-alert">
+								
+								 	<p>A payment of  {% if data['paymentChoices']=='6Month'%}
+										    
+										    &pound;1000.00
+								
+											{% elif data['paymentChoices']=='12Month'%}
+											
+											&pound;500.00										
+											
+											{% elif data['paymentChoices']=='24Month'%}
+											
+											&pound;250.00
+											
+											{% elif data['paymentChoices']=='36Month'%}
+											
+											&pound;168.00
+											
+											{% elif data['paymentChoices']=='48Month'%}
+											
+											&pound;125.00
+											
+											{% elif data['paymentChoices']=='72Month'%}
+											
+											&pound;84.00
+
+											
+											{% else %}
+									
+											
+											
+											{% endif %} was taken from your account on {{ data['paymentDay'] }} May 2021</p>
+								 </div>
+					 	
+					 			
+					 		<table class="govuk-table">
+
+							  <tbody class="govuk-table__body">
+							  
+							  
+							  
+							   <tr class="govuk-table__row">
+							      <th scope="row" class="govuk-table__header">Payments made</th>
+							      <td class="govuk-table__cell">
+							      
+							      
+							      
+							      {% if data['paymentChoices']=='6Month'%}
 										    
 										   1 of 6
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
 											1 of 12
 											
-											{% elif data['how-much2']=='18Month'%}
-											
-											1 of 18
-											
-											
-											{% elif data['how-much2']=='24Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
 											1 of 24
 											
-											{% elif data['how-much2']=='36Month'%}
+											
+											{% elif data['paymentChoices']=='36Month'%}
 											
 											1 of 36
 											
-											{% elif data['how-much2']=='twentyFive'%}
+											{% elif data['paymentChoices']=='48Month'%}
 											
-											1 of 80
+											1 of 48
+											
+											{% elif data['paymentChoices']=='72Month'%}
+											
+											1 of 72
 
 											
 											{% else %}
 											
-											1 of 200
+									
 											
 											{% endif %}
 											
@@ -332,35 +455,34 @@
 								      
 								      
 								       
-							    {% if data['how-much2']=='6Month'%}
+							    {% if data['paymentChoices']=='6Month'%}
 										    
-										    &pound;334.00
+										    &pound;1000.00
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
-											&pound;167.00
+											&pound;500.00										
 											
-											{% elif data['how-much2']=='18Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;112.00
+											&pound;250.00
 											
+											{% elif data['paymentChoices']=='36Month'%}
 											
-											{% elif data['how-much2']=='24Month'%}
+											&pound;168.00
+											
+											{% elif data['paymentChoices']=='48Month'%}
+											
+											&pound;125.00
+											
+											{% elif data['paymentChoices']=='72Month'%}
 											
 											&pound;84.00
-											
-											{% elif data['how-much2']=='36Month'%}
-											
-											&pound;56.00
-											
-											{% elif data['how-much2']=='twentyFive'%}
-											
-											&pound;25.00
 
 											
 											{% else %}
+						
 											
-											&pound;10.00
 											
 											{% endif %}
 								      
@@ -374,37 +496,36 @@
 							      <th scope="row" class="govuk-table__header">Expected final payment</th>
 							      <td class="govuk-table__cell">
 								      
-								     {% if data['how-much2']=='6Month'%}
+								    {% if data['paymentChoices']=='6Month'%}
 										    
-										    {{ data['paymentDay'] }} August 2021
+										    {{ data['paymentDay'] }} October 2021
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
-											{{ data['paymentDay'] }} March 2022
+											{{ data['paymentDay'] }} May 2022
 											
-											{% elif data['how-much2']=='18Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
-											{{ data['paymentDay'] }} August 2022
+											{{ data['paymentDay'] }} May 2023
 											
 											
-											{% elif data['how-much2']=='24Month'%}
+											{% elif data['paymentChoices']=='36Month'%}
 											
-											{{ data['paymentDay'] }} March 2023
+											{{ data['paymentDay'] }} May 2024
 											
-											{% elif data['how-much2']=='36Month'%}
+											{% elif data['paymentChoices']=='48Month'%}
 											
-											{{ data['paymentDay'] }} March 2024
+											{{ data['paymentDay'] }} May 2025
 											
-											{% elif data['how-much2']=='twentyFive'%}
+											{% elif data['paymentChoices']=='72Month'%}
 											
-											{{ data['paymentDay'] }} December 2027
+											{{ data['paymentDay'] }} May 2027
 
 											
 											{% else %}
 											
-											{{ data['paymentDay'] }} November 2037
-											
-											{% endif %}		
+																						
+											{% endif %}	
 								      
 								      
 							      </td>
@@ -425,6 +546,10 @@
 				 
         </div>
 		    </div>
+		    
+		    
+		    
+		    {% endif %}
 
         
       </div>

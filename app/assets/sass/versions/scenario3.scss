@@ -873,6 +873,10 @@ margin: 30px 0 50px 0;
 			padding: .2em .8em;
 			b {
 				font-size: 20px;
+				a {
+					font-weight: normal;
+					font-size: 17px;
+				}
 			}
 		}
 
@@ -1120,6 +1124,18 @@ margin: 40px 0;
 
 }
 
+
+.updatedPlanStatus {
+	border-left: 5px solid govuk-colour("blue");
+	background: rgba(govuk-colour("blue"), 0.05);
+	display: block;
+	padding-left: 1.2em;
+}
+
+.updatedPlanHeading {
+	padding-left: 1.2em;
+	margin-left: 5px;
+}
 
 
 

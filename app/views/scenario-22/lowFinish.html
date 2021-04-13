@@ -30,14 +30,10 @@
           <h1 class="govuk-panel__title">
             Your Direct Debit plan is setup
           </h1>
-          
-          {% if data['planSwitch']=='yesSwitch'%}
+
 	
 	   			<div class="govuk-panel__body">Your flexible payment plan has now ended</div>
-	  		
-	   		
-	   	{% else %}
-	   	{% endif %}
+
 
         </div>
 
@@ -56,10 +52,18 @@
         
         
         <h2 class="govuk-heading-m">Plan summary</h2>
-	   
-	  <table class="govuk-table summary-table mb40">
+        
+        
+        
+         	{% if data['paymentChoices']=='lowPayments'%}
+	   	
+
+	   	
+	   											
+																	
+									 <table class="govuk-table summary-table mb40">
 									 
-									 <caption class="visually-hidden">Plan summary</caption>
+									 <caption class="visually-hidden">Plan details</caption>
 										
 								
 										  <tbody class="govuk-table__body">
@@ -67,7 +71,7 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell" colspan="2">&pound;2000.00
+										      <td class="govuk-table__cell" colspan="2">&pound;6,000.00
 										      </td>
 										      
 									
@@ -77,7 +81,7 @@
 											 
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell" colspan="2">Low payment plan
+										      <td class="govuk-table__cell" colspan="2">Lower payment plan
 										      </td>
 										      
 									
@@ -95,21 +99,188 @@
 											 
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">First payment date</th>
-										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} March 2021
+										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} May 2021
+										      </td>
+										      
+									
+											 </tr>
+											 
+											 
+											 <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Proposed plan review date</th>
+										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} May 2022
+										      	<span class="textNumber">If you are unable to increase the amount you pay over the next 12 months we will contact you to discuss your financial situation.</span>
 										      </td>
 										      
 									
 											 </tr>
 
-								
-	
-								
-								
+										    
+										    
+
 								
 										  </tbody>
 										</table>
 										
 										
+										
+											   	
+	   	
+			   	
+			    {% else %}
+			    
+			    	
+			    	
+			    
+			    
+			    
+			    								
+									 <table class="govuk-table mb40">
+									 
+									 <caption class="visually-hidden">Plan details</caption>
+										
+								
+										  <tbody class="govuk-table__body">
+										  
+										
+											 <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Total amount owed</th>
+										      <td class="govuk-table__cell" colspan="2">&pound;6,000.00
+										      </td>
+										      
+									
+											 </tr>
+										      
+										    
+										    
+								
+										  <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
+										      <td class="govuk-table__cell">
+											      
+											      
+											{% if data['paymentChoices']=='6Month'%}
+										    
+										  6 payments of &pound;1,000.00
+								
+											{% elif data['paymentChoices']=='12Month'%}
+											
+											12 payments of &pound;500.00
+											
+											
+											{% elif data['paymentChoices']=='24Month'%}
+											
+											24 payments of &pound;250.00
+
+											
+											{% elif data['paymentChoices']=='36Month'%}
+
+											
+											
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>35 payments of &pound;168.00</li>
+										  		<li><span class="payDivide">1 final payment of &pound;120.00</span></li>
+											</ul>
+											
+											
+											{% elif data['paymentChoices']=='48Month'%}
+
+											
+											
+											48 payments of &pound;125.00
+											
+											
+											{% elif data['paymentChoices']=='72Month'%}
+
+											
+											
+											<ul class="govuk-list govuk-list--bullet mb0">
+										  		<li>71 payments of &pound;84.00</li>
+										  		<li><span class="payDivide">1 final payment of &pound;36.00</span></li>
+											</ul>
+											
+											
+										
+											
+											
+											{% else %}
+											
+											Low payment plan
+											
+											{% endif %}
+											      
+											      
+										      </td>
+										      
+			
+										      	
+										    </tr>
+										    
+										    
+										     <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment dates</th>
+										      <td class="govuk-table__cell dtList">
+										      
+										      
+										      <dl>
+										      	<dt>First payment:</dt>
+										      	<dd>{{ data['paymentDay'] }} May 2021</dd>
+										      	<dt>Expected final payment:</dt>
+										      	<dd>
+										      	
+										      	{% if data['paymentChoices']=='6Month'%}
+										    
+										    {{ data['paymentDay'] }} October 2021
+								
+											{% elif data['paymentChoices']=='12Month'%}
+											
+											{{ data['paymentDay'] }} May 2022
+											
+											{% elif data['paymentChoices']=='24Month'%}
+											
+											{{ data['paymentDay'] }} May 2023
+											
+											
+											{% elif data['paymentChoices']=='36Month'%}
+											
+											{{ data['paymentDay'] }} May 2024
+											
+											{% elif data['paymentChoices']=='48Month'%}
+											
+											{{ data['paymentDay'] }} May 2025
+											
+											{% elif data['paymentChoices']=='72Month'%}
+											
+											{{ data['paymentDay'] }} May 2027
+
+											
+											{% else %}
+											
+																						
+											{% endif %}
+										      	
+										      	</dd>
+										      </dl>
+											      
+			      
+											      
+										      </td>
+	
+							
+										     
+										    </tr>
+
+
+								
+										  </tbody>
+										</table>
+			    
+			    
+			    
+			    
+			    {% endif %}
+        
+        										
 										<p>Your payments will show on your bank statement as <b>CEN REC GROUP DD</b>.</p>
 										
 										

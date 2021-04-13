@@ -32,70 +32,95 @@
 
 
 		<h1 class="govuk-heading-xl">Make a flexible payment</h1>
-
-
-
-
-											<div class="flexibleBanner">
+		
+		
+		
+		<div class="flexibleBanner">
 											
 											
 											<ul class="govuk-list">
-												<li>
+											
+											
+											
+											<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;1900.00</b>
+													<b>&pound;5980.00</b>
 												</li>
-												<li>
-													{% if data['targetAmountsChoice']=='6MonthTarget'%}
+							
+												
+												
+													
+
+														{% if data['targetAmountsChoice']=='6MonthTarget'%}
 													    
+													    <li>
 													     <h3>Monthly target</h3>
-													    <b>&pound;334.00</b>
+													    <b>&pound;1000.00</b>
+													    </li>
 													    
 											
 														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
 														
+														<li>
 														 <h3>Monthly target</h3>
-														<b>&pound;166.00</b>
+														<b>&pound;500.00</b>
+														</li>
 														
 														
 														
 														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
 														
+														<li>
 														 <h3>Monthly target</h3>
-														<b>&pound;84.00</b>
+														<b>&pound;250.00</b>
+														</li>
 														
 														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
 														
+														<li>
 														 <h3>Monthly target</h3>
-														<b>&pound;56.00</b>
+														<b>&pound;167.00</b>
+														</li>
 														
-														{% elif data['targetAmountsChoice']=='twentyFiveTarget'%}
+														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
 														
+														<li>
 														 <h3>Monthly target</h3>
-														<b>&pound;25.00</b>
-																	
+														<b>&pound;125.00</b>
+														</li>
+														
+														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
+														
+														<li>
+														 <h3>Monthly target</h3>
+														<b>&pound;84.00</b>
+														</li>
 														
 														{% else %}
-														
-														 <h3>Monthly target</h3>
-														<b>&pound;{{ data['payment-amount-target'] }}</b>
-													
-														
+																			
 														{% endif %}
 								
 												</li>
+												
 												<li>
 													<h3>Paid this month</h3>
 													<b>&pound;{{ data['payment-amount'] }}</b>
 												</li>
 												
-												
+											<!--<li>
+													<h3>Left to pay</h3>
+													<b>&pound;67.00</b>
+												</li>-->
+								
+									
 											</ul>
 											
+										
+											
 											</div>
-											
-											
-											
-											
+
+
+
 
 
 										<form class="form" action="paymentDetail" method="post">

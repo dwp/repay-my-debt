@@ -60,7 +60,7 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell" colspan="2">&pound;10,000.00
+										      <td class="govuk-table__cell" colspan="2">&pound;6,000.00
 										      </td>
 										      
 									
@@ -70,7 +70,7 @@
 											 
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell" colspan="2">Low payment plan
+										      <td class="govuk-table__cell" colspan="2">Lower payment plan
 										      </td>
 										      
 									
@@ -88,11 +88,23 @@
 											 
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">First payment date</th>
-										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} March 2021
+										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} May 2021
 										      </td>
 										      
 									
 											 </tr>
+											 
+											 
+											 <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Proposed plan review date</th>
+										      <td class="govuk-table__cell" colspan="2">{{ data['paymentDay'] }} May 2022
+										      	<span class="textNumber">If you are unable to increase the amount you pay over the next 12 months we will contact you to discuss your financial situation.</span>
+										      </td>
+										      
+									
+											 </tr>
+											 
+											 
 											 
 											<tr class="govuk-table__row">
 		    <th scope="row" class="govuk-table__header">Payment reminders</th>
@@ -143,13 +155,16 @@
 										      </dl>
 										      
 										      </td>
-										      <td class="govuk-table__cell changeDetails"><a href="directDebitDetailsEdit">Change</a></td>
+										      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
 											 </tr>
 
 								
 										  </tbody>
 										</table>
-	   	
+										
+										
+										
+											   	
 	   	
 			   	
 			    {% else %}
@@ -170,7 +185,7 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell" colspan="2">&pound;10,000.00
+										      <td class="govuk-table__cell" colspan="2">&pound;6,000.00
 										      </td>
 										      
 									
@@ -186,25 +201,16 @@
 											      
 											{% if data['paymentChoices']=='6Month'%}
 										    
-										  <ul class="govuk-list govuk-list--bullet mb0">
-										  	<li>5 payments of &pound;1,667.00</li>
-										    <li><span class="payDivide">1 final payment of &pound;1,665.00</span></li>
-										  </ul>
+										  6 payments of &pound;1,000.00
 								
 											{% elif data['paymentChoices']=='12Month'%}
 											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>11 payments of &pound;834.00</li>
-												<li><span class="payDivide">1 final payment of &pound;826.00</span></li>
-											</ul>
+											12 payments of &pound;500.00
 											
 											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>23 payments of &pound;418.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;386.00</span></li>
-											</ul>
+											24 payments of &pound;250.00
 
 											
 											{% elif data['paymentChoices']=='36Month'%}
@@ -212,19 +218,15 @@
 											
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>35 payments of &pound;278.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;270.00</span></li>
+										  		<li>35 payments of &pound;168.00</li>
+										  		<li><span class="payDivide">1 final payment of &pound;120.00</span></li>
 											</ul>
 											
 											
 											{% elif data['paymentChoices']=='48Month'%}
 
 											
-											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>47 payments of &pound;210.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;130.00</span></li>
-											</ul>
+											48 payments of &pound;125.00
 											
 											
 											{% elif data['paymentChoices']=='72Month'%}
@@ -232,8 +234,8 @@
 											
 											
 											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>71 payments of &pound;140.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;60.00</span></li>
+										  		<li>71 payments of &pound;84.00</li>
+										  		<li><span class="payDivide">1 final payment of &pound;36.00</span></li>
 											</ul>
 											
 											
@@ -242,7 +244,7 @@
 											
 											{% else %}
 											
-											No plan chosen
+											Low payment plan
 											
 											{% endif %}
 											      
@@ -262,40 +264,39 @@
 										      
 										      <dl>
 										      	<dt>First payment:</dt>
-										      	<dd>{{ data['paymentDay'] }} March 2021</dd>
+										      	<dd>{{ data['paymentDay'] }} May 2021</dd>
 										      	<dt>Expected final payment:</dt>
 										      	<dd>
 										      	
 										      	{% if data['paymentChoices']=='6Month'%}
 										    
-										    {{ data['paymentDay'] }} August 2021
+										    {{ data['paymentDay'] }} October 2021
 								
 											{% elif data['paymentChoices']=='12Month'%}
 											
-											{{ data['paymentDay'] }} March 2022
-											
-											{% elif data['paymentChoices']=='18Month'%}
-											
-											{{ data['paymentDay'] }} August 2022
-											
+											{{ data['paymentDay'] }} May 2022
 											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											{{ data['paymentDay'] }} March 2023
+											{{ data['paymentDay'] }} May 2023
+											
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											{{ data['paymentDay'] }} March 2024
+											{{ data['paymentDay'] }} May 2024
 											
-											{% elif data['paymentChoices']=='twentyFive'%}
+											{% elif data['paymentChoices']=='48Month'%}
 											
-											{{ data['paymentDay'] }} December 2027
+											{{ data['paymentDay'] }} May 2025
+											
+											{% elif data['paymentChoices']=='72Month'%}
+											
+											{{ data['paymentDay'] }} May 2027
 
 											
 											{% else %}
 											
-											{{ data['paymentDay'] }} November 2037
-											
+																						
 											{% endif %}
 										      	
 										      	</dd>

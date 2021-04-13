@@ -115,8 +115,7 @@
 
 {% else %}
 
-
-  <div class="govuk-grid-row">
+ <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       <div class="clear-bar stripped-border">
@@ -208,9 +207,15 @@
 														
 														 <h3>Monthly target</h3>
 														<b>&pound;84.00</b>
+														
+														{% else %}
+														
+														
+														<h3>Monthly target</h3>
+														<b>Not set</b>
 																											
 														{% endif %}
-								
+												
 												</li>
 												
 												<li>
@@ -253,7 +258,7 @@
 						  <h4 class="govuk-heading-s">Last payment</h4>
 						 
 								
-								 	<p>A payment of &pound;{{ data['payment-amount'] }} was made on 12 February 2021.</p> 
+								 	<p>A payment of &pound;{{ data['payment-amount'] }} was made on 20 April 2021.</p> 
 								 
 					 	
 					 			
@@ -274,7 +279,7 @@
 							    
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Expected end of debt</th>
-							      <td class="govuk-table__cell">November 2022</td>
+							      <td class="govuk-table__cell">November 2023</td>
 							    </tr>
 
 
@@ -385,7 +390,6 @@
 
     </div>
 </div>
-
 
 {% endif %}	
 

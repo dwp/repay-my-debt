@@ -28,13 +28,29 @@
 
 
 				      <h1 class="govuk-heading-xl">Your payment plan</h1>
+				      
+				      
+				      
+	   	<div class="govuk-inset-text">
+										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
+										
+										
+					   					<h2 class="govuk-heading-s">Debt Management</h2>
+									  <ul class="govuk-list">
+									  <li>Telephone: 0800 916 0647</li>
+									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
+									</ul>
+									<p class="govuk-body">
+									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+									</p>	
+									
+										</div>
+		
 	   	
 	   	
-	   	
-	   	
-	   		 <table class="govuk-table mb40">
+	   		 <table class="govuk-table summary-table mb40">
 									 
-									 <caption class="visually-hidden">Plan summary</caption>
+									 <caption class="visually-hidden">Current payment plan details</caption>
 										
 								
 										  <tbody class="govuk-table__body">
@@ -43,8 +59,12 @@
 											
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell">Direct Debit payment plan
+										      <td class="govuk-table__cell">
+										      
+										      
+										      Direct Debit {% if data['paymentChoices']=='lowPayments'%}lower payment{% else %}{% endif %}
 										      </td>
+										      
 											 </tr>
 											 
 											 
@@ -53,37 +73,34 @@
 										      <th scope="row" class="govuk-table__header">Monthly payment amount</th>
 										      <td class="govuk-table__cell">
 											      
-											      
-											{% if data['how-much2']=='6Month'%}
-										    &pound;334.00
+											{% if data['paymentChoices']=='6Month'%}
+										    
+										    &pound;1000.00
 								
-											{% elif data['how-much2']=='12Month'%}
+											{% elif data['paymentChoices']=='12Month'%}
 											
-											&pound;167.00
+											&pound;500.00										
 											
-											{% elif data['how-much2']=='18Month'%}
+											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;112.00
+											&pound;250.00
 											
+											{% elif data['paymentChoices']=='36Month'%}
 											
-											{% elif data['how-much2']=='24Month'%}
+											&pound;168.00
+											
+											{% elif data['paymentChoices']=='48Month'%}
+											
+											&pound;125.00
+											
+											{% elif data['paymentChoices']=='72Month'%}
 											
 											&pound;84.00
 
 											
-											{% elif data['how-much2']=='36Month'%}
-
-											&pound;56.00
-											
-											
-											{% elif data['how-much2']=='twentyFive'%}
-
-											&pound;25.00
-											
-											
 											{% else %}
+											&pound;{{ data['affordable-amount'] }}
 											
-											&pound;10.00
 											
 											{% endif %}
 											      
@@ -113,6 +130,46 @@
 							
 										     
 										    </tr>
+										    
+										    
+										    {% if data['paymentChoices']=='lowPayments'%}
+										    <tr class="govuk-table__row">
+											    <th scope="row" class="govuk-table__header">Payment reminders</th>
+												<td class="govuk-table__cell">
+									
+												{% if data['how-contacted']=='yesReminder'%}
+									
+									
+									
+									
+													{% if data['citizenChoice']=='email'%}
+												   		Email address<span class="textNumber">{{ data['contact-by-email'] }}</span>
+												    {% elif data['citizenChoice']=='textMessage'%}
+												     	Text message<span class="textNumber">{{ data['contact-by-text'] }}</span>
+												    {% else %}
+												    {% endif %}
+									
+									
+									
+									
+													{% elif data['how-contacted']=='noReminder'%}
+									
+													No
+									
+									
+													{% else %}
+									
+									
+									
+													{% endif %}
+									
+												</td>
+											    </tr>
+											    {% else %}
+																						
+											{% endif %}
+										    
+
 
 										    
 										    
@@ -137,24 +194,12 @@
 										</table>
 			
 										
-										<p><a href="#" class="govuk-button mb10">Switch to a flexible payment plan</a></p>
 										
 										
-										<div class="govuk-inset-text">
-										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
 										
 										
-					   					<h2 class="govuk-heading-s">Debt Management</h2>
-									  <ul class="govuk-list">
-									  <li>Telephone: 0800 916 0647</li>
-									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-									</ul>
-									<p class="govuk-body">
-									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-									</p>	
-									
-										</div>
 	   	
+	   	<p><a href="#" class="secondary-invert">Switch to a flexible payment plan</a></p>
 	   	
 				   
                   

@@ -28,13 +28,30 @@
 
 
 				      <h1 class="govuk-heading-xl">Your payment plan</h1>
+				      
+				      
+				      
+				      <div class="govuk-inset-text">
+										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
+										
+										
+					   					<h2 class="govuk-heading-s">Debt Management</h2>
+									  <ul class="govuk-list">
+									  <li>Telephone: 0800 916 0647</li>
+									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
+									</ul>
+									<p class="govuk-body">
+									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+									</p>	
+									
+										</div>
 	   	
 	   	
 	   	
 	   	
 	   		 <table class="govuk-table summary-table mb40">
 									 
-									 <caption class="visually-hidden">Plan summary</caption>
+									 <caption class="visually-hidden">Current payment plan details</caption>
 										
 								
 										  <tbody class="govuk-table__body">
@@ -42,7 +59,7 @@
 										  
 										   <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell">
+										      <td class="govuk-table__cell" colspan="2">
 										      
 										      Flexible payment plan
 										      
@@ -56,6 +73,24 @@
 											 
 											 
 											 {% if data['targetChoice2']=='target-no2'%}
+											 
+											 
+											 
+											 
+						<tr class="govuk-table__row">
+		      <th scope="row" class="govuk-table__header">Monthly target</th>
+		      <td class="govuk-table__cell">
+
+			     Not set
+
+		      </td>
+		      
+		      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
+		
+		    </tr>
+					 
+											 
+											 
 
 		   {% else %}
 		   
@@ -94,6 +129,8 @@
 														{% endif %}
 
 		      </td>
+		      
+		      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
 		
 		    </tr>
 
@@ -104,7 +141,7 @@
 										    
 <tr class="govuk-table__row">
 		    <th scope="row" class="govuk-table__header">Payment reminders</th>
-			<td class="govuk-table__cell">
+			<td class="govuk-table__cell" colspan="2">
 
 			{% if data['how-contacted']=='yesReminder'%}
 
@@ -133,7 +170,26 @@
 				{% endif %}
 
 			</td>
+			
+			 
 		    </tr>
+		    
+		      
+										     <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Account details</th>
+										      <td class="govuk-table__cell dtList" colspan="2">
+										      <dl>
+										      	<dt>Account name</dt>
+										      	<dd>{{ data['accountName'] }}</dd>
+										      	<dt>Sort code</dt>
+										      	<dd>{{ data['sortCode'] }}</dd>
+										      	<dt>Account number</dt>
+										      	<dd>{{ data['accountNumber'] }}</dd>
+										      </dl>
+										      
+										      </td>
+										     
+											 </tr>
 										    
 										    										    
 										  
@@ -143,24 +199,16 @@
 										</table>
 										
 										
-										<p><a href="DDStart" class="govuk-button mb10">Switch to a Direct Debit payment plan</a></p>
+										{% if data['planSwitch']=='noSwitch'%}
+										
+										<p><a href="DDStart" class="secondary-invert">Switch to a Direct Debit payment plan</a></p>
+										
+										{% else %}
+										{% endif %}
 										
 										
 										
-										<div class="govuk-inset-text">
-										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
 										
-										
-					   					<h2 class="govuk-heading-s">Debt Management</h2>
-									  <ul class="govuk-list">
-									  <li>Telephone: 0800 916 0647</li>
-									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-									</ul>
-									<p class="govuk-body">
-									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-									</p>	
-									
-										</div>
 	   	
 	   	
 				   
