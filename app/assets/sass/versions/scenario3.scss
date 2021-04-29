@@ -814,6 +814,22 @@ margin: 30px 0 50px 0;
 	margin-bottom: 30px;
 	display: block;
 	
+	.debtDetailsTable {
+
+				.govuk-table__header {
+					font-weight: normal;
+					font-size: 	17px;
+	
+			
+				}
+				.govuk-table__cell {
+					font-weight: bold;
+					font-size: 19px;
+
+
+				}
+			}
+	
 	ul {
 		list-style-type: none;
 		overflow: hidden;
@@ -836,18 +852,30 @@ margin: 30px 0 50px 0;
 			}
 			
 			b {
-				font-size: 24px;
+				font-size: 19px;
 				display: block;
 				font-weight: bold;
 				margin: 2px 0 3px 0;
 			}
 			
-			p {
-				margin: 0;
-				font-size: 17px;
-				color: govuk-colour("dark-grey");
+			
+			
+			.stackedData {
+				p {
+				font-size: 19px;
 				display: block;
+				font-weight: bold;
+				margin: 2px 0 3px 0;
+				}
 			}
+			
+			
+		//	p {
+		//	margin: 0;
+		//		font-size: 17px;
+		//		color: govuk-colour("dark-grey");
+		//		display: block;
+		//	} 
 			
 			
 		
@@ -1136,6 +1164,9 @@ margin: 40px 0;
 	padding-left: 1.2em;
 	margin-left: 5px;
 }
+
+
+
 
 
 
