@@ -23,7 +23,7 @@
          <div class="govuk-grid-column-three-quarters">
          
          
-         <span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+         <span class="back-link"><a href="dashboardDebitLow" class="govuk-back-link">Back to dashboard</a></span>
 	   
 
 
@@ -32,6 +32,19 @@
 				      
 				      
 	   
+	   	 
+	   	 {% if data['payDay']=='yesPay'%}
+	   	   <div class="flexibleBanner">
+		   	 	 <p class="mb0">Your Direct Debit payment day has been updated</p>
+	   	  </div>	
+
+		   {% else %}
+		   
+		   {% endif %}
+
+	   
+	  	   
+	   	
 		
 	   	
 	   	
@@ -46,7 +59,7 @@
 											
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell">
+										      <td class="govuk-table__cell" colspan="2">
 										      
 										      
 										      Direct Debit {% if data['paymentChoices']=='lowPayments'%}lower payment{% else %}{% endif %}
@@ -57,7 +70,7 @@
 											 
 											 
 											  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Monthly payment amount</th>
+										      <th scope="row" class="govuk-table__header">Direct Debit amount</th>
 										      <td class="govuk-table__cell">
 											      
 											{% if data['paymentChoices']=='6Month'%}
@@ -94,6 +107,8 @@
 											      
 										      </td>
 										      
+										      
+										       <td class="govuk-table__cell"><a href="ddAmountChange">Change</a></td>
 										 
 			
 										      	
@@ -113,7 +128,7 @@
 											      
 										      </td>
 										      
-										     
+										     <td class="govuk-table__cell"><a href="directDebitDayEdit">Change</a></td>
 							
 										     
 										    </tr>
@@ -151,6 +166,8 @@
 													{% endif %}
 									
 												</td>
+												
+												<td class="govuk-table__cell"><a href="#">Change</a></td>
 											    </tr>
 											    {% else %}
 																						
@@ -173,6 +190,8 @@
 										      </dl>
 										      
 										      </td>
+										      
+										      <td class="govuk-table__cell"><a href="#">Change</a></td>
 										     
 											 </tr>
 
@@ -189,7 +208,7 @@
 	   	<p><a href="#" class="secondary-invert">Switch to a flexible payment plan</a></p>
 	   	
 	   	
-	   		<div class="govuk-inset-text">
+	  <!-- 		<div class="govuk-inset-text">
 										<p>If you need to make changes to your current plan, you need to contact Debt Management.</p>
 										
 										
@@ -202,7 +221,7 @@
 									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
 									</p>	
 									
-										</div>
+										</div> -->
 				   
                   
     </div>
