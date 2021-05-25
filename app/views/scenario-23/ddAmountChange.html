@@ -60,34 +60,34 @@
 													     <h3>Current monthly payment amount</h3>
 													    <b>
 													    
-													    {% if data['paymentChoices']=='6Month'%}
+													   {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;1000.00
+										    &pound;125.00
 								
-											{% elif data['paymentChoices']=='12Month'%}
-											
-											&pound;500.00										
-											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;250.00
+											&pound;63.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;168.00
+											&pound;42.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;125.00
+											&pound;31.50
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;84.00
+											&pound;21.00
+											
+											{% elif data['paymentChoices']=='25Month'%}
+											
+											&pound;15.00
 
 											
 											{% else %}
 						
-											&pound;{{ data['affordable-amount'] }}
+											
 											
 											{% endif %}
 													    
@@ -98,37 +98,40 @@
 													    <li>
 													    	<h3>Payments remaining</h3>
 													    	<b>
-													    	  {% if data['paymentChoices']=='6Month'%}
+													    	 
+							      {% if data['paymentChoices']=='12Month'%}
 										    
-										   5
+										   11
 								
-											{% elif data['paymentChoices']=='12Month'%}
-											
-											11
-											
 											{% elif data['paymentChoices']=='24Month'%}
 											
 											23
-											
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
 											35
 											
+											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											48
+											47
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
 											71
+											
+											{% elif data['paymentChoices']=='25Month'%}
+											
+											99
 
 											
 											{% else %}
 											
 											
 											
-											{% endif %}</b>
+											{% endif %}
+											
+											</b>
 													    </li>
 													    
 											

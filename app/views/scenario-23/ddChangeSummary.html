@@ -64,46 +64,7 @@
  </div>
 		-->
 
-{% if data['paymentChoices']=='lowPayments'%}
 
-
-
-<table class="govuk-table mb40">
-									 
-									 <caption class="visually-hidden">How this payment will affect your plan</caption>
-									 
-									 
-									 <thead>
-									 	<tr>
-									 	
-									 		 <th scope="row" class="govuk-table__header">&nbsp;</th>
-									 		  <th scope="row" class="govuk-table__header">Before payment</th>
-									 		   <th scope="row" class="govuk-table__header updatedPlanHeading">After payment</th>
-									 	</tr>
-									 </thead>
-									 		 
-										
-								
-										  <tbody class="govuk-table__body">
-										  
-										
-											
-											 <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Total amount left to pay</th>
-										      <td class="govuk-table__cell">&pound;5980.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;5730.00</td>
-											 </tr>
-
-											 
-											 
-										  </tbody>
-										  
-		</table>
-		
-
-
-
-{% else %}
 																						
 											
 		
@@ -131,34 +92,34 @@
 										      <th scope="row" class="govuk-table__header">Direct Debit amount</th>
 										      <td class="govuk-table__cell">
 											      
-											     {% if data['paymentChoices']=='6Month'%}
+											   {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;1000.00
+										    &pound;125.00
 								
-											{% elif data['paymentChoices']=='12Month'%}
-											
-											&pound;500.00										
-											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;250.00
+											&pound;63.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;168.00
+											&pound;42.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;125.00
+											&pound;31.50
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;84.00
+											&pound;21.00
+											
+											{% elif data['paymentChoices']=='25Month'%}
+											
+											&pound;15.00
 
 											
 											{% else %}
 						
-											&pound;{{ data['affordable-amount'] }}
+											
 											
 											{% endif %}
 											      
@@ -177,38 +138,38 @@
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payments remaining</th>
 										      
-										       {% if data['paymentChoices']=='6Month'%}
+										       {% if data['paymentChoices']=='12Month'%}
 										    
-											    <td class="govuk-table__cell">5</td>
-												<td class="govuk-table__cell updatedPlanStatus">5</td>
+											    <td class="govuk-table__cell">11</td>
+												<td class="govuk-table__cell updatedPlanStatus">9</td>
 									
-												{% elif data['paymentChoices']=='12Month'%}
-												
-												<td class="govuk-table__cell">11</td>
-												<td class="govuk-table__cell updatedPlanStatus">11</td>										
-												
 												{% elif data['paymentChoices']=='24Month'%}
 												
 												<td class="govuk-table__cell">23</td>
-												<td class="govuk-table__cell updatedPlanStatus">22</td>
-								
+												<td class="govuk-table__cell updatedPlanStatus">21</td>										
 												
 												{% elif data['paymentChoices']=='36Month'%}
 												
 												<td class="govuk-table__cell">35</td>
-												<td class="govuk-table__cell updatedPlanStatus">34</td>
-							
+												<td class="govuk-table__cell updatedPlanStatus">33</td>
+								
 												
 												{% elif data['paymentChoices']=='48Month'%}
 												
 												<td class="govuk-table__cell">47</td>
 												<td class="govuk-table__cell updatedPlanStatus">45</td>
-												
+							
 												
 												{% elif data['paymentChoices']=='72Month'%}
 												
 												<td class="govuk-table__cell">71</td>
 												<td class="govuk-table__cell updatedPlanStatus">69</td>
+												
+												
+												{% elif data['paymentChoices']=='25Month'%}
+												
+												<td class="govuk-table__cell">99</td>
+												<td class="govuk-table__cell updatedPlanStatus">60</td>
 	
 	
 												{% endif %}
@@ -224,30 +185,30 @@
 										      <th scope="row" class="govuk-table__header">Expected final payment</th>
 										      
 										      
-										      {% if data['paymentChoices']=='6Month'%}
+										      {% if data['paymentChoices']=='12Month'%}
 										       
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} October 2021</td>
-										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} October 2021</td>
-										      
-										      {% elif data['paymentChoices']=='12Month'%}
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} May 2022</td>
-										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} May 2022</td>
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2022</td>
+										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} April 2022</td>
 										      
 										      {% elif data['paymentChoices']=='24Month'%}
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} May 2023</td>
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2023</td>
 										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} April 2023</td>
 										      
 										      {% elif data['paymentChoices']=='36Month'%}
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} May 2024</td>
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2024</td>
 										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} April 2024</td>
 										      
 										      {% elif data['paymentChoices']=='48Month'%}
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} May 2025</td>
-										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} March 2025</td>
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2025</td>
+										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} April 2025</td>
 										      
 										      {% elif data['paymentChoices']=='72Month'%}
-										      <td class="govuk-table__cell">{{ data['paymentDay'] }} May 2027</td>
-										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} March 2025</td>
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} June 2027</td>
+										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} April 2027</td>
+										      
+										      {% elif data['paymentChoices']=='25Month'%}
+										      <td class="govuk-table__cell">{{ data['paymentDay'] }} December 2028</td>
+										      <td class="govuk-table__cell updatedPlanStatus">{{ data['paymentDay'] }} March 2028</td>
 										      
 										      
 										      
@@ -259,35 +220,35 @@
 										      <th scope="row" class="govuk-table__header">Final payment amount</th>
 										      
 										      
-										      {% if data['paymentChoices']=='6Month'%}
+										      {% if data['paymentChoices']=='12Month'%}
 										      
-										      <td class="govuk-table__cell">&pound;1000.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;750.00</td>
-										      
-										      {% elif data['paymentChoices']=='12Month'%}
-										      
-										      <td class="govuk-table__cell">&pound;500.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;250.00</td>
+										      <td class="govuk-table__cell">&pound;125.00</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;120.00</td>
 										      
 										      {% elif data['paymentChoices']=='24Month'%}
 										      
-										      <td class="govuk-table__cell">&pound;250.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;250.00</td>
+										      <td class="govuk-table__cell">&pound;51.00</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;47.00</td>
 										      
 										      {% elif data['paymentChoices']=='36Month'%}
 										      
-										      <td class="govuk-table__cell">&pound;120.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;36.00</td>
+										      <td class="govuk-table__cell">&pound;30.00</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;28.00</td>
 										      
 										      {% elif data['paymentChoices']=='48Month'%}
 										      
-										      <td class="govuk-table__cell">&pound;125.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;125.00</td>
+										      <td class="govuk-table__cell">&pound;19.50</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;17.50</td>
 										      
 										      {% elif data['paymentChoices']=='72Month'%}
 										      
-										      <td class="govuk-table__cell">&pound;84.00</td>
-										      <td class="govuk-table__cell updatedPlanStatus">&pound;2.00</td>
+										      <td class="govuk-table__cell">&pound;9.00</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;7.00</td>
+										      
+										      {% elif data['paymentChoices']=='25Month'%}
+										      
+										      <td class="govuk-table__cell">&pound;15.00</td>
+										      <td class="govuk-table__cell updatedPlanStatus">&pound;12.00</td>
 										      
 										      
 										      {% endif %}
@@ -299,8 +260,7 @@
 		</table>
 		
 		
-		{% endif %}
-		
+	
 		
 		
 		

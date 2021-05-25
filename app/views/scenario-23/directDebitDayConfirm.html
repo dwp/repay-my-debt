@@ -84,7 +84,20 @@
 											
 											
 																	
-						<div class="govuk-inset-text">We need 3 days notice to change Direct Debit payments so your payments will remain the same for this month. Your new payments will start next month.</div>
+						<!--<div class="govuk-inset-text">We need 3 days notice to change Direct Debit payments so your payments will remain the same for this month. Your new payments will start next month.</div>-->
+						
+						
+						<div class="govuk-warning-text">
+		  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+		  <strong class="govuk-warning-text__text">
+		    <span class="govuk-warning-text__assistive">Warning</span>
+		  You must give 3 days notice to change your Direct Debit payment day.
+		  </strong>
+		</div>
+
+
+						
+						
 
 		
 		
@@ -118,13 +131,14 @@
 						
 											&pound;{{ data['affordable-amount'] }}
 											
-											{% endif %} will be taken on {{ data['paymentDay'] }} June 2021.</p>
+											{% endif %} will be taken as normal on 6 June 2021. If you cannot make this payment, you should contact your bank to avoid any charges.</p>
 											
+																						
 											<!--<p>Make sure you have enough money in your account to cover this payment.</p>-->
 											
 											
 											
-											<p>The following month a Direct Debit payment of {% if data['paymentChoices']=='6Month'%}
+											<p>The following month, a Direct Debit payment of {% if data['paymentChoices']=='6Month'%}
 										    
 										    &pound;1000.00
 								
@@ -156,7 +170,7 @@
 											{% endif %} will be taken on {{ data['paymentDay'] }} July 2021.</p>
 
 											
-											
+				
 											
 											
 					
