@@ -48,11 +48,13 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">New Direct Debit amount</th>
-										      <td class="govuk-table__cell" colspan="2">
+										      <td class="govuk-table__cell">
 										      
 										       &pound;{{ data['change-amount'] }}
 										      
 										      </td>
+										      
+										      <td class="govuk-table__cell changeDetails"><a href="#">Change</a></td>
 										      
 									
 											 </tr>
@@ -62,7 +64,7 @@
 								
 										  <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
-										      <td class="govuk-table__cell">
+										      <td class="govuk-table__cell" colspan="2">
 											      
 											 <ul class="govuk-list govuk-list--bullet mb0">
 											  	<li>28 payments of &pound;50.00</li>
@@ -72,7 +74,7 @@
 											
 										      </td>
 										      
-										      <td class="govuk-table__cell changeDetails"><a href="directAmountEdit">Change</a></td>
+										      
 			
 										      	
 										    </tr>
@@ -80,7 +82,7 @@
 										    
 										     <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment dates</th>
-										      <td class="govuk-table__cell dtList">
+										      <td class="govuk-table__cell dtList" colspan="2">
 										      
 										      
 										      <dl>
@@ -91,7 +93,7 @@
 										      	
 										      	
 										    
-										    {{ data['paymentDay'] }} July 2022
+										    {{ data['paymentDay'] }} December 2023
 								
 																					      	
 										      	</dd>
@@ -102,8 +104,7 @@
 											      
 										      </td>
 										      
-										      <td class="govuk-table__cell changeDetails"><a href="directDebitDayEdit">Change</a></td>
-							
+										     							
 										     
 										    </tr>
 

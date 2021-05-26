@@ -55,136 +55,62 @@
 										  <tbody class="govuk-table__body">
 										  
 										
-											  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell">&pound;2000.00
+											<tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">New Direct Debit amount</th>
+										      <td class="govuk-table__cell" colspan="2">
+										      
+										       &pound;{{ data['change-amount'] }}
+										      
 										      </td>
 										      
 									
 											 </tr>
 										    
 										    
-								
-										  <tr class="govuk-table__row">
+											<tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
 										      <td class="govuk-table__cell">
 											      
-											      
-											      
-											{% if data['how-much2']=='6Month'%}
-										    
-										  <ul class="govuk-list govuk-list--bullet mb0">
-										  	<li>5 payments of &pound;334.00</li>
-										    <li><span class="payDivide">1 final payment of &pound;330.00</span></li>
-										  </ul>
+											 <ul class="govuk-list govuk-list--bullet mb0">
+											  	<li>28 payments of &pound;50.00</li>
+											    <li><span class="payDivide">1 final payment of &pound;30.00</span></li>
+											  </ul>
 								
-											{% elif data['how-much2']=='12Month'%}
 											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>11 payments of &pound;167.00</li>
-												<li><span class="payDivide">1 final payment of &pound;163.00</span></li>
-											</ul>
-											
-											{% elif data['how-much2']=='18Month'%}
-											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>17 payments of &pound;112.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;96.00</span></li>
-											</ul>
-											
-											
-											{% elif data['how-much2']=='24Month'%}
-											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>23 payments of &pound;84.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;68.00</span></li>
-											</ul>
-
-											
-											{% elif data['how-much2']=='36Month'%}
-
-											
-											
-											<ul class="govuk-list govuk-list--bullet mb0">
-										  		<li>35 payments of &pound;56.00</li>
-										  		<li><span class="payDivide">1 final payment of &pound;40.00</span></li>
-											</ul>
-											
-											
-											{% elif data['how-much2']=='twentyFive'%}
-
-											<p class="mb0">80 payments of &pound;25.00</p>
-											
-											
-											{% else %}
-											
-											<p class="mb0">200 payments of &pound;10.00</p>
-											
-											{% endif %}
+										      </td>
+		
+										      	
+										    </tr>
+										    
+										    
+										    									    
+										   <tr class="govuk-table__row">
+										      <th scope="row" class="govuk-table__header">Payment dates</th>
+										      <td class="govuk-table__cell dtList">
+										      
+										      
+										      <dl>
+										      	<dt>Next payment:</dt>
+										      	<dd>{{ data['paymentDay'] }} July 2021</dd>
+										      	<dt>Expected final payment:</dt>
+										      	<dd>
+										      	
+										      	
+										    
+										    {{ data['paymentDay'] }} December 2023
+								
+																					      	
+										      	</dd>
+										      </dl>
+											      
+		
 											      
 											      
 										      </td>
 										      
-										    </tr>
-										    
-										    
-										     <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">First payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{{ data['paymentDay'] }} March 2021
-											      
-											      
-										      </td>
+
 										     
-										    </tr>
-										    
-										    
-										  										    
-										    <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Expected final payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											 	{% if data['how-much2']=='6Month'%}
-										    
-										    {{ data['paymentDay'] }} August 2021
-								
-											{% elif data['how-much2']=='12Month'%}
-											
-											{{ data['paymentDay'] }} March 2022
-											
-											{% elif data['how-much2']=='18Month'%}
-											
-											{{ data['paymentDay'] }} August 2022
-											
-											
-											{% elif data['how-much2']=='24Month'%}
-											
-											{{ data['paymentDay'] }} March 2023
-											
-											{% elif data['how-much2']=='36Month'%}
-											
-											{{ data['paymentDay'] }} March 2024
-											
-											{% elif data['how-much2']=='twentyFive'%}
-											
-											{{ data['paymentDay'] }} December 2027
-
-											
-											{% else %}
-											
-											{{ data['paymentDay'] }} November 2037
-											
-											{% endif %}
-											      
-											      
-										      </td>
-										      
-										    </tr>
-
-								
+										    </tr>								
 	
 								
 								
@@ -199,63 +125,11 @@
 										
 										
 										
-										
-										<details class="govuk-details mt30" data-module="govuk-details">
-		  <summary class="govuk-details__summary">
-		    <span class="govuk-details__summary-text">
-		    Further Direct Debit details
-		    </span>
-		  </summary>
-		  <div class="govuk-details__text">
-
-		  
-		  <p>Service user number: 941315</p>
-
-		  	 
-		  	 
-		  <p>If you have any problems or questions about your Direct Debit plan, contact Debt Management: </p>
-		  
-		  
-		  <h2 class="govuk-heading-s">Debt Management</h2>
-
-		  	
-		  	
-		  	  <p>Debt Accounting &amp; Finance<br>
-		  	 Warbreck House<br>
-		  	 Blackpool<br>
-		  	 FY2 0YE<br>
-		  	 United Kingdom</p>		
-		  	 
-
-					   			
-
-
-					   					
-									  <ul class="govuk-list">
-									  <li>Telephone: 0800 916 0647</li>
-									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-									</ul>
-									<p class="govuk-body">
-									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-									</p> 
-
-
-		  </div>
-		</details>
-										
-										
-										
-										
-										
-		
-		
-										<p><a href="#">What did you think of this service? (opens in new tab)</a></p>
-		
-
+									
 			
 			
 			
-			<form class="form" action="ddPlan" method="post">
+			<form class="form" action="ddPlanAmount" method="post">
   <fieldset class="visually-hidden">
     <legend>Hidden field</legend>
 

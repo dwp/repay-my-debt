@@ -23,7 +23,7 @@
          <div class="govuk-grid-column-three-quarters">
          
          
-         <span class="back-link"><a href="dashboardDebitLow" class="govuk-back-link">Back to dashboard</a></span>
+         <span class="back-link"><a href="dashboardDebitLowAmount" class="govuk-back-link">Back to dashboard</a></span>
 	   
 
 
@@ -31,13 +31,14 @@
 				      
 				      
 				      
+	   
 
-	   	  
+	   	 	   	  
 	   	  <div class="flexibleBanner">
 		   	 	 <p class="mb0">Your Direct Debit amount has been updated</p>
 	   	  </div>	
 	   	  
-
+	
 		 
 	   
 	  	   
@@ -59,7 +60,8 @@
 										      <td class="govuk-table__cell" colspan="2">
 										      
 										      
-										      Direct Debit										      </td>
+										      Direct Debit {% if data['paymentChoices']=='lowPayments'%}lower payment{% else %}{% endif %}
+										      </td>
 										      
 											 </tr>
 											 
@@ -69,7 +71,7 @@
 										      <th scope="row" class="govuk-table__header">Direct Debit amount</th>
 										      <td class="govuk-table__cell">
 											      
-											&pound;{{ data['change-amount']}}
+											&pound;{{ data['change-amount'] }}
 											      
 											      
 										      </td>

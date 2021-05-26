@@ -119,36 +119,7 @@
 							      <th scope="row" class="govuk-table__header">Monthly payment</th>
 							      <td class="govuk-table__cell">
 								      
-								      {% if data['paymentChoices']=='12Month'%}
-										    
-										    &pound;125.00
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											&pound;63.00										
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											&pound;42.00
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											&pound;31.50
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											&pound;21.00
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											&pound;15.00
-
-											
-											{% else %}
-						
-											
-											
-											{% endif %}
+								      &pound;{{ data['change-amount'] }}
 								      
 							      </td>
 							    </tr>
@@ -158,37 +129,7 @@
 							      
 							      
 							      
-							      {% if data['paymentChoices']=='12Month'%}
-										    
-										   11
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											23
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											35
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											47
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											71
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											99
-
-											
-											{% else %}
-											
-											
-											
-											{% endif %}
+							      29
 
 							      
 							      
@@ -206,7 +147,7 @@
 									   					 
 							   					 
 	
-					<span><a href="ddPlan" class="secondary-invert">View or manage your payment plan</a></span>
+					<span><a href="ddPlanUpdated" class="secondary-invert">View or manage your payment plan</a></span>
 					
 					<span><a href="additionalPayment" class="secondary-invert">Make an additional payment</a></span>	
 					
@@ -283,7 +224,9 @@
 							      <td class="govuk-table__cell">
 							      
 							      
-							     1											
+							      
+							     1 
+											
 							      </td>
 							   </tr>
 
@@ -334,38 +277,10 @@
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Expected final payment</th>
 							      <td class="govuk-table__cell">
-								      
-								  {% if data['paymentChoices']=='12Month'%}
-										    
-										    {{ data['paymentDay'] }} June 2022
+																		    
+										    {{ data['paymentDay'] }} December 2023
 								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											{{ data['paymentDay'] }} June 2023
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											{{ data['paymentDay'] }} June 2024
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											{{ data['paymentDay'] }} June 2025
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											{{ data['paymentDay'] }} June 2027
-											
-											{% elif data['paymentChoices']=='twentyFive'%}
-											
-											{{ data['paymentDay'] }} December 2028
-
-											
-											{% else %}
-											
-											{{ data['paymentDay'] }} November 2037
-											
-											{% endif %}								      
+			      
 								      
 							      </td>
 							    </tr>

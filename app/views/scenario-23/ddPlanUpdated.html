@@ -23,7 +23,7 @@
          <div class="govuk-grid-column-three-quarters">
          
          
-         <span class="back-link"><a href="dashboardDebitLow" class="govuk-back-link">Back to dashboard</a></span>
+         <span class="back-link"><a href="dashboardDebitLowAmount" class="govuk-back-link">Back to dashboard</a></span>
 	   
 
 
@@ -31,24 +31,7 @@
 				      
 				      
 				      
-	   
-	   	 
-	   	 {% if data['payDay']=='yesPay'%}
-	   	   <div class="flexibleBanner">
-		   	 	 <p class="mb0">Your Direct Debit payment day has been updated</p>
-	   	  </div>	
-	   	  
-	   	  {% elif data['amountChange']=='yesChange'%}
-	   	  
-	   	  <div class="flexibleBanner">
-		   	 	 <p class="mb0">Your Direct Debit amount has been updated</p>
-	   	  </div>	
-	   	  
-		   {% else %}
-		   
-		   {% endif %}
-		   
-		 
+
 	   
 	  	   
 	   	
@@ -80,36 +63,7 @@
 										      <th scope="row" class="govuk-table__header">Direct Debit amount</th>
 										      <td class="govuk-table__cell">
 											      
-											{% if data['paymentChoices']=='12Month'%}
-										    
-										    &pound;125.00
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											&pound;63.00										
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											&pound;42.00
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											&pound;31.50
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											&pound;21.00
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											&pound;15.00
-
-											
-											{% else %}
-											 
-											
-											
-											{% endif %}
+											&pound;{{ data['change-amount'] }}
 											      
 											      
 										      </td>
