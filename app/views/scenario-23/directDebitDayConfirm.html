@@ -102,72 +102,74 @@
 		
 		
 		
-		<p>Your next Direct Debit payment of {% if data['paymentChoices']=='6Month'%}
+		<p>Your next Direct Debit payment of  
+								      {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;1000.00
+										    &pound;125.00
 								
-											{% elif data['paymentChoices']=='12Month'%}
-											
-											&pound;500.00										
-											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;250.00
+											&pound;63.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;168.00
+											&pound;42.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;125.00
+											&pound;31.50
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;84.00
+											&pound;21.00
+											
+											{% elif data['paymentChoices']=='25Month'%}
+											
+											&pound;15.00
 
 											
 											{% else %}
 						
-											&pound;{{ data['affordable-amount'] }}
 											
-											{% endif %} will be taken as normal on 6 June 2021. If you cannot make this payment, you should contact your bank to avoid any charges.</p>
+											
+											{% endif %} will be taken as normal on 6 July 2021. If you cannot make this payment, you should contact your bank to avoid any charges.</p>
 											
 																						
 											<!--<p>Make sure you have enough money in your account to cover this payment.</p>-->
 											
 											
 											
-											<p>The following month, a Direct Debit payment of {% if data['paymentChoices']=='6Month'%}
+											<p>The following month, a Direct Debit payment of  
+								      {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;1000.00
+										    &pound;125.00
 								
-											{% elif data['paymentChoices']=='12Month'%}
-											
-											&pound;500.00										
-											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;250.00
+											&pound;63.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;168.00
+											&pound;42.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;125.00
+											&pound;31.50
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;84.00
+											&pound;21.00
+											
+											{% elif data['paymentChoices']=='25Month'%}
+											
+											&pound;15.00
 
 											
 											{% else %}
 						
-											&pound;{{ data['affordable-amount'] }}
 											
-											{% endif %} will be taken on {{ data['paymentDay'] }} July 2021.</p>
+											
+											{% endif %} will be taken on {{ data['paymentDay'] }} August 2021.</p>
 
 											
 				

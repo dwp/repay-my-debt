@@ -511,7 +511,16 @@
 		width: 45%;
 	}
 	
-	
+	.pill {
+		display: inline-block;
+		background: govuk-colour("blue");
+		border-radius: 3px;
+		padding: 3px 6px;
+		color: #fff;
+		top: -2px;
+		font-size: 15px;
+		font-weight: bold;
+	}
 	
 }
 
