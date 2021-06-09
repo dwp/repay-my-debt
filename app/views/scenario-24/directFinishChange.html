@@ -30,7 +30,9 @@
           <h1 class="govuk-panel__title">
             Your Direct Debit plan has been changed
           </h1>
-	
+		  	<div class="govuk-panel__body">
+				  This will take 2 to 5 working days to update your account
+				</div>
 
         </div>
 
@@ -41,11 +43,7 @@
         
         <p>You will be sent confirmation of this agreement by post within three working days or no later than ten working days before the first payment collection.</p>
 
-	   <div class="govuk-inset-text">You can sign in to manage your plan to track payments, pay additional amounts or get help and support.</div>
-	   
-
-        	
-
+	  
         
         
         <h2 class="govuk-heading-m">Plan summary</h2>
@@ -69,37 +67,65 @@
 										    
 										    
 											<tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
-										      <td class="govuk-table__cell">
-											      
-											 <ul class="govuk-list govuk-list--bullet mb0">
-											  	<li>28 payments of &pound;50.00</li>
-											    <li><span class="payDivide">1 final payment of &pound;30.00</span></li>
-											  </ul>
-								
-											
-										      </td>
-		
-										      	
-										    </tr>
-										    
-										    
-										    									    
-										  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Expected final payment date</th>
-										      <td class="govuk-table__cell dtList" colspan="2">
-										      
-								
-										    
-										    {{ data['paymentDay'] }} December 2023
-								
-																					      	
-										      
-										      </td>
-										      
-										     							
-										     
-										    </tr>
+												  <th scope="row" class="govuk-table__header">Next payment</th>
+												  <td class="govuk-table__cell" colspan="2">
+												  
+												   {% if data['paymentChoices']=='12Month'%}
+												   
+												   &pound;125.00
+									   
+												   {% elif data['paymentChoices']=='24Month'%}
+												   
+												   &pound;63.00										
+												   
+												   {% elif data['paymentChoices']=='36Month'%}
+												   
+												   &pound;42.00
+												   
+												   {% elif data['paymentChoices']=='48Month'%}
+												   
+												   &pound;31.50
+												   
+												   {% elif data['paymentChoices']=='72Month'%}
+												   
+												   &pound;21.00
+												   
+												   {% elif data['paymentChoices']=='25Month'%}
+												   
+												   &pound;15.00
+	   
+												   
+												   {% else %}
+							   
+												   
+												   
+												   {% endif %} on 6 July 2021
+									
+												  
+												  </td>
+												  
+										
+												 </tr>
+												  
+												
+							
+												
+												
+												 <tr class="govuk-table__row">
+												  <th scope="row" class="govuk-table__header">Following month's payment</th>
+												  <td class="govuk-table__cell" colspan="2">
+												  
+									
+												
+												&pound;{{ data['change-amount'] }} on 6 August 2021
+									
+																								  
+												  
+												  </td>
+												  
+																			 
+												 
+												</tr>
 							
 	
 								
