@@ -29,7 +29,7 @@
            </div>
    
    
-          <p class="mb0"><a href="scenario-24/start" class="govuk-button mb10">Start scenario</a></p>
+          <p class="mb0"><a href="scenario-24/startID" class="govuk-button mb10">Start scenario</a></p>
           
           <!--<p class="mb0"><a href="scenario-24/startID" class="govuk-button mb10">Start scenario</a></p>-->
           
@@ -38,17 +38,17 @@
                   
           
           
-          <h3 class="govuk-heading-s">Return journey</h3>
+          <h3 class="govuk-heading-s mt30">Return journey</h3>
            
           <ol class="govuk-list govuk-list--number">
            
    
-            <li><a href="scenario-24/dashboardDebitLow">Direct Debit Dashboard</a></li>
-            
-            
-            <li><a href="scenario-24/OneddPlan">Alternative management flow</a></li>
-            
-            <li><a href="scenario-24/OneddPlanBlock">Unable to manage plan</a></li>
+           
+            <li><a href="scenario-24/dashboardDebitLow">Login to manage your plan</a></li>
+                      
+            <li><a href="scenario-24/LowddPlan.html">Login to manage your plan &ndash; Low payment plan switch</a></li>
+                     
+            <li><a href="scenario-24/OneddPlanBlock">Login to manage your plan &ndash; Unable to manage plan</a></li>
          
    
            </ol>
@@ -67,6 +67,58 @@
    
                 </ol> 
                 
+                
+                
+                
+                <details class="govuk-details mt50" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                    Scenario rules
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                 
+                 <h3 class="govuk-heading-s">DD setup</h3>
+               <ul class="govuk-list govuk-list--bullet">
+                  <li>No low payment plan on initial setup &ndash; any other amount is fine</li>
+                  <li>Enter bank details</li>
+                  <li>Payment day between day 10 - day 20</li>
+                  <li>Once setup is finished &ndash; Return to prototype scenarios</li>
+               </ul>
+               
+               <h3 class="govuk-heading-s">Login to manage plan</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                   <li>Make an additional payment first &ndash; note: data won't update on the dashboard after payment</li>
+                   <li>Manage payment plan</li>
+                   <li>Change DD amount to &pound;50.00</li>
+                   <li>Optional changes for payment day &ndash; if changed choose day 20 - 29</li>
+                   <li>Optional changes for bank details</li>
+                   <li>Complete flow until plan is updated</li> 
+                   <li>Back to dashboard</li>
+                   <li>End flow &ndash; Return to prototype scenarios</li>
+                </ul>
+                
+                <h3 class="govuk-heading-s">Login to manage plan &ndash; Low payment plan switch</h3>
+               <ul class="govuk-list govuk-list--bullet">
+                   <li>Manage payment plan</li>
+                   <li>Change DD amount to &pound;10.00</li>
+                   <li>Optional changes for payment day &ndash; if changed choose day 20 - 29</li>
+                   <li>Optional changes for bank details</li>
+                   <li>Complete flow until plan is updated</li> 
+                   <li>Back to dashboard</li>
+                   <li>End flow &ndash; Return to prototype scenarios</li>
+                </ul>
+                
+                <h3 class="govuk-heading-s">Login to manage plan &ndash; Unable to manage plan</h3>
+               <ul class="govuk-list govuk-list--bullet">
+                   <li>Manage payment plan</li>
+                   <li>End flow &ndash; Return to prototype scenarios</li>
+                </ul>
+
+               
+            
+                  </div>
+                </details>
                 
                 
                <!-- <h3 class="govuk-heading-s">Info</h3>

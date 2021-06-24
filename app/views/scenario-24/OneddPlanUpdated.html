@@ -23,7 +23,15 @@
          <div class="govuk-grid-column-three-quarters">
          
          
-         <span class="back-link"><a href="dashboardDebitLow" class="govuk-back-link">Back to dashboard</a></span>
+		 
+		 
+		 {% if data['lowplan']=='Yeslowplan'%}
+         <span class="back-link"><a href="dashboardDebitLowPlan" class="govuk-back-link">Back to dashboard</a></span>
+		 {% else %}
+
+	   <span class="back-link"><a href="dashboardDebitReal" class="govuk-back-link">Back to dashboard</a></span>
+			 
+		  {% endif %} 
 	   
 
 
@@ -31,7 +39,24 @@
 				      
 				      
 		   
-	  	   
+		   
+		   
+		   
+		   
+		   {% if data['amountChange']=='yesChange'%}
+			   
+		<div class="flexibleBanner">
+			  <p class="mb0">Your payment plan has been updated</p>
+	  </div>
+			 
+			 {% else %}
+
+		  
+				
+			 {% endif %} 
+		   
+		   
+	  	  
 	   	
 		
 	   	
@@ -42,55 +67,61 @@
 										
 								
 										  <tbody class="govuk-table__body">
+											  
+											  
+											  
+											  
+											  
+											  {% if data['lowplan']=='Yeslowplan'%}
+	  
+													
+											   <tr class="govuk-table__row">
+													 <th scope="row" class="govuk-table__header">Payment plan type</th>
+													 <td class="govuk-table__cell" colspan="2">Direct Debit low payment plan
+													 </td>
+												  
+													</tr>
+			  
+													
+												
+												{% else %}
+												
+												
+												<tr class="govuk-table__row">
+													  <th scope="row" class="govuk-table__header">Payment plan type</th>
+													  <td class="govuk-table__cell" colspan="2">
+													  
+													  
+													  Direct Debit
+													  </td>
+													  
+													 </tr>
+									
+											  
+													
+												 {% endif %} 
 										  
 										
 											
-											 <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Payment plan type</th>
-										      <td class="govuk-table__cell" colspan="2">
-										      
-										      
-										      Direct Debit
-										      </td>
-										      
-											 </tr>
+											
 											 
 											 
 											 
 											  <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Direct Debit amount</th>
 										      <td class="govuk-table__cell">
+												  
+												  
+												  
+												  {% if data['lowplan']=='Yeslowplan'%}
+												   &pound;10.00
+												   {% else %}
+										  
+												 &pound;50.00
+													   
+													{% endif %} 
 											      
-											{% if data['paymentChoices']=='12Month'%}
-										    
-										    &pound;125.00
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											&pound;63.00										
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											&pound;42.00
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											&pound;31.50
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											&pound;21.00
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											&pound;15.00
-
-											
-											{% else %}
-											 
-											
-											
-											{% endif %}
+										
 											      
 											      
 										      </td>
@@ -112,11 +143,7 @@
 										      <th scope="row" class="govuk-table__header">Direct Debit payment day</th>
 										      <td class="govuk-table__cell dtList">
 		
-										      	
-												  
-												  
-												  
-												Day {% if data['payDaychange']=='YesPayDaychange'%}
+										      	Day {% if data['payDaychange']=='YesPayDaychange'%}
 													  
 													{{ data['paymentDayUpdate'] }}
 													
@@ -125,8 +152,7 @@
 								   
 												  {{ data['paymentDay'] }}
 													   
-													{% endif %} of each month
-												  
+													{% endif %}  of each month
 											      
 										      </td>
 										      
@@ -207,7 +233,7 @@
 										
 										
 	   	
-	   	<p><a href="startChange" class="secondary-invert">Make changes to your payment plan</a></p>
+	   	<p><a href="#" class="secondary-invert">Make changes to your payment plan</a></p>
 	   	
 	   	
 	  	<!--	<div class="govuk-inset-text">

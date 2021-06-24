@@ -31,7 +31,7 @@
 
 									
 									<h1 class="govuk-heading-xl">
-	   	<span class="govuk-caption-xl">Change Direct Debit amount</span>Summary</h1>
+	   	<span class="govuk-caption-xl">Changes to your payment plan</span>Summary</h1>
 		   
 		   
 		   
@@ -50,8 +50,56 @@
 						   <li>
 							<h3>Direct Debit amount</h3>
 						   <b>
+							   
+							   
+						{% if data['amountChange']=='yesAmountChange'%}
+						  
+						&pound;{{ data['change-amount'] }}
+						
+						
+						{% else %}
+	   
+						  
+						  
+						{% if data['paymentChoices']=='12Month'%}
+						
+						&pound;125.00
+			
+						{% elif data['paymentChoices']=='24Month'%}
+						
+						&pound;63.00										
+						
+						{% elif data['paymentChoices']=='36Month'%}
+						
+						&pound;42.00
+						
+						{% elif data['paymentChoices']=='48Month'%}
+						
+						&pound;31.50
+						
+						{% elif data['paymentChoices']=='72Month'%}
+						
+						&pound;21.00
+						
+						{% elif data['paymentChoices']=='25Month'%}
+						
+						&pound;15.00
+
+						
+						{% else %}
+	
+						&pound;{{ data['payment-amount2'] }}
+						
+						{% endif %}  
+						  
+						  
 						   
-						 &pound;{{ data['change-amount'] }}
+						{% endif %}	   
+							   
+							   
+							   
+						   
+					
 						   
 						   </b>
 						   </li>
@@ -59,8 +107,18 @@
 						   <li>
 							   <h3>Direct Debit payment day</h3>
 							  <b>
+								  
+								  
+							{% if data['payDaychange']=='YesPayDaychange'%}
 							  
-							Day {{ data['paymentDay'] }} of each month
+							Day {{ data['paymentDayUpdate'] }} of each month
+							
+							
+							{% else %}
+		   
+							   Day {{ data['paymentDay'] }} of each month
+							   
+							{% endif %}
 							  
 							  </b>
 							  </li>
@@ -93,10 +151,10 @@ As your next payment is due soon, changes to your Direct Debit plan will not tak
 									
 									
 									
-									<h2 class="govuk-heading-m mt40">How this effects your payments</h2>
+									<h2 class="govuk-heading-m mt40">How this effects your plan</h2>
 																	
 																	
-									<table class="govuk-table mb40">
+									<table class="govuk-table summary-table mb40">
 										 
 										 <caption class="visually-hidden">Payment day summary</caption>
 											
@@ -108,43 +166,103 @@ As your next payment is due soon, changes to your Direct Debit plan will not tak
 												  <th scope="row" class="govuk-table__header">Next payment</th>
 												  <td class="govuk-table__cell" colspan="2">
 												  
-												   {% if data['paymentChoices']=='12Month'%}
-												   
-												   &pound;125.00
-									   
-												   {% elif data['paymentChoices']=='24Month'%}
-												   
-												   &pound;63.00										
-												   
-												   {% elif data['paymentChoices']=='36Month'%}
-												   
-												   &pound;42.00
-												   
-												   {% elif data['paymentChoices']=='48Month'%}
-												   
-												   &pound;31.50
-												   
-												   {% elif data['paymentChoices']=='72Month'%}
-												   
-												   &pound;21.00
-												   
-												   {% elif data['paymentChoices']=='25Month'%}
-												   
-												   &pound;15.00
-	   
-												   
-												   {% else %}
-							   
-												   
-												   
-												   {% endif %} on 6 July 2021
+												  {% if data['amountChange']=='yesAmountChange'%}
+													
+												  &pound;{{ data['change-amount'] }}
+												  
+												  
+												  {% else %}
+								 
+													
+													
+												  {% if data['paymentChoices']=='12Month'%}
+												  
+												  &pound;125.00
+									  
+												  {% elif data['paymentChoices']=='24Month'%}
+												  
+												  &pound;63.00										
+												  
+												  {% elif data['paymentChoices']=='36Month'%}
+												  
+												  &pound;42.00
+												  
+												  {% elif data['paymentChoices']=='48Month'%}
+												  
+												  &pound;31.50
+												  
+												  {% elif data['paymentChoices']=='72Month'%}
+												  
+												  &pound;21.00
+												  
+												  {% elif data['paymentChoices']=='25Month'%}
+												  
+												  &pound;15.00
+						  
+												  
+												  {% else %}
+							  
+												  &pound;{{ data['payment-amount2'] }}
+												  
+												  {% endif %}  
+													
+													
+													 
+												  {% endif %} on
+												  
+												  {% if data['payDaychange']=='YesPayDaychange'%}
+													
+												  {{ data['paymentDayUpdate'] }}
+												  
+												  
+												  {% else %}
+								 
+												{{ data['paymentDay'] }}
+													 
+												  {% endif %} 
+												  
+												  August 2021
 									
 												  
 												  </td>
 												  
 										
 												 </tr>
+												 
+												 
+											{% if data['lowplan']=='Yeslowplan'%}
+		
+												 	 
+												 <tr class="govuk-table__row">
+													   <th scope="row" class="govuk-table__header">Payment plan type</th>
+													   <td class="govuk-table__cell" colspan="2">Low payment plan
+													   </td>
+													
+													  </tr>
+				
+													  <tr class="govuk-table__row">
+													   <th scope="row" class="govuk-table__header">Proposed plan review date</th>
+													   <td class="govuk-table__cell" colspan="2"> {% if data['payDaychange']=='YesPayDaychange'%}
+															   
+															 {{ data['paymentDayUpdate'] }}
+															 
+															 
+															 {% else %}
+											
+														   {{ data['paymentDay'] }}
+																
+															 {% endif %}  August 2022
+														   <span class="textNumber">If you are unable to increase the amount you pay over the next 12 months we will contact you to discuss your financial situation.</span>
+													   </td>
+													   
+											 
+													  </tr>
 												  
+												  {% else %}
+									  
+												
+													  
+												   {% endif %} 
 												
 							
 												
@@ -166,6 +284,8 @@ As your next payment is due soon, changes to your Direct Debit plan will not tak
 												</tr> -->
 												
 												
+												{% if data['BankChange']=='yesBankChange'%}
+												
 												<tr class="govuk-table__row">
 													  <th scope="row" class="govuk-table__header">New account details</th>
 													  <td class="govuk-table__cell dtList">
@@ -183,11 +303,17 @@ As your next payment is due soon, changes to your Direct Debit plan will not tak
 													  <td class="govuk-table__cell changeDetails"><a href="directDebitDetailsEdit">Change</a></td>
 							
 												</tr>
+												
+												
+												{% else %}
+												{% endif %}
+												
+												
 											  </tbody>
 											</table>
 											
 											
-											<details class="govuk-details mt20" data-module="govuk-details">
+										<!--	<details class="govuk-details mt20" data-module="govuk-details">
 												  <summary class="govuk-details__summary">
 													<span class="govuk-details__summary-text">
 													I cannot make my next payment
@@ -197,7 +323,7 @@ As your next payment is due soon, changes to your Direct Debit plan will not tak
 												  <p>If you cannot make your next payment, you should contact your bank to discuss the options available to you.</p>
 										
 												  </div>
-												</details>
+												</details>-->
 										
 										
 									

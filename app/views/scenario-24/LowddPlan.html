@@ -23,7 +23,7 @@
          <div class="govuk-grid-column-three-quarters">
          
          
-         <span class="back-link"><a href="dashboardDebitLow" class="govuk-back-link">Back to dashboard</a></span>
+         <span class="back-link"><a href="#" class="govuk-back-link">Back to dashboard</a></span>
 	   
 
 
@@ -50,7 +50,7 @@
 										      <td class="govuk-table__cell" colspan="2">
 										      
 										      
-										      Direct Debit
+										      Direct Debit {% if data['paymentChoices']=='lowPayments'%}lower payment{% else %}{% endif %}
 										      </td>
 										      
 											 </tr>
@@ -112,21 +112,7 @@
 										      <th scope="row" class="govuk-table__header">Direct Debit payment day</th>
 										      <td class="govuk-table__cell dtList">
 		
-										      	
-												  
-												  
-												  
-												Day {% if data['payDaychange']=='YesPayDaychange'%}
-													  
-													{{ data['paymentDayUpdate'] }}
-													
-													
-													{% else %}
-								   
-												  {{ data['paymentDay'] }}
-													   
-													{% endif %} of each month
-												  
+										      	Day {{ data['paymentDay'] }} of each month
 											      
 										      </td>
 										      
@@ -207,7 +193,7 @@
 										
 										
 	   	
-	   	<p><a href="startChange" class="secondary-invert">Make changes to your payment plan</a></p>
+	   	<p><a href="LowstartChange" class="secondary-invert">Make changes to your payment plan</a></p>
 	   	
 	   	
 	  	<!--	<div class="govuk-inset-text">

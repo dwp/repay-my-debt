@@ -108,7 +108,7 @@
             	
        	
        	<div class="scenario-panel">
-					 <h2 class="govuk-heading-s">Direct Debit payment plan</h2>
+					 <h2 class="govuk-heading-s">Direct Debit low payment plan</h2>
 					 
 					 <div class="scenario-inner-panel">
 					 
@@ -119,94 +119,16 @@
 							      <th scope="row" class="govuk-table__header">Monthly payment</th>
 							      <td class="govuk-table__cell">
 								      
-								      {% if data['amountChange']=='yesAmountChange'%}
+								    
 										  
 										&pound;{{ data['change-amount'] }}
 										
 										
-										{% else %}
-					   
-										  
-										  
-										{% if data['paymentChoices']=='12Month'%}
-										
-										&pound;125.00
-							
-										{% elif data['paymentChoices']=='24Month'%}
-										
-										&pound;63.00										
-										
-										{% elif data['paymentChoices']=='36Month'%}
-										
-										&pound;42.00
-										
-										{% elif data['paymentChoices']=='48Month'%}
-										
-										&pound;31.50
-										
-										{% elif data['paymentChoices']=='72Month'%}
-										
-										&pound;21.00
-										
-										{% elif data['paymentChoices']=='25Month'%}
-										
-										&pound;15.00
-				
-										
-										{% else %}
-					
-										&pound;{{ data['payment-amount2'] }}
-										
-										{% endif %}  
-										  
-										  
-										   
-										{% endif %}
+									
 								      
 							      </td>
 							    </tr>
-							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Payments remaining</th>
-							      <td class="govuk-table__cell">
-							      
-							      
-							      
-							      {% if data['paymentChoices']=='12Month'%}
-										    
-										   11
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											23
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											35
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											47
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											71
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											99
-
-											
-											{% else %}
-											
-											
-											
-											{% endif %}
-
-							      
-							      
-							    </td>
-							    </tr>
+							   
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
 							      <td class="govuk-table__cell">{% if data['payDaychange']=='YesPayDaychange'%}
@@ -228,9 +150,9 @@
 									   					 
 							   					 
 	
-					<span><a href="OneddPlan" class="secondary-invert">View or manage your payment plan</a></span>
+					<span><a href="#" class="secondary-invert mt50">View or manage your payment plan</a></span>
 					
-					<span><a href="additionalPayment" class="secondary-invert">Make an additional payment</a></span>	
+					<span><a href="#" class="secondary-invert">Make an additional payment</a></span>	
 					
 		           		             
 					 </div>
@@ -354,41 +276,23 @@
 							    
 							    
 							    <tr class="govuk-table__row">
-							      <th scope="row" class="govuk-table__header">Expected final payment</th>
+							      <th scope="row" class="govuk-table__header">Proposed plan review date</th>
 							      <td class="govuk-table__cell">
 								      
-								  {% if data['paymentChoices']=='12Month'%}
+								  
 										    
-										    {{ data['paymentDay'] }} July 2022
+										    {% if data['payDaychange']=='YesPayDaychange'%}
+												
+											  {{ data['paymentDayUpdate'] }}
+											  
+											  
+											  {% else %}
+							 
+											{{ data['paymentDay'] }}
+												 
+											  {% endif %} August 2022
 								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											{{ data['paymentDay'] }} July 2023
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											{{ data['paymentDay'] }} July 2024
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											{{ data['paymentDay'] }} July 2025
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											{{ data['paymentDay'] }} July 2027
-											
-											{% elif data['paymentChoices']=='twentyFive'%}
-											
-											{{ data['paymentDay'] }} January 2029
-
-											
-											{% else %}
-											
-											{{ data['paymentDay'] }} December 2038
-											
-											{% endif %}								      
-								      
+										
 							      </td>
 							    </tr>
 							   
@@ -402,7 +306,7 @@
 							
 																
 	
-		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt30">View your payment history</a></span>
+		             <span><a href="#" class="secondary-invert mt30">View your payment history</a></span>
 	
 				 
         </div>
@@ -434,7 +338,7 @@
 					  <p>Details of the debts you owe to DWP.</p>
 
 
-		             <span><a href="debtBreakdownList2" class="secondary-invert dash-spacer">View details of what you owe</a></span>
+		             <span><a href="#" class="secondary-invert dash-spacer">View details of what you owe</a></span>
 					 </div>
 				 </div>
 
