@@ -26,7 +26,7 @@
 	  
 
 			
-			<form class="form" action="https://dth-prototype.herokuapp.com/auth/dev-ready/sign-in?service-name=Repay%20my%20debt%20to%20DWP" method="post">
+			<form class="form" action="indexGuard" method="post">
 				
 				
 		
@@ -36,26 +36,34 @@
 				  <fieldset class="govuk-fieldset">
 				    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 				      <h1 class="govuk-heading-xl">
-				       Choose a sign in option
+						  <span class="govuk-caption-xl">Ashley Chamberlain</span>
+
+				       Do you want to continue using your security code to sign in?
 				      </h1>
 				    </legend>
 				   
 				    <div class="govuk-radios">
 				    
 				    <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="want-pay" name="choose-what" type="radio" value="want-pay">
-				        <label class="govuk-label govuk-radios__label" for="want-pay">
-				        Sign in with my security code and date of birth
+				        <input class="govuk-radios__input" id="codeContinue" name="signOptions" type="radio" value="codeContinue">
+				        <label class="govuk-label--s govuk-radios__label" for="codeContinue">
+				        Yes &ndash; I want to continue using my security code
 				        </label>
+						<span class="govuk-hint govuk-radios__hint">
+							It is important to make a note of this as you will need it each time you sign in
+							</span>
 				       
 				      </div>
 				      
 				      
 				       <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="want-breakdown" name="choose-what" type="radio" value="want-breakdown">
-				        <label class="govuk-label govuk-radios__label" for="want-breakdown">
-				         Sign in with my email address and password
+				        <input class="govuk-radios__input" id="regContinue" name="signOptions" type="radio" value="regContinue">
+				        <label class="govuk-label--s govuk-radios__label" for="regContinue">
+				        No &ndash; I want to register an account to set an email address and password
 				        </label>
+						<span class="govuk-hint govuk-radios__hint">
+							 You will need to verify your identity which can take up to 30 minutes
+							</span>
 				       
 				      </div>
 
@@ -63,10 +71,6 @@
 				    </div>
 				  </fieldset>
 				</div>
-			
-			<p><a href="https://dth-prototype.herokuapp.com/auth/dev-ready/register/start?service-name=Repay my debt to DWP">I need to register for this service</a></p>
-			
-			
 			
 			<button class="govuk-button" data-module="govuk-button">
 			  Continue
