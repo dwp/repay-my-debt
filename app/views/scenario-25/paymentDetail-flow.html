@@ -30,12 +30,12 @@
 
 	   	 
 	   	 
-	   	 <div class="flexibleBanner">
+	  <!-- 	 <div class="flexibleBanner">
 	   	<h2 class="govuk-heading-m">Your flexible payment plan will start today</h2>
-	   <p>Your plan will be reviewed often &ndash; <!--you can pay low amounts during difficult times but-->if the total amount you pay each month is regularly too low, we may contact you.</p>
+	   <p>Your plan will be reviewed often &ndash; if the total amount you pay each month is regularly too low, we may contact you.</p>
 	   
 	   	</div>
-
+-->
 
 	   	
 	   	
@@ -60,30 +60,30 @@
 
 			      	{% if data['targetAmountsChoice']=='6MonthTarget'%}
 													    
-													    &pound;1000.00
+													    &pound;125.00
 													    
 											
 														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
 														
-														&pound;500.00
+														&pound;63.00
 														
 														
 														
 														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
 														
-														&pound;250.00
+														&pound;42.50
 														
 														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
 														
-														&pound;167.00
+														&pound;31.50
 														
 														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
 														
-														&pound;125.00
+														&pound;21.00
 														
 														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
 														
-														&pound;84.00
+														&pound;15.00
 		
 														{% endif %}
 		      </td>

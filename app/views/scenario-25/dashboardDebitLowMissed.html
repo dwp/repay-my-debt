@@ -222,13 +222,14 @@
 							    </tr>
 							  </tbody>
 							</table>	
-							
-						<p class="statement mb20">Make sure you have enough money in your account to avoid any possible bank charges.</p>
+				
+				
+				<p class="statement mb20">Make sure you have enough money in your account to avoid any possible bank charges.</p>
 						
 									   					 
 							   					 
 					
-					<span><a href="additionalPayment" class="secondary-invert">Make an additional payment</a></span>	
+					<span><a href="additionalPayment" class="secondary-invert mt10">Make an additional payment</a></span>	
 					
 					<span><a href="XLddPlan" class="secondary-invert">View or manage your plan</a></span>
 					
@@ -261,38 +262,9 @@
 					 <div class="scenario-inner-panel">
 
 					 
-					 <div class="warning-message complete-alert">
+					 <div class="warning-message">
 								
-								 	<p>A payment of  {% if data['paymentChoices']=='12Month'%}
-										    
-										    &pound;125.00
-								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											&pound;63.00										
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											&pound;42.00
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											&pound;31.50
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											&pound;21.00
-											
-											{% elif data['paymentChoices']=='25Month'%}
-											
-											&pound;15.00
-
-											
-											{% else %}
-									
-											
-											
-											{% endif %} was taken from your account on {{ data['paymentDay'] }} July 2021</p>
+								 	<p>Your last Direct Debit payment on 12 June 2020 was unsuccessful &ndash; we will try to take this payment again on 20 June 2020.</p>
 								 </div>
 					 	
 					 			
@@ -404,7 +376,7 @@
 							
 																
 	
-		             <span><a href="paymentHistoryDDfull" class="secondary-invert mt30">View your payment history</a></span>
+		             <span><a href="paymentHistoryDDfull" class="secondary-invert">View your payment history</a></span>
 	
 				 
         </div>

@@ -1,4 +1,9 @@
 // global styles for <a> and <p> tags
+.leftCap {
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
 .mb0 {
 	margin-bottom: 0!important;
 }
@@ -67,6 +72,11 @@
 .mt50 {
 	margin-top: 50px!important;
 }
+
+.mt60 {
+	margin-top: 50px!important;
+}
+
 
 .extender {
 	margin-top: 0px!important;

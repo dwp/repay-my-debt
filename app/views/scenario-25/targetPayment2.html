@@ -27,34 +27,110 @@
 		
 		
 		
-		{% if data['targetAmountsChoice']=='noAffordTarget'%}
+		{% if data['targetAmountsChoice']=='72MonthTarget'%}
 
 				
 		<h1 class="govuk-heading-xl">
 			<span class="govuk-caption-xl">Step 1 of 3</span>
-			Summary of low payments each month</h1>
+			Low payment target</h1>
 			
 			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	
-				
-				
-				
-				<p><a href="paymentRemindersFirst" class="govuk-button">Continue</a></p>
-				
-				
-				
-				
+		<div class="flexibleBanner">
 			
+			
+			<ul class="govuk-list">
+				<li>
+					<h3>Total amount owed</h3>
+					<b>&pound;1500.00</b>
+				</li>
 				
+				
+				
+				
+				{% if data['targetChoice2']=='target-yes2'%}
+				
+				
+				<li>
+					<h3>Monthly target</h3>
 
+						{% if data['targetAmountsChoice']=='6MonthTarget'%}
+						
+						<b>&pound;125.00</b>
+						
+			
+						{% elif data['targetAmountsChoice']=='12MonthTarget'%}
+						
+						<b>&pound;63.00</b>
+						
+						
+						
+						{% elif data['targetAmountsChoice']=='24MonthTarget'%}
+						
+						<b>&pound;42.50</b>
+						
+						{% elif data['targetAmountsChoice']=='36MonthTarget'%}
+						
+						<b>&pound;31.50</b>
+						
+						{% elif data['targetAmountsChoice']=='48MonthTarget'%}
+						
+						<b>&pound;21.00</b>
+						
+						{% elif data['targetAmountsChoice']=='72MonthTarget'%}
+						
+						<b>&pound;15.00</b>
+						
+
+						
+						{% else %}
+						
+						<b>&pound;{{ data['payment-amount-target'] }}</b>
+					
+						
+						{% endif %}
+
+				</li>
+				{% else %}
+				{% endif %}
+				<li><h3>Review date</h3>
+					<b>22 August 2022</b>
+			</li>
+			</ul>
+			
+			</div>
+
+
+<p>This is an acceptable payment target to start your plan but will be treated as a low payment option as it is over 72 months.</p>
+<p>If your financial situation improves, you should increase your payments.</p>
+	
+	<p>If you have been unable to increase your payments, we will contact you after 12 months to review your financial situation and see how much you can afford.</p>
+
+
+
+
+
+<p><a href="targetPaymentOwnTarget.html" class="govuk-button">Continue</a></p>
+				
+				
+				
+			
+				{% elif data['targetAmountsChoice']=='noAffordTarget'%}
+				
+<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 1 of 3</span> Starting your plan without a payment target</h1>
+
+
+<p>Not setting a payment target is acceptable to start your plan.</p>
+	<p>Your plan will be reviewed often &ndash; if the total amount you pay each month increases the length of your debt over 72 months, we may contact you.</p>
+
+
+<p><a href="targetNoPayment" class="govuk-button">Continue</a></p>
 
 									{% else %}
 									
 									
 									
 									
-										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment towards <br>April's target now</h1>
+										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment today <br>to start your plan</h1>
 
 
 
@@ -67,37 +143,40 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;6000.00</b>
+													<b>&pound;1500.00</b>
 												</li>
+												{% if data['targetChoice2']=='target-yes2'%}
+												
+												
 												<li>
 													<h3>Monthly target</h3>
 
 														{% if data['targetAmountsChoice']=='6MonthTarget'%}
 													    
-													    <b>&pound;1000.00</b>
+													    <b>&pound;125.00</b>
 													    
 											
 														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
 														
-														<b>&pound;500.00</b>
+														<b>&pound;63.00</b>
 														
 														
 														
 														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
 														
-														<b>&pound;250.00</b>
+														<b>&pound;42.50</b>
 														
 														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
 														
-														<b>&pound;167.00</b>
+														<b>&pound;31.50</b>
 														
 														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
 														
-														<b>&pound;125.00</b>
+														<b>&pound;21.00</b>
 														
 														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
 														
-														<b>&pound;84.00</b>
+														<b>&pound;15.00</b>
 														
 					
 														
@@ -109,6 +188,8 @@
 														{% endif %}
 								
 												</li>
+												{% else %}
+												{% endif %}
 												<li>
 													<h3>Paid this month</h3>
 													<b>&pound;0.00</b>
@@ -128,12 +209,16 @@
 										          <fieldset class="govuk-fieldset" aria-describedby="pay-hint">
 											          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
 												      <h1 class="govuk-fieldset__heading">
-												        How much do you want to pay today?
+												        How much do you want to pay?
 												      </h1>
 												    </legend>
 												    
+										<!--			
+													{% if data['targetChoice2']=='target-yes2'%}
 												   <div id="pay-hint" class="govuk-hint mb20">
 												  You can make multiple payments in a month to meet your target</div>
+												  {% else %}
+												  {% endif %} -->
 
 
 											         <div id="example-question" class="form-group inline">
