@@ -27,7 +27,7 @@
 		
 		
 		
-		{% if data['targetAmountsChoice']=='72MonthTarget'%}
+		{% if data['targetAmountsChoice']=='100MonthTarget'%}
 
 				
 		<h1 class="govuk-heading-xl">
@@ -45,53 +45,12 @@
 				</li>
 				
 				
-				
-				
-				{% if data['targetChoice2']=='target-yes2'%}
-				
-				
 				<li>
 					<h3>Monthly target</h3>
 
-						{% if data['targetAmountsChoice']=='6MonthTarget'%}
-						
-						<b>&pound;125.00</b>
-						
-			
-						{% elif data['targetAmountsChoice']=='12MonthTarget'%}
-						
-						<b>&pound;63.00</b>
-						
-						
-						
-						{% elif data['targetAmountsChoice']=='24MonthTarget'%}
-						
-						<b>&pound;42.50</b>
-						
-						{% elif data['targetAmountsChoice']=='36MonthTarget'%}
-						
-						<b>&pound;31.50</b>
-						
-						{% elif data['targetAmountsChoice']=='48MonthTarget'%}
-						
-						<b>&pound;21.00</b>
-						
-						{% elif data['targetAmountsChoice']=='72MonthTarget'%}
-						
 						<b>&pound;15.00</b>
-						
-
-						
-						{% else %}
-						
-						<b>&pound;{{ data['payment-amount-target'] }}</b>
-					
-						
-						{% endif %}
-
+	
 				</li>
-				{% else %}
-				{% endif %}
 				<li><h3>Review date</h3>
 					<b>22 August 2022</b>
 			</li>
@@ -104,6 +63,9 @@
 <p>If your financial situation improves, you should increase your payments.</p>
 	
 	<p>If you have been unable to increase your payments, we will contact you after 12 months to review your financial situation and see how much you can afford.</p>
+	
+	
+	
 
 
 
@@ -112,18 +74,8 @@
 <p><a href="targetPaymentOwnTarget.html" class="govuk-button">Continue</a></p>
 				
 				
-				
-			
-				{% elif data['targetAmountsChoice']=='noAffordTarget'%}
-				
-<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 1 of 3</span> Starting your plan without a payment target</h1>
 
 
-<p>Not setting a payment target is acceptable to start your plan.</p>
-	<p>Your plan will be reviewed often &ndash; if the total amount you pay each month increases the length of your debt over 72 months, we may contact you.</p>
-
-
-<p><a href="targetNoPayment" class="govuk-button">Continue</a></p>
 
 									{% else %}
 									
@@ -145,50 +97,43 @@
 													<h3>Total amount owed</h3>
 													<b>&pound;1500.00</b>
 												</li>
-												{% if data['targetChoice2']=='target-yes2'%}
 												
-												
-												<li>
-													<h3>Monthly target</h3>
 
-														{% if data['targetAmountsChoice']=='6MonthTarget'%}
-													    
-													    <b>&pound;125.00</b>
-													    
-											
+																			
+								{% if data['targetAmountsChoice']=='noAffordTarget'%}
+								
 														{% elif data['targetAmountsChoice']=='12MonthTarget'%}
-														
-														<b>&pound;63.00</b>
-														
-														
+														<li>
+														<h3>Monthly target</h3>
+														<b>&pound;125.00</b>
+														</li>
 														
 														{% elif data['targetAmountsChoice']=='24MonthTarget'%}
-														
-														<b>&pound;42.50</b>
+														<li>
+														<h3>Monthly target</h3>
+														<b>&pound;63.00</b>
+														</li>
 														
 														{% elif data['targetAmountsChoice']=='36MonthTarget'%}
-														
-														<b>&pound;31.50</b>
+														<li>
+														<h3>Monthly target</h3>
+														<b>&pound;42.50</b>
+														</li>
 														
 														{% elif data['targetAmountsChoice']=='48MonthTarget'%}
-														
-														<b>&pound;21.00</b>
+														<li>
+														<h3>Monthly target</h3>
+														<b>&pound;31.50</b>
+														</li>
 														
 														{% elif data['targetAmountsChoice']=='72MonthTarget'%}
-														
-														<b>&pound;15.00</b>
-														
-					
-														
-														{% else %}
-														
-														<b>&pound;{{ data['payment-amount-target'] }}</b>
-													
-														
-														{% endif %}
-								
-												</li>
+														<li>
+														<h3>Monthly target</h3>
+														<b>&pound;21.00</b>
+														</li>
+												
 												{% else %}
+
 												{% endif %}
 												<li>
 													<h3>Paid this month</h3>
