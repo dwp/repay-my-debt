@@ -824,6 +824,11 @@ margin: 30px 0 50px 0;
 	margin-bottom: 30px;
 	display: block;
 	
+	&.warningBanner {
+		border-left: 5px solid govuk-colour("orange");
+		background: rgba(govuk-colour("orange"), 0.05);
+	}
+	
 	.debtDetailsTable {
 
 				.govuk-table__header {
@@ -895,6 +900,8 @@ margin: 30px 0 50px 0;
 
 			}
 		}
+		
+		
 	}
 	
 	&.dashboardTarget {

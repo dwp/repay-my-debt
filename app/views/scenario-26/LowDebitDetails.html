@@ -74,67 +74,136 @@
 									
 		
 		
+<h1 class="govuk-heading-xl">
+	<span class="govuk-caption-xl">Step 3 of 5</span>
+	Bank or building society <br>account details</h1>
+ 
+<!--	<div class="flexibleBanner">
 
 
-			<form class="form" action="lowDebitDay" method="post">
-			<div class="govuk-form-group">
-			   <fieldset class="govuk-fieldset">
-			    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-			      <h1 class="govuk-fieldset__heading">
-			      	<span class="govuk-caption-xl">Step 3 of 4</span>
-			        How do you want to make<br> your payments?
-			      </h1>
-			    </legend>
+									{% if data['how-much2']=='oneHundredPound'%}
+									
+									<ul class="govuk-list">
+										<li><h3>Total amount owed</h3><b>&pound;2000.00</b></li>
+										<li><h3>Direct Debit amount</h3><b>&pound;334.00</b></li>
+										<li><h3>Number of payments</h3><b>6</b></li>	
+									</ul>
+						
+									{% elif data['how-much2']=='fiftyPound'%}
+									
+									<ul class="govuk-list">
+										<li><h3>Total amount owed</h3><b>&pound;2000.00</b></li>
+										<li><h3>Direct Debit amount</h3><b>&pound;167.00</b></li>
+										<li><h3>Number of payments</h3><b>12</b></li>	
+									</ul>
+									
+									{% elif data['how-much2']=='thirtyThree'%}
+									
+									<ul class="govuk-list">
+										<li><h3>Total amount owed</h3><b>&pound;2000.00</b></li>
+										<li><h3>Direct Debit amount</h3><b>&pound;112.00</b></li>
+										<li><h3>Number of payments</h3><b>18</b></li>	
+									</ul>
+									
+									
+									{% elif data['how-much2']=='twentyFivePound'%}
+									
+									<ul class="govuk-list">
+										<li><h3>Total amount owed</h3><b>&pound;2000.00</b></li>
+										<li><h3>Direct Debit amount</h3><b>&pound;84.00</b></li>
+										<li><h3>Number of payments</h3><b>24</b></li>	
+									</ul>
+
+									
+									{% else %}
+									
+									<ul class="govuk-list">
+										<li><h3>Total amount owed</h3><b>&pound;2000.00</b></li>
+										<li><h3>Direct Debit amount</h3><b>&pound;56.00</b></li>
+										<li><h3>Number of payments</h3><b>36</b></li>	
+									</ul>
+									
+									{% endif %}
 
 
 
-			      <div class="govuk-radios">
-			      <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="full-amount" name="payment-options" type="radio" value="full-amount" aria-describedby="full-amount-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="full-amount">
-				        Set up a Direct Debit plan
-				        </label>
-				        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          Make fixed monthly payments on a day which suits you
-				        </span>
-				      </div>
-				      
-				      
-				      <!-- <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="fixed-plan">
-				          Set up a Direct Debit payment plan
-				        </label>
-				        <span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
-				         Choose a payment plan with fixed monthly payments
-				        </span>
-				      </div> -->
-				     
-				      <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="flexible-amount" name="payment-options" type="radio" value="flexible-amount" aria-describedby="flexible-amount-item-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="flexible-amount">
-				         Make flexible payments
-				        </label>
-				        <span id="flexible-amount-hint" class="govuk-hint govuk-radios__hint">
-				        Sign in each month and make manual payments when it suits you
-				        </span>
-				      </div>
-				      
-				      
-				      
-				     
-				     
-				    </div>
 
 
-			  </fieldset>
-			</div>
 
-			<button class="govuk-button" data-module="govuk-button">
-			  Continue
-			</button>
-			</form>
 
+									
+
+							</div> -->
+
+
+
+
+ <form class="form" action="directDebitDay" method="post">
+
+	<fieldset class="govuk-fieldset">
+		<legend class="visually-hidden">
+			Enter Account details
+		</legend>
+
+	<div class="govuk-form-group">
+	  <label class="govuk-label" for="accountName">
+		Name on the account
+	  </label>
+
+	  <input class="govuk-input govuk-input--width-30" id="accountName" name="accountName" type="text">
+
+	</div>
+	
+	
+	<div class="govuk-form-group">
+	  <label class="govuk-label" for="sortCode">
+		Sort code
+	  </label>
+	  <div id="sort-code-hint" class="govuk-hint">
+		Must be 6 digits long
+	  </div>
+
+	  <input class="govuk-input govuk-input--width-10" id="sortCode" name="sortCode" type="text" aria-describedby="sort-code-hint">
+
+	</div>
+
+	
+	<div class="govuk-form-group">
+	  <label class="govuk-label" for="accountNumber">
+		Account number
+	  </label>
+	  
+	  <div id="account-number-hint" class="govuk-hint">
+		Must be between 6 and 8 digits long
+	  </div>
+
+	  <input class="govuk-input govuk-input--width-10" id="accountNumber" name="accountNumber" type="text" aria-describedby="account-number-hint">
+
+	</div>
+	
+	<!--<div class="govuk-form-group">
+<label class="govuk-label" for="rollNumber">
+Building society roll number (if you have one)
+</label>
+<div id="roll-number-hint" class="govuk-hint">
+You can find it on your card, statement or passbook
+</div>
+<input class="govuk-input govuk-input--width-10" id="rollNumber" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
+</div>-->
+	
+	
+	
+	
+	</fieldset>
+	
+
+	
+	
+	
+	<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+	
+ </form>
 								
 									
 									
