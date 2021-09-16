@@ -31,7 +31,7 @@
 		
 		
 		
-		 <form class="form" action="directDebitMain" method="post">
+		 <form class="form" action="commsSummary" method="post">
 
 		    
 		  
@@ -39,34 +39,22 @@
 <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 	<h1 class="govuk-fieldset__heading">
-		<span class="govuk-caption-xl">Step 5 of 5</span>
-	  Would you like us to contact you with updates about any unsuccessful payments?
+<span class="govuk-caption-xl">Payment updates</span>
+	 How would you like to be contacted?
 	</h1>
   </legend>
-
+ <span id="how-contacted-conditional-hint" class="govuk-hint">
+					You will only receive updates about unsuccessful payments
+				  </span> 
 				  
   
    
 				  
-				  
-  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-	<div class="govuk-radios__item">
-	  <input class="govuk-radios__input" id="commsYes" name="commsSign" type="radio" value="commsYes" data-aria-controls="conditional-how-contacted-conditional">
-	  <label class="govuk-label govuk-radios__label" for="commsYes">
-		Yes
-	  </label>
-	</div>
-	<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
 
-
-			<fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-	<h1 class="govuk-fieldset__heading">
-	  How would you like to be contacted?
-	</h1>
-  </legend>
 
   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+	  
+	  
 	<div class="govuk-checkboxes__item">
 	  <input class="govuk-checkboxes__input" id="commsEmail" name="commsChoice" type="checkbox" value="commsEmail" data-aria-controls="conditional-citizenship-conditional">
 	  <label class="govuk-label govuk-checkboxes__label" for="commsEmail">
@@ -98,19 +86,11 @@
 	  </div>
 
 	</div>
-  </div>
-</fieldset>
+
 
 
 	</div>
 
-
-	<div class="govuk-radios__item">
-	  <input class="govuk-radios__input" id="commsNo" name="commsSign" type="radio" value="commsNo">
-	  <label class="govuk-label govuk-radios__label" for="commsNo">
-		No
-	  </label>
-	</div>
 
 </fieldset>
 </div>

@@ -40,18 +40,29 @@
 							  </li>
 							  <li class="govuk-tabs__list-item">
 								<a class="govuk-tabs__tab" href="#past-week">
-								  Communications
+								  Updates
 								</a>
 							  </li>
-							  <li class="govuk-tabs__list-item">
-								<a class="govuk-tabs__tab" href="#past-month">
-								  Sign in preference
-								</a>
-							  </li>
+							  
 							</ul>
 							<div class="govuk-tabs__panel" id="past-day">
 								
 								<h2 class="govuk-heading-l">Payments</h2>
+								
+								
+								
+{% if data['amountChange']=='yesChange'%}
+	   
+<div class="flexibleBanner">
+	  <p class="mb0">Your payment plan has been updated</p>
+</div>
+	 
+	 {% else %}
+
+  
+		
+	 {% endif %} 
+   
 
 								
 								
@@ -184,7 +195,7 @@
 									  </table>
 				  
 		 
-		 <p><a href="#" class="govuk-button">Manage payments</a></p>
+		 <p><a href="startChange" class="govuk-button">Manage payments</a></p>
 						  
 							</div>
 							
@@ -192,7 +203,7 @@
 							<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
 							
 								
-								<h2 class="govuk-heading-l">Communications</h2>
+								<h2 class="govuk-heading-l">Updates</h2>
 								
 								
 								
@@ -200,13 +211,13 @@
 								{% if data['commsSign']=='commsYes'%}
 								
 		
-				<p>You will receive notifications regarding payments and new features.</p>
+				<p>You will only receive updates about unsuccessful payments.</p>
 						 
 										  
 						  
 						  
 	<table class="govuk-table summary-table mb40">
-		<caption class="govuk-heading-s leftCap">Contact details</caption>
+		<caption class="govuk-heading-s leftCap">Contact method</caption>
 <tbody class="govuk-table__body">
 
 
@@ -241,96 +252,42 @@
 				  </table>
 				  
 				  
-				  <p><a href="#" class="govuk-button">Manage communications</a></p>	
+				<!--  <p><a href="#" class="govuk-button">Manage communications</a></p>	 -->
+				
+				
+				<div class="govuk-inset-text">
+					<p>If you want to opt out of receiving updates or need to change your number, you need to contact Debt Management.</p>
+					
+					
+					   <h2 class="govuk-heading-s">Debt Management</h2>
+				  <ul class="govuk-list">
+				  <li>Telephone: 0800 916 0647</li>
+				  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
+				</ul>
+				<p class="govuk-body">
+				  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+				</p>	
+				
+					</div> 
+				
+				
 				  
 				  
 				  {% else %}
 				  
 				
-					<p class="mt40">You have not registered to receive notifications regarding payments and new features.</p>
+					<p class="mt40">You can sign up to receive updates via text or email about unsuccessful payments.</p>
+					
+			
 					
 					
-					
-					
-				<p><a href="#" class="govuk-button">Manage communications</a></p>	
+				<p><a href="manageComms.html" class="govuk-button">Sign up for payment updates</a></p>	
 					
   
 				  {% endif %}
 				  
 						  
-							</div>
-							
-							
-							<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
-							  <h2 class="govuk-heading-l">Sign in preference</h2>
-							  
-							  
-			  
-		<table class="govuk-table summary-table mb40">
-			<caption class="visually-hidden">Sign in details</caption>
-  <tbody class="govuk-table__body">
-
-   
-   <tr class="govuk-table__row">
-	   <th scope="row" class="govuk-table__header">Sign in method</th>
-	   <td class="govuk-table__cell">
-
-		  Security code and date of birth
-
-	   </td>
-	   
-	   
-	   </tr>
-	   	
-																		
-						</tbody>
-					  </table>
-					  
-					  	
-						  <div class="govuk-inset-text mt0 mb20">
-
-						  <h3 class="govuk-heading-m">Register an account</h3>
-						  
-						<p>Register an account to set an email address and password.</p>
-					  <p>You will need to verify your identity which can take up to 30 minutes.</p>
-					  
-					  
-					  
-						<p><a href="indexGuard" class="secondary-invert mb0">Register an account</a></p>	
-						  </div>
-  
-					  
-						  
-				  </div>
-							
-							
 						
-						  </div>
-				      
-		   
-	  	   
-	   	
-		
-	   	
-	   	
-	
-	   	
-	   	
-	  	<!--	<div class="govuk-inset-text">
-										<p>If you need to make changes to your bank details, you need to contact Debt Management.</p>
-										
-										
-					   					<h2 class="govuk-heading-s">Debt Management</h2>
-									  <ul class="govuk-list">
-									  <li>Telephone: 0800 916 0647</li>
-									  <li> Monday to Friday, 10am to 4pm (except public holidays)</li>
-									</ul>
-									<p class="govuk-body">
-									  <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
-									</p>	
-									
-										</div> 
-				   -->
                   
     </div>
 </div>

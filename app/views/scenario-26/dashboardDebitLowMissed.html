@@ -215,7 +215,7 @@
 							</table>	
 				
 				
-				<p class="statement mb20">Make sure you have enough money in your account to avoid any possible bank charges.</p>
+				<p class="statement mb20">If you're worried you cannot make this payment, you should contact your bank to discuss your options.</p>
 						
 									   					 
 							   					 
@@ -254,17 +254,10 @@
 
 					 
 					 <div class="warning-message">
+						 
+						 <p>Your last Direct Debit was unsuccessful &ndash; we will try to take another payment on 30 September 2021.</p>
 								
-								 	<p>Your last Direct Debit on {% if data['payDaychange']=='YesPayDaychange'%}
-											 
-										   {{ data['paymentDayUpdate'] }}
-										   
-										   
-										   {% else %}
-						  
-										 {{ data['paymentDay'] }}
-											  
-										   {% endif %} September 2020 was unsuccessful &ndash; we will try to take this payment again on 30 September 2021.</p>
+								 	
 								 </div>
 					 	
 					 			
