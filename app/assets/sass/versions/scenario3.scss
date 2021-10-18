@@ -775,7 +775,7 @@ margin: 30px 0 50px 0;
 }
 .loggedIn {
 	float: right;
-	width: 14%;
+	width: auto;
 	text-align: right;
 	padding-top: 5px;
 	padding-bottom: 10px;
@@ -796,7 +796,7 @@ margin: 30px 0 50px 0;
 	}
 	
 	&.loggedDetail {
-		width: 30%;
+	
 		p {
 			span {
 				display: block;
@@ -1184,6 +1184,14 @@ margin: 40px 0;
 
 
 
+.govuk-header__logo {
+	width: 25%;
+}
+
+
+.startCaption {
+	padding: 5px 0 0 0;
+}
 
 
 

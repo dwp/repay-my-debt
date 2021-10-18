@@ -202,11 +202,33 @@
 								
 								
 								
-								 
-								{% if data['commsSign']=='commsYes'%}
-								
+				{% if data['commChoice']=='comm4'%}
+				
+
+				<p class="mt40">You can receive reminders that you can manage your plan when your situation changes, take action if there are any problems with payments and be notified of any review dates.</p>
+				
 		
-				<p>You will only receive notifications about unsuccessful payments.</p>
+				
+				
+			<p><a href="#" class="secondary-invert">Sign up for notifications</a></p>	
+				
+				
+					{% else %}			
+		
+				<p>You will receive notifications about:</p>
+				
+				<ul class="govuk-list govuk-list--bullet">
+		
+					<li>plan management</li>
+			
+					
+
+					<li>problems with any payments</li>
+	
+
+					<li>review date</li>
+
+				  </ul>
 						 
 										  
 						  
@@ -216,32 +238,33 @@
 <tbody class="govuk-table__body">
 
 
-
-
 <tr class="govuk-table__row">
    <th scope="row" class="govuk-table__header">Email</th>
    <td class="govuk-table__cell">
 
-	   {{ data['commsEmailAddress'] }}
+	   {{ data['contact-by-email'] }}
 
    </td>
    
    
    </tr>
    
-   <tr class="govuk-table__row">
-		 <th scope="row" class="govuk-table__header">Text message</th>
-		 <td class="govuk-table__cell">
-  
-			 {{ data['commsTextNumber'] }}
-  
-		 </td>
-		 
-		 
-		 </tr>
- 
 
-						
+   
+   <tr class="govuk-table__row">
+	  <th scope="row" class="govuk-table__header">Text message</th>
+	  <td class="govuk-table__cell">
+   
+		  {{ data['contact-by-text'] }}
+   
+	  </td>
+	  
+	  
+	  </tr>
+   
+   
+   
+  		
 																	
 					</tbody>
 				  </table>
@@ -250,20 +273,12 @@
 				<!--  <p><a href="#" class="govuk-button">Manage communications</a></p>	 -->
 				
 				
-				<p><a href="manageNotifications" class="secondary-invert">Manage notifications</a></p>	
+				<p><a href="#" class="secondary-invert">Manage notifications</a></p>	
 				
 				
 				  
 				  
-				  {% else %}
-				  
 				
-					<p class="mt40">You can sign up to receive updates via text or email about unsuccessful payments.</p>
-					
-			
-					
-					
-				<p><a href="manageComms" class="secondary-invert">Sign up for notifications</a></p>	
 					
   
 				  {% endif %}

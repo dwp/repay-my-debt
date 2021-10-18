@@ -57,7 +57,7 @@
 						  
 							   <tr class="govuk-table__row">
 								<th scope="row" class="govuk-table__header">Total amount owed</th>
-								<td class="govuk-table__cell" colspan="2">&pound;2160.00
+								<td class="govuk-table__cell" colspan="2">&pound;4320.00
 								</td>
 								
 					  
@@ -164,7 +164,7 @@
 										
 											 <tr class="govuk-table__row">
 										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell" colspan="2">&pound;2160.00
+										      <td class="govuk-table__cell" colspan="2">&pound;4320.00
 										      </td>
 										      
 									
@@ -180,34 +180,34 @@
 											      
 											{% if data['paymentChoices']=='12Month'%}
 		
-											<p class="mb0">12 payments of &pound;180.00</p>
+											<p class="mb0">12 payments of &pound;320.00</p>
 
 											
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											<p class="mb0">24 payments of &pound;90.00</p>
+											<p class="mb0">24 payments of &pound;180.00</p>
 
 											
 											{% elif data['paymentChoices']=='36Month'%}
 
 											
 											
-											<p class="mb0">36 payments of &pound;60.00</p>
+											<p class="mb0">36 payments of &pound;120.00</p>
 											
 											
 											{% elif data['paymentChoices']=='48Month'%}
 
-											<p class="mb0">48 payments of &pound;45.00</p>
+											<p class="mb0">48 payments of &pound;90.00</p>
 											
 											{% elif data['paymentChoices']=='72Month'%}
 
-											<p class="mb0">72 payments of &pound;30.00</p>
+											<p class="mb0">72 payments of &pound;60.00</p>
 											
 											
 											
 											{% else %}
 											
-											<p class="mb0">No amount</p>
+											<p class="mb0">43 payments of &pound;100.00</p>
 											
 											{% endif %}
 											      
@@ -255,7 +255,7 @@
 											  
 											  {% else %}
 											  
-											  No date chosen
+											  {{ data['paymentDay'] }} April 2024
 											  
 											  {% endif %}
 										      	
