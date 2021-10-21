@@ -25,9 +25,61 @@
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 		
 		
+{% if data['paymentChoices']=='lowPayments'%}
+
+
+<form class="form" action="changePlanOutcome" method="post">
 
 
 
+<div class="govuk-form-group">
+	  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+		<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+		  <h1 class="govuk-fieldset__heading">
+			<span class="govuk-caption-xl">Step 1 of 3</span>
+			Do you want to change your Direct Debit monthly amount?
+		  </h1>
+		</legend>
+
+		<div class="govuk-radios govuk-radios--inline">
+		  <div class="govuk-radios__item">
+			<input class="govuk-radios__input" id="lowAmountChangeYes" name="lowAmountChange" type="radio" value="lowAmountChangeYes">
+			<label class="govuk-label govuk-radios__label" for="lowAmountChangeYes">
+			  Yes
+			</label>
+		  </div>
+		  <div class="govuk-radios__item">
+			<input class="govuk-radios__input" id="lowAmountChangeNo" name="lowAmountChange" type="radio" value="lowAmountChangeNo">
+			<label class="govuk-label govuk-radios__label" for="lowAmountChangeNo">
+			  No
+			</label>
+		  </div>
+		</div>
+	
+	  </fieldset>
+	</div>
+
+
+
+
+	
+	
+	
+	
+	<button class="govuk-button" data-module="govuk-button">
+	  Continue
+	</button>
+	</form>
+
+
+
+
+
+
+
+
+
+{% else %}
 
 										<form class="form" action="OneddChangeSummary" method="post">
 											
@@ -105,7 +157,7 @@
 											</button>
 											</form>
 
-
+{% endif %}
 
 
 						

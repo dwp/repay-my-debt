@@ -120,17 +120,110 @@ Sign in
 	</form>
 
 
+{% elif data['inSign']=='inRegister'%}
+
+
+
+<h1 class="govuk-heading-xl">Sign in</h1>
+
+<form class="form" action="index" method="post">
+
+	<fieldset class="govuk-fieldset">
+	<legend class="visually-hidden">Sign in details</legend>
+
+	<div class="govuk-form-group">
+	  <label class="govuk-label" for="emailAddress"">
+		Email address
+	  </label>
+
+	  <input class="govuk-input govuk-input--width-30" id="emailAddress" name="emailAddress" type="text">
+
+	  
+	</div>
+
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="password">
+  Password
+</label>
+
+<input class="govuk-input govuk-input--width-30" id="password" name="password" type="text">
+
+
+</div>
+
+
+
+	</fieldset>
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+Sign in
+</button>
+
+
+</form>
+
+
+<p><a href="indexGuard">Register now</a> if you have not used this service before.</p>
+
+<h2 class="govuk-heading-m"">Problems signing in?</h2>
+
+<ul class="govuk-list">
+<li>
+  <a href="#t" class="govuk-link">I forgot my password</a>
+</li>
+<li>
+  <a href="#" class="govuk-link">I cannot access the email I use to sign in</a>
+</li>
+</ul>
+
+
 
 
 {% else %}
 
 
 
-<h1 class="govuk-heading-xl">Sign in</h1>
+
+<h1 class="govuk-heading-xl">Register</h1>
+
+<p>Register so you can securely sign in whenever you use this service.</p>
+
+<h2 class="govuk-heading-m">Before you start</h2>
+
+<p>You will need:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+	<li>an email address</li>
+	<li>a mobile phone</li>
+
+  </ul>
+
+<p>You will also need information from 2 sources so we can check we are dealing with the right person. These are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>a UK passport</li>
+<li>payslips or P60M</li>
+<li>information about tax credits, if you claim them</li>
+<li>details of your credit record</li>
+</ul>
 
 
+<h3 class="govuk-heading-m">What happens next</h3>
 
-<p><a href="https://dth-prototype.herokuapp.com/auth/v7/sign-in?service-name=Repay my debt to DWP" class="govuk-button">Continue</a></p>
+<p>Your information will be checked against our records. This also helps protect you from fraud.</p>
+
+<p>We will send security codes to your email and mobile phone to check that they belong to you.</p>
+
+<p>Whenever you sign in we will send a new security code to your mobile phone.</p>
+
+<p>You will also need to create a password.</p>
+
+<p><a href="https://dth-prototype.herokuapp.com/auth/dev-ready/register/email-address?service-name=Manage my benefit debt" class="govuk-button">Continue</a></p>
+
 
 
 

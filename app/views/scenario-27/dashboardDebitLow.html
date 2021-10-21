@@ -36,7 +36,7 @@
 			   <div class="govuk-inset-text">
 			 Total amount owed: <span class="total-amount">
 			 
-			&pound;2145.00
+			&pound;4290.00
 							
 									 
 									 </span>
@@ -79,23 +79,16 @@
 									  <th scope="row" class="govuk-table__header">Monthly payment</th>
 									  <td class="govuk-table__cell">
 										  
-										  &pound;15.00
+										  &pound;30.00
 										  
 									  </td>
 									</tr>
 								
 								<tr class="govuk-table__row">
 								  <th scope="row" class="govuk-table__header">Next payment date</th>
-								  <td class="govuk-table__cell">{% if data['payDaychange']=='YesPayDaychange'%}
+								  <td class="govuk-table__cell">
 										
-									  {{ data['paymentDayUpdate'] }}
-									  
-									  
-									  {% else %}
-					 
-									{{ data['paymentDay'] }}
-										 
-									  {% endif %} November 2021</td>
+									  {{ data['paymentDay'] }} December 2021</td>
 								</tr>
 							  </tbody>
 							</table>	
@@ -140,7 +133,7 @@
 					 
 					 <div class="warning-message complete-alert">
 								
-									 <p>A payment of &pound;15.00 was taken from your account on {{ data['paymentDay'] }} October 2021</p>
+									 <p>A payment of &pound;30.00 was taken from your account on {{ data['paymentDay'] }} November 2021</p>
 								 </div>
 						 
 								 
@@ -166,7 +159,7 @@
 									  
 									  
 									   
-								&pound;15.00
+								&pound;30.00
 									  
 									  
 								  </td>
@@ -180,7 +173,7 @@
 									  
 								 
 											
-											{{ data['paymentDay'] }} October 2022
+											{{ data['paymentDay'] }} November 2022
 								
 																	      
 									  
@@ -292,31 +285,31 @@
 			 Total amount owed: <span class="total-amount">
 			 
 			 
-			 {% if data['paymentChoices']=='12Month'%} 2160
+			 {% if data['paymentChoices']=='12Month'%} 
 										    
-										    &pound;1980.00
+										    &pound;3960.00
 								
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;2070.00										
+											&pound;4140.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;2100.00
+											&pound;4200.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;2115.00
+											&pound;4230.00
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;2130.00
+											&pound;4248.00
 
 
 											
 											{% else %}
 											
-											&pound;2145.00
+											&pound;4220.00
 						
 											
 											
@@ -387,28 +380,28 @@
 										  
 										{% if data['paymentChoices']=='12Month'%}
 										
-										&pound;180.00
+										&pound;360.00
 							
 										{% elif data['paymentChoices']=='24Month'%}
 										
-										&pound;90.00										
+										&pound;180.00										
 										
 										{% elif data['paymentChoices']=='36Month'%}
 										
-										&pound;60.00
+										&pound;120.00
 										
 										{% elif data['paymentChoices']=='48Month'%}
 										
-										&pound;45.00
+										&pound;90.00
 										
 										{% elif data['paymentChoices']=='72Month'%}
 										
-										&pound;30.00
+										&pound;60.00
 			
 										
 										{% else %}
 					
-										
+										&pound;100.00
 										
 										{% endif %}  
 										  
@@ -449,7 +442,7 @@
 											
 											{% else %}
 											
-											
+											42
 											
 											{% endif %}
 
@@ -459,16 +452,7 @@
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
-							      <td class="govuk-table__cell">{% if data['payDaychange']=='YesPayDaychange'%}
-										
-									  {{ data['paymentDayUpdate'] }}
-									  
-									  
-									  {% else %}
-					 
-									{{ data['paymentDay'] }}
-										 
-									  {% endif %} November 2021</td>
+							      <td class="govuk-table__cell">{{ data['paymentDay'] }} December 2021</td>
 							    </tr>
 							  </tbody>
 							</table>	
@@ -515,30 +499,30 @@
 								
 								 	<p>A payment of  {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;180.00
+										    &pound;360.00
 								
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;90.00										
+											&pound;180.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;60.00
+											&pound;120.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;45.00
+											&pound;90.00
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;30.00
+											&pound;60.00
 
 											
 											{% else %}
 									
-										
+										&pound;100.00
 											
-											{% endif %} was taken from your account on {{ data['paymentDay'] }} October 2021</p>
+											{% endif %} was taken from your account on {{ data['paymentDay'] }} November 2021</p>
 								 </div>
 					 	
 					 			
@@ -566,26 +550,26 @@
 								       
 							    {% if data['paymentChoices']=='12Month'%}
 										    
-										    &pound;180.00
+										    &pound;360.00
 								
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											&pound;90.00										
+											&pound;180.00										
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											&pound;60.00
+											&pound;120.00
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											&pound;45.00
+											&pound;90.00
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											&pound;30.00
+											&pound;60.00
 											
 											{% else %}
-						
+						&pound;100.00
 											
 											{% endif %}
 								      
@@ -601,29 +585,29 @@
 								      
 								  {% if data['paymentChoices']=='12Month'%}
 										    
-										    {{ data['paymentDay'] }} October 2022
+										    {{ data['paymentDay'] }} November 2022
 								
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											{{ data['paymentDay'] }} October 2023
+											{{ data['paymentDay'] }} November 2023
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											{{ data['paymentDay'] }} October 2024
+											{{ data['paymentDay'] }} November 2024
 											
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											{{ data['paymentDay'] }} October 2025
+											{{ data['paymentDay'] }} November 2025
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											{{ data['paymentDay'] }} October 2027
+											{{ data['paymentDay'] }} November 2027
 				
 											
 											{% else %}
 											
-											
+											{{ data['paymentDay'] }} April 2024
 											
 											{% endif %}								      
 								      

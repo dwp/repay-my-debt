@@ -36,7 +36,7 @@
 			   <div class="govuk-inset-text">
 			 Total amount owed: <span class="total-amount">
 			 
-			&pound;2160.00
+			&pound;4320.00
 							
 									 
 									 </span>
@@ -79,14 +79,14 @@
 									  <th scope="row" class="govuk-table__header">Monthly payment</th>
 									  <td class="govuk-table__cell">
 										  
-										  &pound;15.00
+										  &pound;30.00
 										  
 									  </td>
 									</tr>
 								
 								<tr class="govuk-table__row">
 								  <th scope="row" class="govuk-table__header">Next payment date</th>
-								  <td class="govuk-table__cell">25 October 2021</td>
+								  <td class="govuk-table__cell">20 November 2021</td>
 								</tr>
 							  </tbody>
 							</table>	
@@ -96,9 +96,9 @@
 															
 													
 					
-					<span><a href="startAdditional.html" class="secondary-invert">Make an additional payment</a></span>	
+					<span><a href="startAdditional" class="secondary-invert">Make an additional payment</a></span>	
 					
-					<span><a href="XLddPlan" class="secondary-invert">View or manage your plan</a></span>
+					<span><a href="XLddPlan2" class="secondary-invert">View or manage your plan</a></span>
 					
 					
 					
@@ -128,13 +128,16 @@
 					 
 					 <div class="scenario-inner-panel">
 
-					 
-					<div class="warning-message">
-						 
-						 <p>Your last Direct Debit was unsuccessful &ndash; we will try to take another payment on 25 October 2021.</p>
-								
-									 
-								 </div>
+
+								 
+								 <div class="warning-message">
+									  
+									  <p>Your last Direct Debit was unsuccessful &ndash; we will try to take another payment on 20 November 2021.</p>
+											 
+												  
+											  </div>
+								 
+								 
 						 
 								 
 							 <table class="govuk-table">
@@ -148,7 +151,7 @@
 								  <td class="govuk-table__cell">
 								  
 								  
-								 0										
+								 0											
 								  </td>
 							   </tr>
 
@@ -173,7 +176,7 @@
 									  
 								 
 											
-											{{ data['paymentDay'] }} October 2022
+											{{ data['paymentDay'] }} November 2022
 								
 																	      
 									  
@@ -284,15 +287,9 @@
 	   		<div class="govuk-inset-text">
 			 Total amount owed: <span class="total-amount">
 			 
-			 
-			 		&pound;2160.00
-								
-			 
-			 							
-											
-											
-							
-			 						
+										    
+										    &pound;4320.00
+				
 			 						</span>
 			 
 
@@ -302,18 +299,6 @@
 	   	
 	   </div> 
 	   
-	   
-<!--<div class="warning-message complete-alert">
-							 <h5 class="govuk-heading-s">Payment status</h5>
-							 	<p>A payment has been made. It will take up to 24 hours to update your account.</p>
-							 </div> -->
-							 
-							 
-							 
-							<!--<div class="warning-message">
-								 <h5 class="govuk-heading-s">You didn't make a payment last month</h5>
-								 	<p>If you do not keep up with your payments, we may ask your employer to make deductions from your pay or ask a debt collection agency to collect this money for us.</p>
-								 </div>-->
 
 
       <div class="govuk-grid-row">
@@ -353,28 +338,28 @@
 										  
 										{% if data['paymentChoices']=='12Month'%}
 										
-										&pound;180.00
+										&pound;360.00
 							
 										{% elif data['paymentChoices']=='24Month'%}
 										
-										&pound;90.00										
+										&pound;180.00										
 										
 										{% elif data['paymentChoices']=='36Month'%}
 										
-										&pound;60.00
+										&pound;120.00
 										
 										{% elif data['paymentChoices']=='48Month'%}
 										
-										&pound;45.00
+										&pound;90.00
 										
 										{% elif data['paymentChoices']=='72Month'%}
 										
-										&pound;30.00
+										&pound;60.00
 			
 										
 										{% else %}
 					
-										
+										&pound;100.00
 										
 										{% endif %}  
 										  
@@ -415,7 +400,7 @@
 											
 											{% else %}
 											
-											
+											43
 											
 											{% endif %}
 
@@ -425,7 +410,7 @@
 							    </tr>
 							    <tr class="govuk-table__row">
 							      <th scope="row" class="govuk-table__header">Next payment date</th>
-							      <td class="govuk-table__cell">25 October 2021</td>
+							      <td class="govuk-table__cell">20 November 2021</td>
 							    </tr>
 							  </tbody>
 							</table>	
@@ -435,9 +420,9 @@
 									   					 
 							   					 
 					
-					<span><a href="startAdditional" class="secondary-invert">Make an additional payment</a></span>	
+					<span><a href="startAdditional.html" class="secondary-invert">Make an additional payment</a></span>	
 					
-					<span><a href="#" class="secondary-invert">View or manage your plan</a></span>
+					<span><a href="XLddPlan2" class="secondary-invert">View or manage your plan</a></span>
 					
 					
 					
@@ -468,13 +453,12 @@
 					 <div class="scenario-inner-panel">
 
 					 
-				
-								 	<div class="warning-message">
-										  
-										  <p>Your last Direct Debit was unsuccessful &ndash; we will try to take another payment on 25 October 2021.</p>
-												 
-													  
-												  </div>
+					 <div class="warning-message">
+						   
+						   <p>Your last Direct Debit was unsuccessful &ndash; we will try to take another payment on 20 November 2021.</p>
+								  
+									   
+								   </div>
 					 	
 					 			
 					 		<table class="govuk-table">
@@ -488,7 +472,7 @@
 							      <td class="govuk-table__cell">
 							      
 							      
-							     0										
+							     0											
 							      </td>
 							   </tr>
 
@@ -497,9 +481,8 @@
 							      <th scope="row" class="govuk-table__header">Total amount repaid</th>
 							      <td class="govuk-table__cell">
 								      
-								      
-								       
-							    &pound;0.00
+										    &pound;0.00
+
 								      
 								      
 							      </td>
@@ -513,29 +496,29 @@
 								      
 								  {% if data['paymentChoices']=='12Month'%}
 										    
-										    {{ data['paymentDay'] }} October 2022
+										    {{ data['paymentDay'] }} November 2022
 								
 											{% elif data['paymentChoices']=='24Month'%}
 											
-											{{ data['paymentDay'] }} October 2023
+											{{ data['paymentDay'] }} November 2023
 											
 											{% elif data['paymentChoices']=='36Month'%}
 											
-											{{ data['paymentDay'] }} October 2024
+											{{ data['paymentDay'] }} November 2024
 											
 											
 											{% elif data['paymentChoices']=='48Month'%}
 											
-											{{ data['paymentDay'] }} October 2025
+											{{ data['paymentDay'] }} November 2025
 											
 											{% elif data['paymentChoices']=='72Month'%}
 											
-											{{ data['paymentDay'] }} October 2027
+											{{ data['paymentDay'] }} November 2027
 				
 											
 											{% else %}
 											
-											
+											{{ data['paymentDay'] }} April 2024
 											
 											{% endif %}								      
 								      
