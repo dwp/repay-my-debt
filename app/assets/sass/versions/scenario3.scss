@@ -1210,6 +1210,12 @@ margin: 40px 0;
 	  padding: 2em;
 	  li {
 		font-size: 19px;
+		h2 {
+			font-size: 19px;
+		}
+		p {
+			font-size: 19px;
+		}
 		}
   }
   .clear-bar {
@@ -1298,6 +1304,10 @@ margin: 40px 0;
 			width: auto;
 			border-left: none;
 			padding: .4em 0;
+			
+			b {
+				font-size: 19px;
+			}
 
 			
 		
