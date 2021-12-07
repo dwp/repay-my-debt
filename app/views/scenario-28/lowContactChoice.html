@@ -19,8 +19,20 @@
     
     
     <h1 class="govuk-heading-xl">
-      <span class="govuk-caption-xl">Step 5 of 5</span>
-      Sign up for notifications</h1>
+      <span class="govuk-caption-xl">
+        
+        {% if data['paymentChoices']=='lowPayments'%}
+         
+         Step 5 of 5
+         
+         {% else %}
+         
+         Step 4 of 4
+         
+         {% endif %}
+        
+      </span>
+      Sign up for helpful notifications</h1>
       
       
       
@@ -46,25 +58,36 @@
          </div>
          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
         
+        
+        
+        
            <div class="govuk-checkboxes__item">
-
-             
-             
              <input class="govuk-checkboxes__input" id="comm2" name="commChoice" type="checkbox" value="comm2" aria-describedby="comm2-hint">
              <label class="govuk-label govuk-checkboxes__label" for="comm2">
               Plan management
              </label>
              <div id="comm2-hint" class="govuk-hint govuk-checkboxes__hint">
-              This is a monthly reminder to sign in and manage your plan
-             </div>
-             
-             
+              A monthly reminder to sign in and manage your plan
+             </div>          
            </div>
+          
+          {% if data['paymentOptions']=='flexyPayChoice'%} 
+           <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="comm2a" name="commChoice" type="checkbox" value="comm2" aria-describedby="comm2-hint">
+              <label class="govuk-label govuk-checkboxes__label" for="comm2a">
+              Payment reminders
+              </label>
+              <div id="comm2a-hint" class="govuk-hint govuk-checkboxes__hint">
+               If you have not made a payment by the middle of the month, you will receive a message to remind you
+              </div>          
+            </div>
+            {% else %}
+           {% endif %}
            
            
            
            
-           
+           {% if data['paymentOptions']=='ddFixedChoice'%} 
            <div class="govuk-checkboxes__item">
              <input class="govuk-checkboxes__input" id="comm3" name="commChoice" type="checkbox" value="comm3" aria-describedby="comm3-hint">
              <label class="govuk-label govuk-checkboxes__label" for="comm3">
@@ -74,7 +97,11 @@
                We will send you alerts to sign in and view your options if there are any problems with your payments
               </div>
            </div>
+           {% else %}
+           {% endif %}
            
+           
+           {% if data['paymentChoices']=='lowPayments'%}
            <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="comm1" name="commChoice" type="checkbox" value="comm1" aria-describedby="comm1-hint">
               <label class="govuk-label govuk-checkboxes__label" for="comm1">
@@ -84,6 +111,8 @@
               We will remind you within one week of your proposed plan review date
               </div>
             </div>
+            {% else %}
+            {% endif %}
            
            <div class="govuk-radios__divider">or</div>
            

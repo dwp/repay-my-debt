@@ -53,60 +53,33 @@
 
 
 
-									{% elif data['payment-options']=='flexible-amount'%}
-
-		<div class="attention-card">
-
-			<h1 class="govuk-heading-l mb30">How a flexible payment plan works</h1>
-			
-	<p class="title">This is not a Direct Debit &ndash; you must sign in each month and make at least one payment.</p>
-			
-
-			<ul class="govuk-list">
-			
-			<li>Set a monthly payment target</li>	
-				<li class="two">Make a payment today to start your plan</li>
-
-				<li class="three">Sign up for helpful payment reminders</li>
-				
-				<!--li class="four">We will review your plan if the total amount you pay each month is regularly too low</li>-->
-			</ul>
-			
-			
-			
-			
-			
-
-			<p><a href="targets2" class="attention-invert mt30">Continue</a></p>
-
-		</div>
-
-									<!--// Flexible amount end -->
-
-
-
-
-
-									{% elif data['payment-options']=='fixed-plan'%}
+								
+									{% else %}
 
 	   
 									
 											<h1 class="govuk-heading-xl">Set up a payment plan</h1>
 							
 					
+<p>Set up a payment plan based on how much you can afford and choose to pay in a way that suits you &ndash; either by Direct Debit or flexible payments.</p>
 
-								 <p class="mt30">Setup a payment plan based on an amount you can afford &ndash; pay your chosen amount by Direct Debit or our flexible payment option.
-										 </p>
-	
-										 <p class="mt30">You will need:
-											   </p>
-											   
-											   <ul class="govuk-list govuk-list--bullet">
-					
-												  <li>your bank or building society account details</li>
-												  <li>your sort code and account number</li>
-											   </ul>
-										  
+						
+										 <div class="govuk-inset-text mt0">
+											 Once your plan is setup, you can sign in to manage your plan, change payments, pay additional amounts or get help and support.
+														 </div>
+														 
+														 
+														 
+														 
+										<!-- <p class="mt30">If you want to set up a payment plan online:
+												</p>
+												
+												<ul class="govuk-list govuk-list--bullet">
+												  <li>you must be an account holder and be able to authorise Direct Debits with <br>your bank or building society</li>
+												 <li>you will need your bank or building society account details</li>
+												 <li>you will also need your sort code and account number if you have a building society account</li>
+												</ul>
+												 
 							
 				<details class="govuk-details mt30" data-module="govuk-details">
 		  <summary class="govuk-details__summary">
@@ -131,7 +104,7 @@
 
 		  </div>
 		</details>
-		
+	-->
 		
 		
 												  
@@ -149,15 +122,7 @@
 										  Continue
 										</a></p>
 						
-						
-	
-
-
-									{% else %}
-
-									<h1 class="govuk-heading-l">Oops! you didn't select a payment option</h1>
-
-									<p>Don't worry, you can go back and try again.</p>
+			
 
 
 									{% endif %}

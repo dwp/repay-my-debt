@@ -30,13 +30,25 @@
 
 
 		<h1 class="govuk-heading-xl">
-			<span class="govuk-caption-xl">Step 4 of 5</span>
+			<span class="govuk-caption-xl">
+				
+				{% if data['paymentChoices']=='lowPayments'%}
+				 
+				 Step 4 of 5
+				 
+				 {% else %}
+				 
+				 Step 3 of 4
+				 
+				 {% endif %}
+				
+			</span>
 			Bank or building society <br>account details</h1>
 		
 		
 		
 		
-		 <form class="form" action="directDebitComms" method="post">
+		 <form class="form" action="lowContactChoice" method="post">
 
 		    <fieldset class="govuk-fieldset">
 			    <legend class="visually-hidden">

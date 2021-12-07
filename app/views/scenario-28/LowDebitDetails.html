@@ -40,7 +40,7 @@
 			
 			<div class="attention-card">
 
-			<h1 class="govuk-heading-l mb40">How a more affordable Direct Debit plan works</h1>
+			<h1 class="govuk-heading-l mb40">How a more affordable plan works</h1>
 			
 			
 			<ul class="govuk-list">
@@ -49,13 +49,13 @@
 			
 			<li>
 				<h2>Start your plan by entering an amount you can afford to pay each month </h2>
-				<p>If your financial situation improves, you should increase your payment plan or pay additional amounts.</p>
+				<p>If your financial situation improves, you should sign in to your account and manage your plan to increase your payments or pay additional amounts.</p>
 			</li>	
 			
 			
 			<li class="two">
 				<h2>We may review your plan after 12 months</h2>
-				<p>If you have been unable to increase your payment plan, we will contact you to review your situation and see how much you can afford.</p>
+				<p>If you have been unable to increase your payment plan, we will contact you to review your situation and understand how much you can afford.</p>
 				
 			</li>
 				
@@ -90,7 +90,7 @@
 			
 			
 			<h1 class="govuk-heading-xl">
-				   <span class="govuk-caption-xl">Step 2 of 5</span>
+				   <span class="govuk-caption-xl">Step 2 of 4</span>
 					  Enter a different amount </h1>								 
 						
 		
@@ -172,69 +172,72 @@
 	
 	
 			<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+	
+			
+			<form class="form" action="paymentGuard" method="post">
+									
+												
+												<div class="govuk-form-group">
+													  <fieldset class="govuk-fieldset">
+														<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl mb20">
+														  <h1 class="govuk-fieldset__heading">
+														  <span class="govuk-caption-xl">Step 2 of 4</span>
+															How do you want to make your monthly payments?
+														  </h1>
+														</legend>
+														
+									<!--				 <div class="govuk-inset-text mt0">
+							Once your plan is setup, you can sign in to manage your plan, change payments, pay additional amounts or get help and support.
+										</div> -->
+	
+	
+	
+	<div class="govuk-radios">
 		
-<form class="form" action="directDebitDetailsTemp2" method="post">
-
-	
-	 <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-			<legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-			  <h1 class="govuk-fieldset__heading">
-			   <span class="govuk-caption-xl">Step 3 of 5</span>
-			   What day of the month do you want your Direct Debit to be taken?
-			  </h1>
-			</legend>
-			
-			
-		<!--     <div class="govuk-inset-text mt0">
-
-		 <p><b>If your chosen date:</b>
-								 </p>
-
-		 <ul class="govuk-list govuk-list--bullet">
-									 <li>is not present in a particular month, your payment will be taken on the last working day</li>
-									<li>falls on a weekend or bank holiday, your payment will be taken on the next working day</li>
-								 </ul>
-								 
-			 </div> -->
 		
-			
-			
-		   <div class="govuk-inset-text mt0">
-		   
-		   
-		  <!--  <p>If your chosen day is not present in a particular month, your payment will be taken on the last working day.</p> -->
-						<p>You cannot set up a Direct Debit between the 29th and 31st of the month.</p>
-									<p>If your chosen day falls on a weekend or bank holiday, your payment will be taken on the next working day.</p>
-		   
-							   </div> 
-			
-		  
-			
-			
-			<span id="passport-issued-hint" class="govuk-hint">
-			  For example, enter 02 for the second day of the month
-			</span>
-		   
-				<div class="govuk-form-group">
-				  <label class="visually-hidden" for="paymentDay">
-					Payment day
-				  </label>
-				  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="paymentDay" name="paymentDay" type="text" pattern="[0-9]*" inputmode="numeric">
-				</div>
-
-		  </fieldset>
-	
-
-	
-	
-	
-	<button class="govuk-button" data-module="govuk-button">Continue</button>
-
-	
- </form>
-								
+		<div class="govuk-radios__item">
+			<input class="govuk-radios__input" id="ddFixedChoice" name="paymentOptions" type="radio" aria-describedby="ddFixedChoice-hint" value="ddFixedChoice">
+			<label class="govuk-label govuk-radios__label" for="ddFixedChoice">
+			<b>Direct Debit payments</b>
+			</label>
+			<div id="ddFixedChoice-hint" class="govuk-hint govuk-radios__hint">
+			A fixed payment each month on a day that suits you
 			</div>
-		</div>				
+		  </div> 
+		
+	  <div class="govuk-radios__item">
+		<input class="govuk-radios__input" id="flexyPayChoice" name="paymentOptions" type="radio" value="flexyPayChoice" aria-describedby="flexyPayChoice-hint">
+		<label class="govuk-label govuk-radios__label" for="flexyPayChoice">
+		  <b>Flexible payments</b>
+		</label>
+		<div id="flexyPayChoice-hint" class="govuk-hint govuk-radios__hint">
+		You must sign in each month and make a payment &ndash; you can make multiple payments in a month to meet your payment amount
+		</div>
+	  </div>
+														
+									   
+										</div>												      
+														  
+		
+													  </fieldset>
+													</div>
+												
+												
+												<button class="govuk-button" data-module="govuk-button">
+												  Continue
+												</button>
+												</form>
+											
+											
+										<!--// Fixed amount end -->	
+										
+										
+									
+										
+											
+	
+		</div>
+	</div>	
 									
 						{% endif %}		
 

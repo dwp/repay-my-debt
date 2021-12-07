@@ -27,9 +27,22 @@
 	   
 	   
 	   <div class="govuk-panel govuk-panel--confirmation">
+		   
+		   {% if data['paymentOptions']=='ddFixedChoice'%}
           <h1 class="govuk-panel__title">
-            Your Direct Debit plan is setup
+            Your payment plan is setup
           </h1>
+		  
+		  {% else %}
+		  
+		  <h1 class="govuk-panel__title">
+		  Your payment was successful and your plan is setup
+		  </h1>
+		  <div class="govuk-panel__body">
+   
+			  It will take 2 to 5 working days to update your account
+			</div>
+		  {% endif %}
 
         </div>
 
@@ -37,93 +50,156 @@
 
         <h2 class="govuk-heading-m">What happens next</h2>
         
-        
+        {% if data['paymentOptions']=='ddFixedChoice'%}
+		
         <p>You will be sent confirmation of this agreement within three working days or no later than ten working days before the first payment collection.</p>
 		
+		{% else %}
 		
+		<p>We have sent you a payment confirmation email &ndash; you should allow your account to update before signing back in.</p>
+		
+		{% endif %}
 		
 		
 		{% if data['paymentChoices']=='lowPayments'%}
 		
 		
-	<div class="govuk-inset-text">
-		  <p>Once your plan is set up, you can sign in to choose a higher payment plan or pay additional amounts.</p>
-			  <p>If you are able to increase your plan, a review may not be needed.</p>	
-			  </div>
+		
+{% if data['paymentOptions']=='ddFixedChoice'%}
+   <div class="govuk-inset-text">
+	   You can sign in to manage your plan, change payments, pay additional amounts or get help and support.
+   </div>
+   {% else %}
+   <div class="govuk-inset-text">
+		 Once your account has been updated, you can sign in to manage your plan, continue to make payments or get help and support.
+	  </div>
 
+	  {% endif %}
+  
 		
 		
 		<h2 class="govuk-heading-m">Plan summary</h2>
 	   
-	  <table class="govuk-table mb40">
-										  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
-								
-										  <tbody class="govuk-table__body">
-											  
-											  
-											  <tr class="govuk-table__row">
-												  <th scope="row" class="govuk-table__header">Plan type</th>
-												  <td class="govuk-table__cell">Affordable payment plan 
-												  </td>
-												  
-										
-												 </tr>
-										  
-										
-											  <tr class="govuk-table__row">
-											  <th scope="row" class="govuk-table__header">Total amount owed</th>
-											  <td class="govuk-table__cell">&pound;4320.00
-											  </td>
-											  
-									
-											 </tr>
-											
-											
-								
-										 <tr class="govuk-table__row">
-											 <th scope="row" class="govuk-table__header">Direct Debit amount</th>
-											 <td class="govuk-table__cell">
-												 
-										  &pound;{{ data['affordable-amount'] }}
-										  
-										  
-			 
-										   
-											 </td>
-										 </tr>
-											
-											
-											 <tr class="govuk-table__row">
-											  <th scope="row" class="govuk-table__header">First payment date</th>
-											  <td class="govuk-table__cell">
-												  
-												  
-											{{ data['paymentDay'] }} November 2021
-												  
-												  
-											  </td>
-											 
-											</tr>
-											
-											
-																					  
-											<tr class="govuk-table__row">
-												  <th scope="row" class="govuk-table__header">Proposed plan review date</th>
-												  <td class="govuk-table__cell">
-												  
-												  {{ data['paymentDay'] }} November 2022
-												  
-												  </td>
-											  
-											</tr>
+	 <table class="govuk-table mb40">
+			
+			<caption class="visually-hidden">Plan summary</caption>
+			   
+	   
+				 <tbody class="govuk-table__body">
+					 
+					 
+					 <tr class="govuk-table__row">
+						 <th scope="row" class="govuk-table__header">Total amount owed</th>
+						 <td class="govuk-table__cell">&pound;4320.00
+						 </td>
+						 
+			   
+						</tr>
+					 
+					 <tr class="govuk-table__row">					
+						 <th scope="row" class="govuk-table__header">Plan type</th>
+						 <td class="govuk-table__cell">Affordable payment plan 
+						 </td>
+						 
+						</tr>
+					 
 
+					 
+				   {% if data['paymentOptions']=='ddFixedChoice'%}
+					   
+					   
+				   <tr class="govuk-table__row">					
+					   <th scope="row" class="govuk-table__header">Payment type</th>
+					   <td class="govuk-table__cell">Direct Debit 
+					   </td>
+					  
+					  </tr>
+					   
+					   
+					   <tr class="govuk-table__row">
+						   <th scope="row" class="govuk-table__header">Direct Debit amount</th>
+						   <td class="govuk-table__cell">
+							   
+						&pound;{{ data['affordable-amount'] }}
+
+						   </td>
+						   
+						   
+						 </tr>
+						 
+						 
+						 <tr class="govuk-table__row">
+							 <th scope="row" class="govuk-table__header">First payment date</th>
+							 <td class="govuk-table__cell">
+							 
+							 {{ data['paymentDay'] }} January 2022
+							 
+							 </td>
+							 
+							
+						   </tr>
+						   
+						   <tr class="govuk-table__row">
+								 <th scope="row" class="govuk-table__header">Proposed plan review date</th>
+								 <td class="govuk-table__cell">
+								 
+								December 2022
+								 
+								 </td>
+								 
+								 
+							   </tr>
+						   
+						  
+					   
+					   {% else %}
+					   
+					   
+					   <tr class="govuk-table__row">
+						   <th scope="row" class="govuk-table__header">Payment type</th>
+						   <td class="govuk-table__cell">Flexible payments
+						   </td>
+						   
+						  </tr>
+						  
+						  <tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Monthly target amount</th>
+								<td class="govuk-table__cell">
+									
+							 &pound;{{ data['affordable-amount'] }}
+
+								</td>
 								
-	
 								
+							  </tr>
+							  
+							  
+							  <tr class="govuk-table__row">
+									<th scope="row" class="govuk-table__header">Payment today</th>
+									<td class="govuk-table__cell">
+									
+									&pound;{{ data['payment-amount'] }}
+									
+									</td>
+									
 								
-								
-										  </tbody>
-										</table>
+								  </tr>
+								  
+								  <tr class="govuk-table__row">
+										<th scope="row" class="govuk-table__header">Proposed plan review date</th>
+										<td class="govuk-table__cell">
+										
+										December 2022
+										
+										</td>
+										
+									   
+									  </tr>
+						  
+						  {% endif %}
+
+				 </tbody>
+			   </table>
 										
 										
 										
@@ -132,133 +208,260 @@
 		{% else %}
 		
 		
-	   <div class="govuk-inset-text">You can sign in to manage your plan to track payments, pay additional amounts or get help and support.</div>
-	   
+		
+		
+		
+		{% if data['paymentOptions']=='ddFixedChoice'%}
+	   <div class="govuk-inset-text">
+		   You can sign in to manage your plan, change payments, pay additional amounts or get help and support.
+	   </div>
+	   {% else %}
+	   <div class="govuk-inset-text">
+			Once your account has been updated, you can sign in to manage your plan, continue to make payments or get help and support.
+		  </div>
 
+		  {% endif %}
         	
 
         
         
         <h2 class="govuk-heading-m">Plan summary</h2>
 	   
-	  <table class="govuk-table mb40">
-										  <caption class="govuk-table__caption"><span class="visually-hidden">Payment summary</span></caption>
-								
-										  <tbody class="govuk-table__body">
-										  
-										
-											  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Total amount owed</th>
-										      <td class="govuk-table__cell">&pound;4320.00
-										      </td>
-										      
-									
-											 </tr>
-										    
-										    
-								
-										  <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Payment breakdown</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{% if data['paymentChoices']=='12Month'%}
+	 <table class="govuk-table mb40">
+		  
+		  <caption class="visually-hidden">Plan summary</caption>
+			 
+	 
+			   <tbody class="govuk-table__body">
+			   
+			 
+				  <tr class="govuk-table__row">
+				   <th scope="row" class="govuk-table__header">Total amount owed</th>
+				   <td class="govuk-table__cell">&pound;4320.00
+				   </td>
+				   
+		 
+				  </tr>
+				   
+				 
+			  {% if data['paymentOptions']=='ddFixedChoice'%}   
+			  
+			  <tr class="govuk-table__row">
+					<th scope="row" class="govuk-table__header">Payment type</th>
+					<td class="govuk-table__cell">Direct Debit
+					</td>
+					
+		  
+				   </tr>
+			  
+	 
+			   <tr class="govuk-table__row">
+				   <th scope="row" class="govuk-table__header">Payment breakdown</th>
+				   <td class="govuk-table__cell">
+					   
+					   
+				 {% if data['paymentChoices']=='12Month'%}
+
+				 <p class="mb0">12 payments of &pound;320.00</p>
+
+				 
+				 {% elif data['paymentChoices']=='24Month'%}
+				 
+				 <p class="mb0">24 payments of &pound;180.00</p>
+
+				 
+				 {% elif data['paymentChoices']=='36Month'%}
+
+				 
+				 
+				 <p class="mb0">36 payments of &pound;120.00</p>
+				 
+				 
+				 {% elif data['paymentChoices']=='48Month'%}
+
+				 <p class="mb0">48 payments of &pound;90.00</p>
+				 
+				 {% elif data['paymentChoices']=='72Month'%}
+
+				 <p class="mb0">72 payments of &pound;60.00</p>
+				 
+				 
+				 
+				 {% else %}
+				 
+				 <p class="mb0">43 payments of &pound;100.00</p>
+				 
+				 {% endif %}
+					   
+					   
+				   </td>
 		
-											<p class="mb0">12 payments of &pound;320.00</p>
+					   
+				 </tr>
+				 
+				 
+				  <tr class="govuk-table__row">
+				   <th scope="row" class="govuk-table__header">Payment dates</th>
+				   <td class="govuk-table__cell dtList">
+				   
+				   
+				   <dl>
+					   <dt>First payment:</dt>
+					   <dd>{{ data['paymentDay'] }} January 2021</dd>
+					   <dt>Expected final payment:</dt>
+					   <dd>
+					   
+				   {% if data['paymentChoices']=='12Month'%}
+				   
+				   {{ data['paymentDay'] }} January 2023
+	   
+				   {% elif data['paymentChoices']=='24Month'%}
+				   
+				   {{ data['paymentDay'] }} January 2024
+				   
+				   {% elif data['paymentChoices']=='36Month'%}
+				   
+				   {{ data['paymentDay'] }} January 2025
+				   
+				   
+				   {% elif data['paymentChoices']=='48Month'%}
+				   
+				   {{ data['paymentDay'] }} January 2026
+				   
+				   {% elif data['paymentChoices']=='72Month'%}
+				   
+				   {{ data['paymentDay'] }} January 2028
+				   
+				   
+				   {% else %}
+				   
+				   {{ data['paymentDay'] }} April 2024
+				   
+				   {% endif %}
+					   
+					   </dd>
+				   </dl>
+					   
 
-											
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											<p class="mb0">24 payments of &pound;180.00</p>
+					   
+					   
+				   </td>
+			
+				 </tr>
 
-											
-											{% elif data['paymentChoices']=='36Month'%}
+				  
+				  
+				  {% else %}
+				  
+				  
+				  <tr class="govuk-table__row">
+						<th scope="row" class="govuk-table__header">Payments</th>
+						<td class="govuk-table__cell">Flexible payments
+						</td>
+					
+					   </tr>
+					   
+					   <tr class="govuk-table__row">
+							 <th scope="row" class="govuk-table__header">Monthly target</th>
+							 <td class="govuk-table__cell">
+								 
+						  {% if data['paymentChoices']=='12Month'%}
 
-											
-											
-											<p class="mb0">36 payments of &pound;120.00</p>
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
+						  <p class="mb0">&pound;320.00 &ndash; for 12 months</p>
 
-											<p class="mb0">48 payments of &pound;90.00</p>
-											
-											{% elif data['paymentChoices']=='72Month'%}
+						  
+						  {% elif data['paymentChoices']=='24Month'%}
+						  
+						  <p class="mb0">&pound;180.00 &ndash; for 24 months</p>
 
-											<p class="mb0">72 payments of &pound;60.00</p>
-											
-											
-											
-											{% else %}
-											
-											<p class="mb0">43 payments of &pound;100.00</p>
-											
-											{% endif %}
-											      
-											      
-										      </td>
-										  </tr>
-										    
-										    
-										     <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">First payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											{{ data['paymentDay'] }} November 2021
-											      
-											      
-										      </td>
-										     
-										    </tr>
-										    
-										    
-										  										    
-										    <tr class="govuk-table__row">
-										      <th scope="row" class="govuk-table__header">Expected final payment date</th>
-										      <td class="govuk-table__cell">
-											      
-											      
-											 {% if data['paymentChoices']=='12Month'%}
-										    
-										    {{ data['paymentDay'] }} November 2022
+						  
+						  {% elif data['paymentChoices']=='36Month'%}
+
+						  
+						  
+						  <p class="mb0">&pound;120.00 &ndash; for 36 months</p>
+						  
+						  
+						  {% elif data['paymentChoices']=='48Month'%}
+
+						  <p class="mb0">&pound;90.00 &ndash; for 48 months</p>
+						  
+						  {% elif data['paymentChoices']=='72Month'%}
+
+						  <p class="mb0">&pound;60.00 &ndash; for 72 months</p>
+						  
+						  
+						  
+						  {% else %}
+						  
+						  <p class="mb0">&pound;100.00 &ndash; for 40 months</p>
+						  
+						  {% endif %}
+
+							 </td>
+							 
+							 
+						   </tr>
+						   
+						   
+						   
+						   
+						   
+						   <tr class="govuk-table__row">
+								 <th scope="row" class="govuk-table__header">Payment today</th>
+								 <td class="govuk-table__cell">
+								 
+								 &pound;{{ data['payment-amount'] }}
+								 
+								 </td>
 								
-											{% elif data['paymentChoices']=='24Month'%}
-											
-											{{ data['paymentDay'] }} November 2023
-											
-											{% elif data['paymentChoices']=='36Month'%}
-											
-											{{ data['paymentDay'] }} November 2024
-											
-											
-											{% elif data['paymentChoices']=='48Month'%}
-											
-											{{ data['paymentDay'] }} November 2025
-											
-											{% elif data['paymentChoices']=='72Month'%}
-											
-											{{ data['paymentDay'] }} November 2027
-											
-											
-											{% else %}
-											
-											{{ data['paymentDay'] }} April 2024
-											
-											{% endif %}
-											      
-											      
-										      </td>
-										      
-										    </tr>
+							   </tr>
+							   
+							   <tr class="govuk-table__row">
+									 <th scope="row" class="govuk-table__header">Expected end of debt</th>
+									 <td class="govuk-table__cell" colspan="2">
+								 
+								 {% if data['paymentChoices']=='12Month'%}
+								   
+								   December 2022 
+					   
+								   {% elif data['paymentChoices']=='24Month'%}
+								   
+								   December 2023
+								   
+								   {% elif data['paymentChoices']=='36Month'%}
+								   
+								   December 2024
+								   
+								   
+								   {% elif data['paymentChoices']=='48Month'%}
+								   
+								   December 2025
+								   
+								   {% elif data['paymentChoices']=='72Month'%}
+								   
+								   December 2027
+								   
+								   
+								   {% else %}
+								   
+								   April 2024
+								   
+								   {% endif %}
+								   
+								   
+								   <br>
+									 <p>(If monthly target is met each month)</p>
+									 </td>
+								 </tr>
+				  
+				  
+				   {% endif %}
+				  
 
-								
-	
-								
-								
-								
-										  </tbody>
-										</table>
+	 
+			   </tbody>
+			 </table>
 										
 										
 										

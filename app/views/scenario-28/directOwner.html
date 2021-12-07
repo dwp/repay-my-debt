@@ -37,7 +37,20 @@
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-      <span class="govuk-caption-xl">Step 2 of 5</span>
+      <span class="govuk-caption-xl">
+        
+        
+        {% if data['paymentChoices']=='lowPayments'%}
+         
+         Step 4 of 5
+         
+         {% else %}
+         
+         Step 3 of 4
+         
+         {% endif %}
+        
+      </span>
     
         
         Are you an account holder and the only person needed to authorise Direct Debits with your bank or building society?

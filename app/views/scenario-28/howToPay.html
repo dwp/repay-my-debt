@@ -25,21 +25,21 @@
 		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 
 		
-		<form class="form" action="directOwner" method="post">
+		<form class="form" action="paymentGuard" method="post">
 								
 											
 											<div class="govuk-form-group">
 												  <fieldset class="govuk-fieldset">
 												    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl mb20">
 												      <h1 class="govuk-fieldset__heading">
-												      <span class="govuk-caption-xl">Step 2 of 5</span>
+												      <span class="govuk-caption-xl">Step 3 of 5</span>
 												        How do you want to make your monthly payments?
 												      </h1>
 												    </legend>
 												    
-												 <div class="govuk-inset-text mt0">
+												<!-- <div class="govuk-inset-text mt0">
 						Once your plan is setup, you can sign in to manage your plan, change payments, pay additional amounts or get help and support.
-								    </div> 
+								    </div> -->
 
 
 
@@ -47,22 +47,22 @@
 	
 	
 	<div class="govuk-radios__item">
-		<input class="govuk-radios__input" id="inSecurity" name="inSign" type="radio" aria-describedby="sign-in-2-item-hint" value="inSecurity">
-		<label class="govuk-label govuk-radios__label" for="inSecurity">
-		<b>Direct Debit fixed payments</b>
+		<input class="govuk-radios__input" id="ddFixedChoice" name="paymentOptions" type="radio" aria-describedby="ddFixedChoice-hint" value="ddFixedChoice">
+		<label class="govuk-label govuk-radios__label" for="ddFixedChoice">
+		<b>Direct Debit payments</b>
 		</label>
-		<div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-		A fixed payment on a day that works for you
+		<div id="ddFixedChoice-hint" class="govuk-hint govuk-radios__hint">
+		A fixed payment each month on a day that suits you
 		</div>
 	  </div> 
 	
   <div class="govuk-radios__item">
-	<input class="govuk-radios__input" id="inRegister" name="inSign" type="radio" value="inRegister" aria-describedby="sign-in-item-hint">
-	<label class="govuk-label govuk-radios__label" for="inRegister">
+	<input class="govuk-radios__input" id="flexyPayChoice" name="paymentOptions" type="radio" value="flexyPayChoice" aria-describedby="flexyPayChoice-hint">
+	<label class="govuk-label govuk-radios__label" for="flexyPayChoice">
 	  <b>Flexible payments</b>
 	</label>
-	<div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-	You must sign in each month &ndash; you can make multiple payments in a month to meet your payment amount
+	<div id="flexyPayChoice-hint" class="govuk-hint govuk-radios__hint">
+	You must sign in each month and make a payment &ndash; you can make multiple payments in a month to meet your payment amount
 	</div>
   </div>
 												    

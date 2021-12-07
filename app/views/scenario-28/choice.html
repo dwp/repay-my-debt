@@ -33,7 +33,7 @@
 
 
 
-			<form class="form" action="#" method="post">
+			<form class="form" action="fullPayment3" method="post">
 			<div class="govuk-form-group">
 			  <fieldset class="govuk-fieldset">
 				    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s visually-hidden">
@@ -47,36 +47,25 @@
 			      <div class="govuk-radios">
 			      <div class="govuk-radios__item">
 				        <input class="govuk-radios__input" id="full-amount" name="payment-options" type="radio" value="full-amount" aria-describedby="full-amount-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="full-amount">
+				        <label class="govuk-label govuk-radios__label" for="full-amount">
 				         Pay the full amount
 				        </label>
-				        <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          A one off payment will be taken from your account
-				        </span>
+				       <!-- <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
+				          A payment will be taken from your account which will clear the amount you owe
+				        </span> -->
 				      </div>
 				      
 				      
 				     <div class="govuk-radios__item">
 				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="fixed-plan">
+				        <label class="govuk-label govuk-radios__label" for="fixed-plan">
 				          Set up a payment plan
 				        </label>
-				        <span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
-				         Choose a payment plan with options to pay fixed or flexible payments
-				        </span>
+				        <!--<span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
+				     Set up a payment plan based on how much you can afford
+				        </span>-->
 				      </div>
-				      <!-- <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="flexible-amount" name="payment-options" type="radio" value="flexible-amount" aria-describedby="flexible-amount-item-hint">
-				        <label class="govuk-label govuk-radios__label govuk-label--s" for="flexible-amount">
-				         Set up a flexible payment plan
-				        </label>
-				        <span id="flexible-amount-hint" class="govuk-hint govuk-radios__hint">
-				        Sign in each month and make at least one payment &ndash; when you pay is up to you
-				        </span>
-				      </div>-->
-				      
-				      
-				     
+				    
 				     
 				    </div>
 

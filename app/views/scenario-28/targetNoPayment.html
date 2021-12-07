@@ -28,7 +28,21 @@
 		
 
 									
-										<h1 class="govuk-heading-xl"><span class="govuk-caption-xl">Step 2 of 3</span> Make a payment today <br>to start your plan</h1>
+										<h1 class="govuk-heading-xl">
+											
+											<span class="govuk-caption-xl">
+											
+											{% if data['paymentChoices']=='lowPayments'%}
+											 
+											 Step 4 of 5
+											 
+											 {% else %}
+											 
+											 Step 3 of 4
+											 
+											 {% endif %}
+											
+											</span> Make a payment today <br>to start your plan</h1>
 
 
 
@@ -41,7 +55,46 @@
 											<ul class="govuk-list">
 												<li>
 													<h3>Total amount owed</h3>
-													<b>&pound;1500.00</b>
+													<b>&pound;4320.00</b>
+												</li>
+												
+												
+												<li>
+													<h3>Monthly target</h3>
+													<b>
+														
+													{% if data['paymentChoices']=='12Month'%}
+				
+													&pound;320.00
+		
+													
+													{% elif data['paymentChoices']=='24Month'%}
+													
+													&pound;180.00
+		
+													
+													{% elif data['paymentChoices']=='36Month'%}
+
+													&pound;120.00
+													
+													
+													{% elif data['paymentChoices']=='48Month'%}
+		
+													&pound;90.00
+													
+													{% elif data['paymentChoices']=='72Month'%}
+		
+													&pound;60.00
+													
+													
+													
+													{% else %}
+													
+													&pound;{{ data['affordable-amount'] }}
+													
+													{% endif %}	
+														
+													</b>
 												</li>
 										
 												<li>
@@ -56,7 +109,7 @@
 											
 											
 
-										<form class="form" action="paymentRemindersFirst" method="post">
+										<form class="form" action="lowContactChoice" method="post">
 
 
 											<div class="govuk-form-group">
