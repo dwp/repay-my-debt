@@ -8,18 +8,21 @@
 {% block content %}
 
 
-		{% if data['paymentChoices']=='lowPayments'%}
+		
 		
 		
 		<div class="govuk-grid-row">
 	
 			<div class="govuk-grid-column-full">
+				
+				
 	
 	
 	
 			<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 
 
+			{% if data['paymentChoices']=='lowPayments'%}
 
 			
 			<div class="attention-card">
@@ -55,23 +58,10 @@
 
 		</div>
 				
-				</div>
-				</div>
-				
-										    
+								    
 										     		
-													 
-			{% elif data['paymentChoices']=='customAmount'%}		
-			
-			
-			
-			<div class="govuk-grid-row">
+{% elif data['paymentChoices']=='customAmount'%}
 		
-				<div class="govuk-grid-column-three-quarters">
-		
-		
-				<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
-			
 			
 			<h1 class="govuk-heading-xl">
 				   <span class="govuk-caption-xl">Step 2 of 4</span>
@@ -115,25 +105,16 @@
 																				
 																		
 									
-																				<button class="govuk-button" data-module="govuk-button">
-																				  Continue
-																				</button>
-																				</form>
-																		
-																		
-				</div>
-			</div>							
+						<button class="govuk-button" data-module="govuk-button">
+						  Continue
+						</button>
+						</form>
+					
 		
 		
 									{% else %}
 									
-		
-		<div class="govuk-grid-row">
-	
-			<div class="govuk-grid-column-three-quarters">
-	
-	
-			<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+
 	
 			
 			<form class="form" action="paymentGuard" method="post">
@@ -190,15 +171,15 @@
 										<!--// Fixed amount end -->	
 										
 										
-									
+								{% endif %}		
+	
 										
 											
 	
 		</div>
 	</div>	
 									
-						{% endif %}		
-
+						
 
 									
 									
