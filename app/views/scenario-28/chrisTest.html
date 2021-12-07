@@ -11,18 +11,17 @@
 		
 		
 		
-		<div class="govuk-grid-row">
-	
-			<div class="govuk-grid-column-full">
-				
-				
-	
-	
-	
-			<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+		
 
 
 			{% if data['paymentChoices']=='lowPayments'%}
+			
+			
+			<div class="govuk-grid-row">
+		
+				<div class="govuk-grid-column-full">
+
+				<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 
 			
 			<div class="attention-card">
@@ -57,14 +56,82 @@
 			<p><a href="lowPayChoice" class="attention-invert mt30">Continue</a></p>
 
 		</div>
+		
+		
+				</div>
+			</div>
+		
+		
+		
+		{% elif data['paymentChoices']=='customAmount'%}
+		
+		
+		<div class="govuk-grid-row">
+	
+			<div class="govuk-grid-column-three-quarters">
+
+			<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+	
+		
+		<h1 class="govuk-heading-xl">
+			   <span class="govuk-caption-xl">Step 2 of 4</span>
+				  Enter a different amount </h1>								 
+					
+	
+							
+					<div class="govuk-inset-text">
+					
+						
+					<p>The amount you enter needs to keep your debt within 72 monthly payments.</p>
+					<p>Based on what you owe, the minimum amount is £60.00.</p>
+					<p>We will then show you a breakdown of when you will be debt free.</p>
+					
+						 </div>
+		
+											
+																	
+						<form class="form" action="customSummary" method="post">
+
+
+							<div class="govuk-form-group">
+								 <fieldset class="govuk-fieldset">
+									<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+									  <h1 class="govuk-fieldset__heading">
+									
+										How much do you want to pay?
+									  </h1>
+									</legend>
+									
 				
-								    
+
+
+									 <div id="example-question" class="form-group inline">
+										<span class="c-form-input-denote govuk-body">£</span>
+										<input class="form-control c-form-input-denote__input govuk-input form-control-1-4 govuk-input--width-10" type="number" name="custom-amount">
+									  </div>
+
+								  </fieldset>
+							</div>
+																			
+																	
+								
+					<button class="govuk-button" data-module="govuk-button">
+					  Continue
+					</button>
+					</form>
+				
+			</div>
+		</div>
 										     		
 
 	{% else %}
 									
 
-	
+	<div class="govuk-grid-row">
+
+		<div class="govuk-grid-column-three-quarters">
+
+		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 			
 			<form class="form" action="paymentGuard" method="post">
 									
@@ -117,6 +184,10 @@
 												</form>
 											
 											
+											
+											</div>
+											</div>	
+													
 				
 										
 								{% endif %}		
@@ -124,9 +195,7 @@
 										
 											
 	
-		</div>
-	</div>	
-									
+							
 						
 
 									
