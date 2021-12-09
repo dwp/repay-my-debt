@@ -90,7 +90,15 @@
 													
 													{% else %}
 													
-													&pound;{{ data['affordable-amount'] }}
+														{% if data['paymentChoices']=='lowPayments'%}
+														
+														&pound;{{ data['affordable-amount'] }}
+														
+														{% else %}
+														
+														&pound;100.00
+														
+														{% endif %}
 													
 													{% endif %}	
 														
