@@ -468,12 +468,13 @@
 										{% endif %}
 										
 										
+										
+										
+										{% if data['paymentOptions']=='ddFixedChoice'%}
+										
 										<p>Your payments will show on your bank statement as <b>CEN REC GROUP DD</b>.</p>
 										
-										
-										
-										
-										
+	
 										
 										<details class="govuk-details mt30" data-module="govuk-details">
 		  <summary class="govuk-details__summary">
@@ -518,8 +519,8 @@
 		  </div>
 		</details>
 										
-										
-										
+					{% else %}					
+						{% endif %}				
 										
 										
 		
