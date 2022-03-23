@@ -26,59 +26,59 @@
 
 
 									{% if data['choose-what']=='want-pay'%}
-									 <h1 class="govuk-heading-xl">Payment options </h1>
+									<h1 class="govuk-heading-xl">Pay the full amount</h1>
+								
+								
+									  {% include "includes/baOwed.html" %} 
+								
+									
+								   
+										<form class="form" action="#" method="post">
 
-	    {% include "includes/amountOwed2.html" %}
+									<h2 class="govuk-heading-m">Before you pay</h2>
+									
+									<p>Make sure you have enough money in your account to cover this payment.</p>
 
+									<p>Credit card payments will incur extra charges, debit card payments will not.</p>
+									
+									<details class="govuk-details mt20" data-module="govuk-details">
+										  <summary class="govuk-details__summary">
+											<span class="govuk-details__summary-text">
+											Can I get another Budgeting Advance?
+											</span>
+										  </summary>
+										  <div class="govuk-details__text">
+										  <p>You can get another Budgeting Advance if you have:</p>
+								
+								
+										<ul class="govuk-list govuk-list--bullet">
+										  <li>been getting Universal Credit, income-related Employment and Support Allowance, Income and Support, income-related Jobseeker's Allowance or State Pension Credit for 6 months or more, unless you need the money to help you start a new job or keep an existing job</li>
+										  <li>earned less than £2,600 (£3,600 jointly for couples) in the past 6 months</li>
+										  <li>paid off any previous Budgeting Advances</li>
+										</ul>
+										<p>If you're not sure about any of this information, you should contact Universal Credit or refer to your journal.</p>
+										
+										<ul class="govuk-list">
+											  <li>Telephone: 0800 012 1331</li>
+											   <!-- <li>Textphone: 0800 328 1344</li>-->
+												<li>Monday to Friday, 10am to 4pm (excluding public holidays)</li>
+											</ul>
+										
+										<p class="govuk-body">
+										  <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/contacting-08-and-03-numbers">Find out about call charges</a>
+										</p>
+								
+								
+								
+										  </div>
+										</details>
+	
+										<p><a href="govPay" class="govuk-button">
+										  Continue to pay
+										</a></p>
+										</form>
 
-
-
-			<form class="form" action="fullPayment3" method="post">
-			<div class="govuk-form-group">
-			  <fieldset class="govuk-fieldset">
-				    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s visually-hidden">
-				      <h2 class="govuk-heading-s mb0">
-				        Choose a payment option:
-				      </h2>
-				    </legend>
-
-
-
-			      <div class="govuk-radios">
-			      <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="full-amount" name="payment-options" type="radio" value="full-amount" aria-describedby="full-amount-hint">
-				        <label class="govuk-label govuk-radios__label" for="full-amount">
-				         Pay the full amount
-				        </label>
-				       <!-- <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          A payment will be taken from your account which will clear the amount you owe
-				        </span> -->
-				      </div>
-				      
-				      
-				     <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
-				        <label class="govuk-label govuk-radios__label" for="fixed-plan">
-				          Set up a payment plan
-				        </label>
-				        <!--<span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
-				     Set up a payment plan based on how much you can afford
-				        </span>-->
-				      </div>
-				    
-				     
-				    </div>
-
-
-			  </fieldset>
-			</div>
-
-			<button class="govuk-button" data-module="govuk-button">
-			  Continue
-			</button>
-			</form>
-
-										<!--// choose payment end -->
+										<!--// Full amount end -->
 										
 										
 										
@@ -92,97 +92,23 @@
 
 
 									{% elif data['choose-what']=='want-help'%}
-									
-									
-									
-									<h1 class="govuk-heading-xl mb30">Help and support in dealing with the money you owe</h1>
-									
-									
-									
-										<h2 class="govuk-heading-m">Worried about how much you can afford?</h2>
-			
-													<p>If you're unsure how much you can afford, there are more affordable options which may suit your situation.</p>
-									
-									<p><a href="fullPayment3" class="secondary-invert">Consider setting up a payment plan</a></p>
-										
-	
-	
-									 <div class="govuk-inset-text">  <p>If you are unable to pay, you must contact Debt Management to discuss the <br>options available to you.</p>
-	
-	
-											   <h2 class="govuk-heading-m">Debt Management</h2>
-										  <ul class="govuk-list">
-												<li>Telephone: 0800 5871322</li>
-												<li>Monday to Friday, 9am to 5pm</li>
-											  </ul>
-											  <p class="govuk-body">
-												<a class="govuk-link" href="https://www.nidirect.gov.uk/articles/contacting-08-and-03-numbers">Find out about call charges</a>
-											  </p></div>
-										  
-										  
-	
-										   <h2 class="govuk-heading-m">Further advice</h2>
-											  
-											  <p>In the meantime get:</p>
-	   
-	   
-											 <ul class="govuk-list govuk-list--bullet">
-													 <li>help dealing with money problems from <a href="https://www.citizensadvice.org.uk/">Citizens Advice (opens in new tab)</a> </li>
-													 <li>expert debt advice from <a href="https://www.stepchange.org/">StepChange Debt Charity (opens in new tab)</a></li>
-													 <li>advice to improve your finances from <a href="https://www.moneyadviceservice.org.uk">Money Advice Service (opens in new tab)</a></li>
-											 </ul>
-	
-									
-									
-									
 
-				<!--	<form class="form" action="helpSupport" method="post">
+					<h1 class="govuk-heading-xl mb30">Help and support</h1>
 
 
 
-						        <div class="govuk-form-group">
-										  <fieldset class="govuk-fieldset">
-										    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-
-										      <h1 class="govuk-fieldset__heading">
-										      How would you describe your financial situation?
-										      </h1>
-										    </legend>
+							  
+							  <p>If you're struggling with your finances, you can get:</p>
 
 
-										    <div class="govuk-radios">
-										      <div class="govuk-radios__item">
-										        <input class="govuk-radios__input" id="help-struggling" name="help-choice" type="radio" value="help-struggling">
-										        <label class="govuk-label govuk-radios__label" for="help-struggling">
-										          I do not have much money so I'm unsure how much I can pay
-										        </label>
-										      </div>
-										
-										      <div class="govuk-radios__item">
-										        <input class="govuk-radios__input" id="help-advice" name="help-choice" type="radio" value="help-advice">
-										        <label class="govuk-label govuk-radios__label" for="help-advice">
-										          I have no money and need further advice
-										        </label>
-										      </div>
+							 <ul class="govuk-list govuk-list--bullet mb60">
+									 <li>help dealing with money problems from <a href="https://www.citizensadvice.org.uk/">Citizens Advice (opens in new tab)</a> </li>
+									 <li>expert debt advice from <a href="https://www.stepchange.org/">StepChange Debt Charity (opens in new tab)</a></li>
+									 <li>advice to improve your finances from <a href="https://www.moneyadviceservice.org.uk">Money Advice Service (opens in new tab)</a></li>
+							 </ul>
 
 
-										    </div>
-										  </fieldset>
-										</div>
-
-
-
-
-
-
-						<button class="govuk-button" data-module="govuk-button">
-						  Continue
-						</button>
-
-						</form> -->
-
-									<!--// Help and support end -->
-									
+						<!--// Fixed amount end -->
 									
 									
 									
@@ -193,10 +119,13 @@
 									
 									
 									
-									<h1 class="govuk-heading-xl mb30">Details of what you owe</h1>
+									<h1 class="govuk-heading-xl mb30">Details of other benefit money <br>you owe</h1>
 									
 									
-									{% include "includes/amountOwed2.html" %}
+								<div class="govuk-inset-text">
+									<p class="mb10"> Total amount owed: <span class="total-amount">&pound;4320.00</span></p>
+									<p class="govuk-hint">This amount does not include any Universal Credit Budgeting Advances</p>
+									 </div>
 
 
  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
@@ -429,11 +358,61 @@ The total amount you owe does not include any Discretionary Support loans as you
 
 									{% else %}
 
-									<h1 class="govuk-heading-l">Oops! you didn't select an option</h1>
+									<h1 class="govuk-heading-xl mb30">
+								
+									Repay your Universal Credit Budgeting Advance</h1>
+									
+	 
+										<div class="govuk-inset-text">
+											For details of the amount owed, you need to refer to your Universal Credit journal.
+											 </div>			 
+		 
+		 
+		 
+		 <h2 class="govuk-heading-m">Before you pay</h2>
+		 
+		 <p>Make sure you have enough money in your account to cover this payment.</p>
 
-									<p>Don't worry, you can go back and try again.</p>
-
-
+		 <p>Credit card payments will incur extra charges, debit card payments will not.</p>
+		 
+		 <details class="govuk-details mt20" data-module="govuk-details">
+			   <summary class="govuk-details__summary">
+				 <span class="govuk-details__summary-text">
+				 Can I get another Budgeting Advance?
+				 </span>
+			   </summary>
+			   <div class="govuk-details__text">
+			   <p>You can get another Budgeting Advance if you have:</p>
+	 
+	 
+			 <ul class="govuk-list govuk-list--bullet">
+			   <li>been getting Universal Credit, income-related Employment and Support Allowance, Income and Support, income-related Jobseeker's Allowance or State Pension Credit for 6 months or more, unless you need the money to help you start a new job or keep an existing job</li>
+			   <li>earned less than £2,600 (£3,600 jointly for couples) in the past 6 months</li>
+			   <li>paid off any previous Budgeting Advances</li>
+			 </ul>
+			 <p>If you're not sure about any of this information, you should contact Universal Credit or refer to your journal.</p>
+			 
+			 <ul class="govuk-list">
+				   <li>Telephone: 0800 012 1331</li>
+					<!-- <li>Textphone: 0800 328 1344</li>-->
+					 <li>Monday to Friday, 10am to 4pm (excluding public holidays)</li>
+				 </ul>
+			 
+			 <p class="govuk-body">
+			   <a class="govuk-link" href="https://www.nidirect.gov.uk/articles/contacting-08-and-03-numbers">Find out about call charges</a>
+			 </p>
+	 
+	 
+	 
+			   </div>
+			 </details>
+		 
+		 
+		 <p><a href="payAmount" class="govuk-button">Continue</a></p>
+		 
+		 
+			
+		
 									{% endif %}
 
 
