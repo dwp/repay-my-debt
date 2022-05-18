@@ -9,25 +9,24 @@
 
 
 
-   <!-- <div class="clear-bar">
-	   		<h2 class="govuk-heading-l">Ashley Chamberlain<span>ZZ 41 54 60 Z</span></h2>
-	   		<p>What you owe:
-	   				<span>&pound;120.00</span></p>
-
-	   </div> -->
-
 
 	   <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-three-quarters">
-
-
-		<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+   
+		   <div class="govuk-grid-column-three-quarters">
 
 
 
 
 									{% if data['payment-options']=='full-amount'%}
+									
+									
+								
+								
+								
+										<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+									
+									
+									
 									<h1 class="govuk-heading-xl">Pay the full amount</h1>
 								
 								
@@ -42,11 +41,37 @@
 							<p>Credit card payments will incur extra charges, debit card payments will not.</p>
 	
 										<p><a href="fullFinish" class="govuk-button">
-										  Continue
+										  Continue to pay
 										</a></p>
 										</form>
+										
+
 
 										<!--// Full amount end -->
+
+
+
+{% elif data['payment-options']=='no-plan'%}
+
+
+
+	<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
+
+
+
+<h1 class="govuk-heading-xl">
+	Make a one off payment</h1>
+ 
+<p>You can make a one off payment at anytime to reduce the amount you owe without setting up a plan.</p>
+
+
+<div class="govuk-inset-text">You will need to make a payment every month.</div>
+
+
+
+	 <p><a href="oneOffPay" class="govuk-button">
+	   Continue
+	 </a></p>
 
 
 
@@ -56,16 +81,25 @@
 								
 									{% else %}
 
-	   
-									
+
+
+
+	<span class="back-link"><a href="javascript: history.go(-1)" class="govuk-back-link">Back</a></span>
 											<h1 class="govuk-heading-xl">Set up a payment plan</h1>
 							
 					
 <p>Set up a payment plan based on how much you can afford and choose to pay in a way that suits you &ndash; either by Direct Debit or flexible payments.</p>
 
+<!--<p>If you set up a plan, you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+	   <li>manage your plan by changing your payments</li>
+	   <li>pay additional amounts</li>
+	   <li>get help and support</li>
+	   </ul>-->
+
 						
 										 <div class="govuk-inset-text mt0">
-											 Once your plan is setup, you can sign in to manage your plan, change payments, pay additional amounts or get help and support.
+											 Once your plan is setup, you can sign in to manage your plan, pay additional amounts or get help and support.
 														 </div>
 														 
 										
@@ -74,15 +108,16 @@
 										  Continue
 										</a></p>
 						
-			
+
+	 
 
 
 									{% endif %}
 
 
-
-
-    </div>
 </div>
+</div>
+
+
 
 {% endblock %}

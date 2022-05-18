@@ -47,33 +47,41 @@
 			      <div class="govuk-radios">
 			      <div class="govuk-radios__item">
 				        <input class="govuk-radios__input" id="full-amount" name="payment-options" type="radio" value="full-amount" aria-describedby="full-amount-hint">
-				        <label class="govuk-label govuk-radios__label" for="full-amount">
-				         Pay the full amount
+				        <label class="govuk-label govuk-radios__label govuk-label--s" for="full-amount">
+				        Pay the full amount
 				        </label>
-				       <!-- <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
-				          A payment will be taken from your account which will clear the amount you owe
-				        </span> -->
-				      </div>
-				      
-				      
-				     <div class="govuk-radios__item">
-				        <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
-				        <label class="govuk-label govuk-radios__label" for="fixed-plan">
-				          Set up a payment plan
-				        </label>
-				        <!--<span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
-				     Set up a payment plan based on how much you can afford
-				        </span>-->
+				      <span id="full-amount-hint" class="govuk-hint govuk-radios__hint">
+				          A payment will be taken which will clear the amount you owe.
+				        </span> 
 				      </div>
 					  
-			
 					  <div class="govuk-radios__item">
-						  <input class="govuk-radios__input" id="singlePay" name="payment-options" type="radio" value="singlePay" aria-describedby="singlePay-hint">
-						  <label class="govuk-label govuk-radios__label" for="singlePay">
+						  <input class="govuk-radios__input" id="fixed-plan" name="payment-options" type="radio" value="fixed-plan" aria-describedby="fixed-plan-hint">
+						  <label class="govuk-label govuk-radios__label govuk-label--s" for="fixed-plan">
+						  Set up a payment plan
+						  </label>
+					   <span id="fixed-plan-hint" class="govuk-hint govuk-radios__hint">
+					  Pay how much you can afford in a way that suits you &ndash; either by Direct Debit or flexible payments.
+						  </span>
+						</div>
+					
+						  
+						  <div class="govuk-radios__divider">or</div>
+				      
+				      <div class="govuk-radios__item">
+						  <input class="govuk-radios__input" id="no-plan" name="payment-options" type="radio" value="no-plan" aria-describedby="no-plan-hint">
+						  <label class="govuk-label govuk-radios__label govuk-label--s" for="no-plan">
 							Make a one off payment
 						  </label>
-						 
+						 <span id="no-plan-hint" class="govuk-hint govuk-radios__hint">
+							Make a single payment to reduce the amount you owe.
+								 </span>
 						</div>
+					  
+				     
+					  
+			
+					 
 				    
 				     
 				    </div>

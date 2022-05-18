@@ -6,6 +6,8 @@
 
 // global styles for <a> and <p> tags
 .back-link {
+	display: block;
+	clear: both;
 	.govuk-back-link {
 		margin: 0 0 30px 0;
 	}
