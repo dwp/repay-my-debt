@@ -62,18 +62,18 @@
 					 <div class="flexibleBanner dashboardTarget">
 						 
 
-					 <p class="mb0">You have a payment due for June 2022</p>
+					 <p class="mb0">You have a payment due for July 2022.</p>
 						 
 						 </div>
 							
 							
 							
-						<p class="statement mb20">You currently do not have a payment plan setup.</p>
+						<p class="statement mb20">You do not currently have a payment plan setup.</p>
 						
 															
-							<span><a href="directLowAmount" class="secondary-invert">Set up a payment plan</a></span>							
+							<span><a href="setupPlanStart" class="secondary-invert">Set up a payment plan</a></span>							
 					
-					<span><a href="#" class="secondary-invert">Make a one off payment</a></span>	
+					<span><a href="oneOffPay" class="secondary-invert">Make a one off payment</a></span>	
 	
 					 </div>
 				 </div>	
@@ -103,7 +103,7 @@
 					 
 					 <div class="warning-message complete-alert">
 								
-									 <p>A payment of &pound;30.00 was taken from your account on 21 May 2022</p>
+									 <p>A payment of &pound;{{ data['oneOffPay'] }} was made on 10 June 2022.</p>
 								 </div>
 						 
 								 
@@ -131,7 +131,7 @@
 									  
 									  
 									   
-								&pound;30.00
+							&pound;{{ data['oneOffPay'] }}
 									  
 									  
 								  </td>
@@ -146,7 +146,7 @@
 							
 																
 	
-					 <span><a href="paymentHistoryDDfull" class="secondary-invert">View your payment history</a></span>
+					 <span><a href="paymentHistoryNoPlan" class="secondary-invert">View your payment history</a></span>
 	
 				 
 		</div>

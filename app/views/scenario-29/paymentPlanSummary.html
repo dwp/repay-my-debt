@@ -104,7 +104,7 @@
 											<th scope="row" class="govuk-table__header">Proposed plan review date</th>
 											<td class="govuk-table__cell" colspan="2">
 											
-											December 2022
+											June 2023
 											
 											</td>
 											
@@ -173,7 +173,7 @@
 												   <th scope="row" class="govuk-table__header">Proposed plan review date</th>
 												   <td class="govuk-table__cell" colspan="2">
 												   
-												   December 2022
+												   June 2023
 												   
 												   </td>
 												   
@@ -515,7 +515,18 @@ Written confirmation may be required. Please also notify us.</li>
 		<p>By continuing, you confirm that you will:</p>
 
 		<ul class="govuk-list govuk-list--bullet mb30">
+			
+			{% if data['paymentOptions']=='ddFixedChoice'%}
 			<li>pay the agreed monthly amount</li>
+			{% else %}
+			{% endif %}
+			
+			{% if data['paymentOptions']=='flexyPayChoice'%} 
+			<li>make payments towards your monthly amount</li>
+			{% else %}
+			{% endif %}
+			
+			
 			<li>let us know immediately if you’re struggling to keep up with payments</li>
 		</ul>
 										

@@ -60,7 +60,7 @@
         
         
         
-        
+        {% if data['paymentOptions']=='ddFixedChoice'%} 
            <div class="govuk-checkboxes__item">
              <input class="govuk-checkboxes__input" id="comm2" name="commChoice" type="checkbox" value="comm2" aria-describedby="comm2-hint">
              <label class="govuk-label govuk-checkboxes__label" for="comm2">
@@ -70,6 +70,8 @@
               A monthly reminder to sign in and manage your plan
              </div>          
            </div>
+           {% else %}
+            {% endif %}
           
           {% if data['paymentOptions']=='flexyPayChoice'%} 
            <div class="govuk-checkboxes__item">
